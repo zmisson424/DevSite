@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -10,11 +11,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Home />
-        <Projects />
-        <Experience />
-        <Contact />
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Switch>
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/experience" component={Experience} />
+              <Route exact path="/projects" component={Projects} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+            </Switch>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }

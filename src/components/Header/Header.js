@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
 import { colors } from "../../config";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-import {
-  Container,
-  Navbar,
-  Nav,
-  NavbarBrand,
-  NavItem,
-  NavLink,
-  Row,
-  Col
-} from "reactstrap";
+import { Container, Navbar, Nav, NavbarBrand, NavItem } from "reactstrap";
+
+const StyledLink = styled(Link)`
+  color: #ffffff;
+  margin-right: 35px;
+
+  &:hover {
+    color: #AEEA00;
+  }
+`;
 
 export default class Header extends Component {
   render() {
@@ -35,15 +35,17 @@ export default class Header extends Component {
             color: "#FFFFFF"
           }}
         >
-          <NavItem>Home</NavItem>
           <NavItem>
-            <NavLink>Projects</NavLink>
+            <StyledLink to="/home">Home</StyledLink>
           </NavItem>
           <NavItem>
-            <NavLink>Experience</NavLink>
+            <StyledLink to="/projects">Projects</StyledLink>
           </NavItem>
           <NavItem>
-            <NavLink>Contact</NavLink>
+            <StyledLink to="experience">Experience</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink to="contact">Contact</StyledLink>
           </NavItem>
         </Nav>
       </Navbar>
