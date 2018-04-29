@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { colors } from "../../config";
 
-import { Row, Col, Card, CardTitle, CardText } from "reactstrap";
+import {Card, CardTitle, CardText } from "reactstrap";
 
 const StyledCard = styled(Card)`
   margin-top: 20px;
