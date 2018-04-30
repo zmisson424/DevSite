@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
 
 class App extends Component {
   render() {
@@ -27,6 +28,11 @@ class App extends Component {
                 <Route exact path="/home" component={Home} />
                 <Route exact path="/experience" component={Experience} />
                 <Route exact path="/projects" component={Projects} />
+                <Route
+                  exact
+                  path="/projects/osu-portfolio"
+                  component={Portfolio}
+                />
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/">
                   <Redirect to="/home" />

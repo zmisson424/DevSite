@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { colors } from "../../config";
+import { Link } from "react-router-dom";
 
 import OSU from "../../media/ohiostate.png";
 import Soon from "../../media/comingsoon.png";
@@ -32,11 +33,11 @@ const StyledTitle = styled(CardTitle)`
   font-size: 32px;
   margin-top: 15px;
   margin-left: 20px;
-  margin-bottom: 25px ! important;
+  margin-bottom: 25px !important;
 `;
 
 const StyledButton = styled(Button)`
-  background-color: #000066 ! important;
+  background-color: #000066 !important;
   margin-left: 25%;
   margin-bottom: 20px;
   width: 50%;
@@ -45,7 +46,7 @@ const StyledButton = styled(Button)`
   bottom: 0;
 
   &:hover {
-    background-color: #0D47A1 ! important;
+    background-color: #0d47a1 !important;
   }
 `;
 
@@ -57,19 +58,40 @@ const StyledImage = styled(CardImg)`
 const StyledText = styled(CardText)`
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 20px ! important;
+  margin-bottom: 20px !important;
+`;
+
+const StyledLink = styled(Link)`
+  background-color: #000066 !important;
+  margin-left: 25%;
+  margin-bottom: 20px;
+  width: 50%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+
+  &:hover {
+    background-color: #0d47a1 !important;
+  }
+`;
+
+const H2 = styled.h2`
+  margin-top: 20px;
+  margin-bottom: 25px;
+  color: #aeea00;
+  border-bottom: 1px solid;
 `;
 
 class Projects extends Component {
   render() {
     return (
       <div>
+        <H2>Projects</H2>
+
         <StyledCard>
           <Row>
             <Col md={4}>
-              <StyledImage
-                src={OSU}
-              />
+              <StyledImage src={OSU} />
             </Col>
             <Col>
               <StyledTitle>Ohio State Geog 5201 Portfolio</StyledTitle>
@@ -78,7 +100,9 @@ class Projects extends Component {
                 projects utilizing ArcGIS, ArcGIS Pro, QGIS, ArcScene, and
                 ArcWeb.
               </StyledText>
-              <StyledButton>See More</StyledButton>
+              <Link to="/projects/osu-portfolio">
+                <StyledButton>See More</StyledButton>
+              </Link>
             </Col>
           </Row>
         </StyledCard>
@@ -95,9 +119,7 @@ class Projects extends Component {
               <StyledButton>See More</StyledButton>
             </Col>
             <Col md={4}>
-              <StyledImage
-                src={Soon}
-              />
+              <StyledImage src={Soon} />
             </Col>
           </Row>
         </StyledCard>
@@ -105,9 +127,7 @@ class Projects extends Component {
         <StyledCard>
           <Row>
             <Col md={4}>
-              <StyledImage
-                src={LE}
-              />
+              <StyledImage src={LE} />
             </Col>
             <Col>
               <StyledTitle>Learning Express</StyledTitle>
@@ -133,9 +153,7 @@ class Projects extends Component {
               <StyledButton>See More</StyledButton>
             </Col>
             <Col md={4}>
-              <StyledImage
-                src={Bliss}
-              />
+              <StyledImage src={Bliss} />
             </Col>
           </Row>
         </StyledCard>
