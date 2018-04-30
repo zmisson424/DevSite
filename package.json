@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "bootstrap": "4.0.0",
+    "firebase": "^4.11.0",
+    "firebase-admin": "^5.12.0",
+    "firebase-tools": "^3.18.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -16,6 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "deploy": "cross-env NODE_PATH=src yarn build && firebase deploy",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "cross-env NODE_PATH=src build-storybook -s public"
   },
