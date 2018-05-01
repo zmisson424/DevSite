@@ -28,7 +28,7 @@ export default class Header extends Component {
             color: "#FFFFFF"
           }}
         >
-          Embark
+          Embark Developing
         </NavbarBrand>
         <Nav
           style={{

@@ -4,6 +4,7 @@ import { Container } from "reactstrap";
 import { colors } from "./config";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import AboveHeader from "./components/AboveHeader";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -23,7 +24,11 @@ class App extends Component {
           >
             <AboveHeader />
             <Header />
-            <Container>
+            <Container
+              style={{
+                paddingBottom: 100
+              }}
+            >
               <Switch>
                 <Route exact path="/home" component={Home} />
                 <Route exact path="/experience" component={Experience} />
@@ -39,6 +44,7 @@ class App extends Component {
                 </Route>
               </Switch>
             </Container>
+            <Footer />
           </div>
         </BrowserRouter>
       </div>

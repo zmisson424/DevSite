@@ -86,7 +86,7 @@ class Portfolio extends Component {
             importantly, what is being displayed and why. The object of the
             course was to become more familiar with GIS software and how to
             display and show GIS results to the outside world. We learned how to
-            implement 2D and 3D displays, how to take time in to consideration
+            implement 2D and 3D displays, how to take time into consideration
             and how to manipulate different graphs and objects to display
             desired results. During class we used a wide range of software:
             ArcGIS, ArcScene, ArcGIS Pro, and QGIS. Each piece of software has
@@ -98,7 +98,7 @@ class Portfolio extends Component {
             in PDF format or it could be displayed on an interactive website.
             One is clearly easier than the other. A PDF does not show off the
             intricacy or details of each assignment. What you submit is what the
-            instructor or professor receives. The website on the other hand is
+            instructor or professor receives. The website on the other hand, is
             interactive. ArcWeb maps can be displayed using iFrames to allow
             unique interactivity, gifs can be played and viewed, and it can all
             be presented in a clean, crisp setting.
@@ -110,7 +110,7 @@ class Portfolio extends Component {
                 This lab was built off of the techniques learned in Lab 1. The
                 object was to create a 3D scene using ArcScene and then make an
                 animation inside of that 3D scene. This specific scene takes
-                place on The Ohio States campus. The point of the map is to
+                place on The Ohio State campus. The point of the map is to
                 display all the bus routes and bus stop locations. Each bus
                 route is layed on the ground using bright colored paths and the
                 bus stops are represented using a 3D bus stop symbol. Noticeable
@@ -138,13 +138,13 @@ class Portfolio extends Component {
           <H4>Lab 3 - Creating 3D Views with QGIS2ThreeJS</H4>
           <Row>
             <Col>
-            <img
-              src={Poverty}
-              style={{
-                width: "100%",
-                maxHeight: 400
-              }}
-            />
+              <img
+                src={Poverty}
+                style={{
+                  width: "100%",
+                  maxHeight: 400
+                }}
+              />
             </Col>
             <Col>
               <p>
@@ -155,7 +155,7 @@ class Portfolio extends Component {
                 lab we made 4 different 3D interactive maps that were then
                 exported and displayed in a web browser where a user could alter
                 and move the map to see different views. For the unguided part
-                we had to make a prism map. I got to decided and find all the
+                we had to make a prism map. I got to decide and find all the
                 information displayed. My prism map is a map of Ohio showing the
                 poverty levels in each county. I created my own CSV file for the
                 data. I looked up each county by hand and designated them a spot
@@ -199,7 +199,7 @@ class Portfolio extends Component {
           <H4>Lab 7 - Tracking Analyst</H4>
           <p>
             The point of this lab was to learn and understand how ArcGIS handles
-            tracking data. This feature allows the user to diplay a path an
+            tracking data. This feature allows the user to display a path an
             object might take and represent different data along its path. For
             the unguided section I tracked all the hurricanes in the United
             States during the 2016 storm season. The map shows when each
@@ -233,7 +233,7 @@ class Portfolio extends Component {
               WebGIS is an online tool created by ESRI. For this lab I created a
               Scene with different pictures and locations based on where I grew
               up, Toledo, Ohio. Is shows where I went to school, the house I
-              grew up in, where my grandparents lived and where I played sports
+              grew up in, where my grandparents lived, and where I played sports
               at.
             </Col>
           </Row>
@@ -290,10 +290,10 @@ class Portfolio extends Component {
               The last lab was another WebGIS application. This one was to
               display a bunch of data on a 3D model of Earth. I decided to map
               the top 45 amusement parks around the world and have the z-axis
-              represent the amount of guest that entered the park in 2016. This
-              allows the user to quickly rotate around the world and see which
-              park or parks were the most active. Each point is clickable as
-              well, and brings up information about each park.
+              represent the number of visitors that entered the park in 2016.
+              This allows the user to quickly rotate around the world and see
+              which park or parks were the most active. Each point is clickable
+              as well, and brings up information about each park.
             </Col>
             <Col>
               <iframe
