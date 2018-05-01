@@ -42,7 +42,6 @@ const StyledButton = styled(Button)`
   margin-bottom: 20px;
   width: 50%;
   height: 50px;
-  position: absolute;
   bottom: 0;
 
   &:hover {
