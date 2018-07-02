@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
 import { colors } from '../../config';
+
 import {
   Drawer,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  Divider,
-  Typography
+  Avatar,
+  Divider
 } from '@material-ui/core';
 import {
   Dashboard as DashIcon,
   CloudUpload,
   Assignment,
-  Help as HelpIcon,
-  Settings as SetIcon
+  Help as HelpIcon
 } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
+
+import { Home, Projects, Experience, Contact } from '../../pages';
 
 const drawerWidth = 245;
 
@@ -33,18 +33,22 @@ const styles = theme => ({
   drawerPaper: {
     position: 'relative',
     width: drawerWidth,
-    backgroundColor: colors.primaryDark
+    backgroundColor: colors.primary
   },
   content: {
     flexGrow: 1,
     backgroundColor: '#FAFAFA'
   },
+  avatar: {
+    height: 200,
+    width: 200,
+    marginLeft: '10%',
+    marginRight: '10%',
+    marginTop: 25,
+    color: colors.secondary
+  },
   item: {
     color: '#ffffff'
-  },
-  bottomList: {
-    position: 'absolute',
-    bottom: 0
   }
 });
 
@@ -59,33 +63,6 @@ class Layout extends Component {
     });
   };
 
-  header = () => {
-    return (
-      <div
-        style={{
-          marginBottom: 10
-        }}
-      >
-        <div
-          style={{
-            marginLeft: 23
-          }}
-        >
-          <h2
-            style={{
-              color: '#ffffff',
-              marginBottom: 0
-            }}
-          >
-            Learning Express
-          </h2>
-          <Typography style={{ color: '#ffffff' }}>of Columbus</Typography>
-        </div>
-        <Divider style={{ marginTop: 25 }} />
-      </div>
-    );
-  };
-
   render() {
     const { classes } = this.props;
     const pageNumber = this.state.pageNumber;
@@ -98,7 +75,16 @@ class Layout extends Component {
             paper: classes.drawerPaper
           }}
         >
-          {this.header()}
+          <div
+            style={{
+              marginBottom: 10
+            }}
+          >
+            <Avatar alt="Embark Development" className={classes.avatar}>
+              Embark Dev
+            </Avatar>
+            <Divider style={{ marginTop: 25 }} />
+          </div>
 
           <List>
             <ListItem button onClick={() => this.changePageNumber(1)}>
@@ -146,12 +132,6 @@ class Layout extends Component {
                 }}
               />
             </ListItem>
-          </List>
-          <List
-            classes={{
-              root: classes.bottomList
-            }}
-          >
             <ListItem button onClick={() => this.changePageNumber(4)}>
               <ListItemIcon
                 classes={{
@@ -167,28 +147,13 @@ class Layout extends Component {
                 }}
               />
             </ListItem>
-            <ListItem button onClick={() => this.changePageNumber(5)}>
-              <ListItemIcon
-                classes={{
-                  root: classes.item
-                }}
-              >
-                <SetIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Settings"
-                classes={{
-                  primary: classes.item
-                }}
-              />
-            </ListItem>
           </List>
         </Drawer>
         <main className={classes.content}>
-          {pageNumber === 1 && <span>Home</span>}
-          {pageNumber === 2 && <span>Projects</span>}
-          {pageNumber === 3 && <span>Experience</span>}
-          {pageNumber === 4 && <span>Contact</span>}
+          {pageNumber === 1 && <Home />}
+          {pageNumber === 2 && <Projects />}
+          {pageNumber === 3 && <Experience />}
+          {pageNumber === 4 && <Contact />}
         </main>
       </div>
     );

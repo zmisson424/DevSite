@@ -1,12 +1,11 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { colors } from "../../config";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { colors } from '../../config';
 
-import OSU from "../../media/ohiostate.png";
-import Soon from "../../media/comingsoon.png";
-import LE from "../../media/learningexpress.png";
-import Bliss from "../../media/bliss.jpg";
+import OSU from '../../media/ohiostate.png';
+import Soon from '../../media/comingsoon.png';
+import LE from '../../media/learningexpress.png';
+import Bliss from '../../media/bliss.jpg';
 
 import {
   Card,
@@ -16,7 +15,7 @@ import {
   Row,
   Col,
   Button
-} from "reactstrap";
+} from 'reactstrap';
 
 const StyledCard = styled(Card)`
   margin-top: 20px;
@@ -60,20 +59,6 @@ const StyledText = styled(CardText)`
   margin-bottom: 20px !important;
 `;
 
-const StyledLink = styled(Link)`
-  background-color: #000066 !important;
-  margin-left: 25%;
-  margin-bottom: 20px;
-  width: 50%;
-  height: 50px;
-  position: absolute;
-  bottom: 0;
-
-  &:hover {
-    background-color: #0d47a1 !important;
-  }
-`;
-
 const H2 = styled.h2`
   margin-top: 20px;
   margin-bottom: 25px;
@@ -99,9 +84,6 @@ class Projects extends Component {
                 projects utilizing ArcGIS, ArcGIS Pro, QGIS, ArcScene, and
                 ArcWeb.
               </StyledText>
-              <Link to="/projects/osu-portfolio">
-                <StyledButton>See More</StyledButton>
-              </Link>
             </Col>
           </Row>
         </StyledCard>
