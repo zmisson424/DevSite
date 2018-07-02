@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 
 import { colors } from '../../config';
@@ -51,6 +49,15 @@ const styles = theme => ({
 });
 
 class Layout extends Component {
+  state = {
+    pageNumber: 1
+  };
+
+  changePageNumber = number => {
+    this.setState({
+      pageNumber: number
+    });
+  };
 
   header = () => {
     return (
@@ -81,6 +88,8 @@ class Layout extends Component {
 
   render() {
     const { classes } = this.props;
+    const pageNumber = this.state.pageNumber;
+
     return (
       <div className={classes.root}>
         <Drawer
@@ -92,7 +101,7 @@ class Layout extends Component {
           {this.header()}
 
           <List>
-            <ListItem button onClick={() => this.props.changePageNumber(1)}>
+            <ListItem button onClick={() => this.changePageNumber(1)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -101,13 +110,13 @@ class Layout extends Component {
                 <DashIcon />
               </ListItemIcon>
               <ListItemText
-                primary="Dashboard"
+                primary="Home"
                 classes={{
                   primary: classes.item
                 }}
               />
             </ListItem>
-            <ListItem button onClick={() => this.props.changePageNumber(2)}>
+            <ListItem button onClick={() => this.changePageNumber(2)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -116,13 +125,13 @@ class Layout extends Component {
                 <Assignment />
               </ListItemIcon>
               <ListItemText
-                primary="Reports"
+                primary="Projects"
                 classes={{
                   primary: classes.item
                 }}
               />
             </ListItem>
-            <ListItem button onClick={() => this.props.changePageNumber(3)}>
+            <ListItem button onClick={() => this.changePageNumber(3)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -131,7 +140,7 @@ class Layout extends Component {
                 <CloudUpload />
               </ListItemIcon>
               <ListItemText
-                primary="Upload"
+                primary="Experience"
                 classes={{
                   primary: classes.item
                 }}
@@ -143,7 +152,7 @@ class Layout extends Component {
               root: classes.bottomList
             }}
           >
-            <ListItem button onClick={() => this.props.changePageNumber(4)}>
+            <ListItem button onClick={() => this.changePageNumber(4)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -152,13 +161,13 @@ class Layout extends Component {
                 <HelpIcon />
               </ListItemIcon>
               <ListItemText
-                primary="Help"
+                primary="Contact"
                 classes={{
                   primary: classes.item
                 }}
               />
             </ListItem>
-            <ListItem button onClick={() => this.props.changePageNumber(5)}>
+            <ListItem button onClick={() => this.changePageNumber(5)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -176,16 +185,13 @@ class Layout extends Component {
           </List>
         </Drawer>
         <main className={classes.content}>
-          {this.props.pageNumber === 1 && <Dashboard />}
-          {this.props.pageNumber === 2 && <Reports />}
-          {this.props.pageNumber === 3 && <Upload />}
-          {this.props.pageNumber === 4 && <Help />}
-          {this.props.pageNumber === 5 && <Settings />}
+          {pageNumber === 1 && <span>Home</span>}
+          {pageNumber === 2 && <span>Projects</span>}
+          {pageNumber === 3 && <span>Experience</span>}
+          {pageNumber === 4 && <span>Contact</span>}
         </main>
       </div>
     );
   }
 }
-export default compose(connect(mapStateToProps, mapDispatchToProps))(
-  withStyles(styles)(Layout)
-);
+export default withStyles(styles)(Layout);
