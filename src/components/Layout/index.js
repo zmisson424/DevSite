@@ -54,7 +54,7 @@ const styles = theme => ({
 
 class Layout extends Component {
   state = {
-    pageNumber: 1
+    pageNumber: 2
   };
 
   changePageNumber = number => {
@@ -111,7 +111,7 @@ class Layout extends Component {
                 <Assignment />
               </ListItemIcon>
               <ListItemText
-                primary="Projects"
+                primary="Develop"
                 classes={{
                   primary: classes.item
                 }}
@@ -126,7 +126,7 @@ class Layout extends Component {
                 <CloudUpload />
               </ListItemIcon>
               <ListItemText
-                primary="Experience"
+                primary="Projects"
                 classes={{
                   primary: classes.item
                 }}
@@ -151,8 +151,8 @@ class Layout extends Component {
         </Drawer>
         <main className={classes.content}>
           {pageNumber === 1 && <Home />}
-          {pageNumber === 2 && <Projects />}
-          {pageNumber === 3 && <Experience />}
+          {pageNumber === 2 && <Experience />}
+          {pageNumber === 3 && <Projects />}
           {pageNumber === 4 && <Contact />}
         </main>
       </div>
