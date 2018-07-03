@@ -1,39 +1,38 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { colors } from "../../config";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { colors } from '../../config';
 
-import {Card, CardTitle, CardText } from "reactstrap";
+import ImageOne from './components/computer_background.jpg';
 
-const StyledCard = styled(Card)`
-  margin-top: 20px;
-  padding: 10px;
+const BackDiv = styled.div`
+  background: url(${ImageOne});
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
+
+const CenterDiv = styled.div`
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 40%;
 `;
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        <StyledCard>
-          <CardTitle>Embark on your new idea</CardTitle>
-          <CardText>
-            Quick, fast development to get your project off the ground.
-          </CardText>
-        </StyledCard>
-
-        <StyledCard>
-          <CardTitle>Development</CardTitle>
-          <CardText>
-            Wide range of skills to optimize and deploy your application.
-          </CardText>
-        </StyledCard>
-
-        <StyledCard>
-          <CardTitle>Rapid Development</CardTitle>
-          <CardText>
-            Fast project deployment using a variety of languages.
-          </CardText>
-        </StyledCard>
-      </div>
+      <BackDiv>
+        <CenterDiv>
+          <h2
+            style={{
+              color: colors.secondary
+            }}
+          >
+            Embark Developing
+          </h2>
+        </CenterDiv>
+      </BackDiv>
     );
   }
 }

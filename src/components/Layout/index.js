@@ -33,7 +33,7 @@ const styles = theme => ({
   drawerPaper: {
     position: 'relative',
     width: drawerWidth,
-    backgroundColor: colors.primary
+    backgroundColor: colors.primaryDark
   },
   content: {
     flexGrow: 1,
