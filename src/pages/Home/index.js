@@ -1,38 +1,57 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { colors } from '../../config';
 
-import ImageOne from './components/computer_background.jpg';
-
-const BackDiv = styled.div`
-  background: url(${ImageOne});
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: relative;
-`;
-
-const CenterDiv = styled.div`
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  top: 40%;
-`;
+import SlideOne from './components/SlideOne';
+import SlideTwo from './components/SlideTwo';
+import SlideThree from './components/SlideThree';
 
 class Home extends Component {
+  state = {
+    slide: 1
+  };
+
+  componentDidMount = (prevProps, prevState) => {
+    setInterval(() => {
+      this.nextSlide();
+    }, 7000);
+  };
+
+  nextSlide = () => {
+    var slide = this.state.slide;
+    if (slide < 3) {
+      slide = slide + 1;
+      this.setState({
+        slide
+      });
+    } else if (slide === 3) {
+      this.setState({
+        slide: 1
+      });
+    }
+  };
+
+  previousSlide = () => {
+    var slide = this.state.slide;
+    if (slide > 1) {
+      slide = slide - 1;
+      this.setState({
+        slide
+      });
+    }
+  };
+
   render() {
+    const slide = this.state.slide;
     return (
-      <BackDiv>
-        <CenterDiv>
-          <h2
-            style={{
-              color: colors.secondary
-            }}
-          >
-            Embark Developing
-          </h2>
-        </CenterDiv>
-      </BackDiv>
+      <div
+        style={{
+          height: '100%',
+          width: '100%'
+        }}
+      >
+        {slide === 1 ? <SlideOne /> : null}
+        {slide === 2 ? <SlideTwo /> : null}
+        {slide === 3 ? <SlideThree /> : null}
+      </div>
     );
   }
 }
