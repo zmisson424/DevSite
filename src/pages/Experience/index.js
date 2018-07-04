@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { colors } from '../../config';
+import React, { Component } from "react";
+import styled from "styled-components";
+import { colors } from "../../config";
 
 import {
   Typography,
@@ -10,16 +10,20 @@ import {
   Grid,
   Divider,
   Grow
-} from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+} from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
 
-import HTML5 from './components/html5.png';
-import REACT from './components/react.png';
-import ANGULAR from './components/angular.png';
-import ANDROID from './components/android.png';
-import FLUTTER from './components/flutter.png';
-import FIREBASE from './components/firebase.png';
-import GOOGLE from './components/google.jpg';
+import HTML5 from "./components/html5.png";
+import REACT from "./components/react.png";
+import ANGULAR from "./components/angular.png";
+import ANDROID from "./components/android.png";
+import FLUTTER from "./components/flutter.png";
+import FIREBASE from "./components/firebase.png";
+import GOOGLE from "./components/google.jpg";
+import AWS from "./components/aws.png";
+import MONGO from "./components/mongo.png";
+import MATERIAL from "./components/material.png";
+import BOOTSTRAP from "./components/bootstrap.png";
 
 const BackDiv = styled.div`
   background: ${colors.background};
@@ -45,7 +49,7 @@ const CardImage = styled.img`
 
 const styles = theme => ({
   root: {
-    display: 'flex'
+    display: "flex"
   },
   actions: {
     paddingTop: 13,
@@ -196,7 +200,7 @@ class Experience extends Component {
           <Grid item md={2}>
             <Grow in={true}>
               <Card>
-                <CardImage src={HTML5} />
+                <CardImage src={AWS} />
                 <CardContent>
                   <Typography gutterBottom variant="headline" component="h2">
                     AWS
@@ -213,7 +217,7 @@ class Experience extends Component {
           <Grid item md={2}>
             <Grow in={true}>
               <Card>
-                <CardImage src={HTML5} />
+                <CardImage src={MONGO} />
                 <CardContent>
                   <Typography gutterBottom variant="headline" component="h2">
                     MongoDB
@@ -234,13 +238,32 @@ class Experience extends Component {
           <Grid item md={2}>
             <Grow in={true}>
               <Card>
-                <CardImage src={HTML5} />
+                <CardImage src={MATERIAL} />
                 <CardContent>
                   <Typography gutterBottom variant="headline" component="h2">
-                    HTML 5
+                    Material Design
                   </Typography>
                   <Typography component="p">
-                    Stuff about HTML 5 goes here.
+                    Like this website.
+                  </Typography>
+                </CardContent>
+                <Divider />
+                <CardActions className={classes.actions}>
+                  <a href="#">Learn More</a>
+                </CardActions>
+              </Card>
+            </Grow>
+          </Grid>
+          <Grid item md={2}>
+            <Grow in={true}>
+              <Card>
+                <CardImage src={BOOTSTRAP} />
+                <CardContent>
+                  <Typography gutterBottom variant="headline" component="h2">
+                    Bootstrap
+                  </Typography>
+                  <Typography component="p">
+                    Bill
                   </Typography>
                 </CardContent>
                 <Divider />
