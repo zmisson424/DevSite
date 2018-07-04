@@ -29,11 +29,16 @@ const BackDiv = styled.div`
   background: ${colors.background};
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 const SectionHeader = styled.h2`
-  color: ${colors.primaryLight};
+  color: ${colors.secondary};
+  padding-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid;
 `;
 
 const CardImage = styled.img`
@@ -84,7 +89,7 @@ class Experience extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true} timeout={1500}>
+            <Grow in={true} timeout={1000}>
               <Card>
                 <CardImage src={REACT} />
                 <CardContent>
@@ -103,7 +108,7 @@ class Experience extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true} timeout={3000}>
+            <Grow in={true} timeout={2000}>
               <Card>
                 <CardImage src={ANGULAR} />
                 <CardContent>
@@ -123,8 +128,8 @@ class Experience extends Component {
 
         <SectionHeader>Apps</SectionHeader>
         <Grid container spacing={16}>
-          <Grid item md={2}>
-            <Grow in={true}>
+          <Grid item md={2} >
+            <Grow in={true} timeout={3000}>
               <Card>
                 <CardImage src={ANDROID} />
                 <CardContent>
@@ -141,7 +146,7 @@ class Experience extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true}>
+            <Grow in={true} timeout={4000}>
               <Card>
                 <CardImage src={FLUTTER} />
                 <CardContent>
@@ -149,7 +154,7 @@ class Experience extends Component {
                     Flutter
                   </Typography>
                   <Typography component="p">
-                    Build for Android and iOS together
+                    Build for Android and iOS
                   </Typography>
                 </CardContent>
                 <Divider />
@@ -164,7 +169,7 @@ class Experience extends Component {
         <SectionHeader>Services</SectionHeader>
         <Grid container spacing={16}>
           <Grid item md={2}>
-            <Grow in={true}>
+            <Grow in={true} timeout={5000}>
               <Card>
                 <CardImage src={FIREBASE} />
                 <CardContent>
@@ -181,7 +186,7 @@ class Experience extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true}>
+            <Grow in={true} timeout={6000}>
               <Card>
                 <CardImage src={GOOGLE} />
                 <CardContent>
@@ -198,7 +203,7 @@ class Experience extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true}>
+            <Grow in={true} timeout={7000}>
               <Card>
                 <CardImage src={AWS} />
                 <CardContent>
@@ -215,7 +220,7 @@ class Experience extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true}>
+            <Grow in={true} timeout={8000}>
               <Card>
                 <CardImage src={MONGO} />
                 <CardContent>
@@ -236,16 +241,14 @@ class Experience extends Component {
         <SectionHeader>Design</SectionHeader>
         <Grid container spacing={16}>
           <Grid item md={2}>
-            <Grow in={true}>
+            <Grow in={true} timeout={9000}>
               <Card>
                 <CardImage src={MATERIAL} />
                 <CardContent>
                   <Typography gutterBottom variant="headline" component="h2">
                     Material Design
                   </Typography>
-                  <Typography component="p">
-                    Like this website.
-                  </Typography>
+                  <Typography component="p">Like this website.</Typography>
                 </CardContent>
                 <Divider />
                 <CardActions className={classes.actions}>
@@ -255,16 +258,14 @@ class Experience extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true}>
+            <Grow in={true} timeout={10000}>
               <Card>
                 <CardImage src={BOOTSTRAP} />
                 <CardContent>
                   <Typography gutterBottom variant="headline" component="h2">
                     Bootstrap
                   </Typography>
-                  <Typography component="p">
-                    Bill
-                  </Typography>
+                  <Typography component="p">Bill</Typography>
                 </CardContent>
                 <Divider />
                 <CardActions className={classes.actions}>
