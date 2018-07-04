@@ -62,7 +62,7 @@ const styles = theme => ({
   }
 });
 
-class Experience extends Component {
+class Develop extends Component {
   render() {
     const { classes } = this.props;
     return (
@@ -280,4 +280,4 @@ class Experience extends Component {
   }
 }
 
-export default withStyles(styles)(Experience);
+export default withStyles(styles)(Develop);

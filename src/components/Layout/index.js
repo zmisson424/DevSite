@@ -18,7 +18,7 @@ import {
 } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
 
-import { Home, Projects, Experience, Contact } from '../../pages';
+import { Home, Projects, Develop, Contact } from '../../pages';
 
 const drawerWidth = 245;
 
@@ -111,7 +111,7 @@ class Layout extends Component {
                 <Assignment />
               </ListItemIcon>
               <ListItemText
-                primary="Develop"
+                primary="Create"
                 classes={{
                   primary: classes.item
                 }}
@@ -126,7 +126,7 @@ class Layout extends Component {
                 <CloudUpload />
               </ListItemIcon>
               <ListItemText
-                primary="Projects"
+                primary="Develop"
                 classes={{
                   primary: classes.item
                 }}
@@ -151,8 +151,8 @@ class Layout extends Component {
         </Drawer>
         <main className={classes.content}>
           {pageNumber === 1 && <Home />}
-          {pageNumber === 2 && <Experience />}
-          {pageNumber === 3 && <Projects />}
+          {pageNumber === 2 && <Projects />}
+          {pageNumber === 3 && <Develop />}
           {pageNumber === 4 && <Contact />}
         </main>
       </div>
