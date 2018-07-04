@@ -18,7 +18,7 @@ import {
 } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
 
-import { Home, Projects, Develop, Contact } from '../../pages';
+import { Home, Create, Develop, Contact } from '../../pages';
 
 const drawerWidth = 245;
 
@@ -151,7 +151,7 @@ class Layout extends Component {
         </Drawer>
         <main className={classes.content}>
           {pageNumber === 1 && <Home />}
-          {pageNumber === 2 && <Projects />}
+          {pageNumber === 2 && <Create />}
           {pageNumber === 3 && <Develop />}
           {pageNumber === 4 && <Contact />}
         </main>
