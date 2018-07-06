@@ -52,8 +52,7 @@ class Create extends Component {
             Where to start?
           </Typography>
           <Typography className={classes.body} variant="display1">
-            There are lots of different development techniques that will create
-            the perfect setup for you company or business.
+            There are lots of different options to create exactly what you need.
           </Typography>
         </TextDiv>
         <CenterDiv>
@@ -95,12 +94,12 @@ class Create extends Component {
             Services
           </Typography>
           <Typography className={classes.body} variant="display1">
-          If you already have a websiter or application, but are just looking
-          for some new additions, this can be done as well. For example, local
-          churches might look to update their website to support live
-          streaming to broadcast Sunday service. They might also want to add a
-          spot to accept donations through a credit card. These small
-          imporvements are always possible.
+            If you already have a websiter or application, but are just looking
+            for some new additions, this can be done as well. For example, local
+            churches might look to update their website to support live
+            streaming to broadcast Sunday service. They might also want to add a
+            spot to accept donations through a credit card. These small
+            imporvements are always possible.
           </Typography>
         </TextDiv>
       </div>

@@ -6,7 +6,8 @@ import SlideThree from './components/SlideThree';
 
 class Home extends Component {
   state = {
-    slide: 1
+    slide: 1,
+    permSlide: 1
   };
 
   componentDidMount = (prevProps, prevState) => {
@@ -41,6 +42,7 @@ class Home extends Component {
 
   render() {
     const slide = this.state.slide;
+    //const slide = this.state.permSlide;
     return (
       <div
         style={{

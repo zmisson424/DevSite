@@ -12,11 +12,12 @@ const BackDiv = styled.div`
   background-size: cover;
   width: 100%;
   height: 100%;
-  position: relative;
+  position: fixed;
 `;
 
 const CenterDiv = styled.div`
   width: 100%;
+  padding-right: 245px;
   text-align: center;
   position: absolute;
   top: 35%;
