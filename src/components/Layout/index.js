@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import { colors } from '../../config';
 
 import {
@@ -19,13 +20,40 @@ import {
 import { withStyles } from '@material-ui/core/styles';
 
 import { Home, Create, Develop, Contact } from '../../pages';
+import LOGO from './components/embarklogo.png';
+import GITHUB from './components/github.png';
+import STACKOVERFLOW from './components/stackoverflow.png';
+import GITLAB from './components/gitlab.png';
 
 const drawerWidth = 245;
+
+const LogoImg = styled.img`
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 25px;
+`;
+
+const SocialImg = styled.img`
+  width: 25%;
+  display: inline-block;
+`;
+
+const SocialBar = styled.div`
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+`;
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    zIndex: 1,
+    zIndex: 1
   },
   drawerPaper: {
     position: 'fixed',
@@ -80,10 +108,8 @@ class Layout extends Component {
               marginBottom: 10
             }}
           >
-            <Avatar alt="Embark Development" className={classes.avatar}>
-              Embark Dev
-            </Avatar>
-            <Divider style={{ marginTop: 25 }} />
+            <LogoImg src={LOGO} />
+            <Divider style={{ marginTop: 50, marginBottom: 20 }} />
           </div>
 
           <List>
@@ -148,6 +174,14 @@ class Layout extends Component {
               />
             </ListItem>
           </List>
+          <Divider style={{ marginTop: 25 }} />
+          <div style={{ position: 'absolute', bottom: 0 }}>
+            <SocialBar>
+              <SocialImg src={GITHUB} alt="Github" />
+              <SocialImg src={STACKOVERFLOW} alt="Stackoverflow" />
+              <SocialImg src={GITLAB} alt="Gitlab" />
+            </SocialBar>
+          </div>
         </Drawer>
         <main className={classes.content}>
           {pageNumber === 1 && <Home />}
