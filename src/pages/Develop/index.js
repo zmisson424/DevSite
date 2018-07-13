@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { colors } from "../../config";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { colors } from '../../config';
 
 import {
   Typography,
@@ -10,27 +10,27 @@ import {
   Grid,
   Divider,
   Grow
-} from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
+} from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
-import HTML5 from "./components/html5.png";
-import REACT from "./components/react.png";
-import ANGULAR from "./components/angular.png";
-import ANDROID from "./components/android.png";
-import FLUTTER from "./components/flutter.png";
-import FIREBASE from "./components/firebase.png";
-import GOOGLE from "./components/google.jpg";
-import AWS from "./components/aws.png";
-import MONGO from "./components/mongo.png";
-import MATERIAL from "./components/material.png";
-import BOOTSTRAP from "./components/bootstrap.png";
+import HTML5 from './components/html5.png';
+import REACT from './components/react.png';
+import ANGULAR from './components/angular.png';
+import ANDROID from './components/android.png';
+import FLUTTER from './components/flutter.png';
+import FIREBASE from './components/firebase.png';
+import GOOGLE from './components/google.jpg';
+import AWS from './components/aws.png';
+import MONGO from './components/mongo.png';
+import MATERIAL from './components/material.png';
+import BOOTSTRAP from './components/bootstrap.png';
 
 const BackDiv = styled.div`
   background: ${colors.background};
   width: 100%;
   height: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 `;
 
 const SectionHeader = styled.h2`
@@ -54,7 +54,7 @@ const CardImage = styled.img`
 
 const styles = theme => ({
   root: {
-    display: "flex"
+    display: 'flex'
   },
   actions: {
     paddingTop: 13,
@@ -128,8 +128,8 @@ class Develop extends Component {
 
         <SectionHeader>Apps</SectionHeader>
         <Grid container spacing={16}>
-          <Grid item md={2} >
-            <Grow in={true} timeout={3000}>
+          <Grid item md={2}>
+            <Grow in={true} timeout={1000}>
               <Card>
                 <CardImage src={ANDROID} />
                 <CardContent>
@@ -146,7 +146,7 @@ class Develop extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true} timeout={4000}>
+            <Grow in={true} timeout={2000}>
               <Card>
                 <CardImage src={FLUTTER} />
                 <CardContent>
@@ -169,7 +169,7 @@ class Develop extends Component {
         <SectionHeader>Services</SectionHeader>
         <Grid container spacing={16}>
           <Grid item md={2}>
-            <Grow in={true} timeout={5000}>
+            <Grow in={true} timeout={3000}>
               <Card>
                 <CardImage src={FIREBASE} />
                 <CardContent>
@@ -186,7 +186,7 @@ class Develop extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true} timeout={6000}>
+            <Grow in={true} timeout={4000}>
               <Card>
                 <CardImage src={GOOGLE} />
                 <CardContent>
@@ -203,7 +203,7 @@ class Develop extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true} timeout={7000}>
+            <Grow in={true} timeout={5000}>
               <Card>
                 <CardImage src={AWS} />
                 <CardContent>
@@ -220,7 +220,7 @@ class Develop extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true} timeout={8000}>
+            <Grow in={true} timeout={6000}>
               <Card>
                 <CardImage src={MONGO} />
                 <CardContent>
@@ -239,9 +239,9 @@ class Develop extends Component {
         </Grid>
 
         <SectionHeader>Design</SectionHeader>
-        <Grid container spacing={16}>
+        <Grid container spacing={16} style={{ marginBottom: 25 }}>
           <Grid item md={2}>
-            <Grow in={true} timeout={9000}>
+            <Grow in={true} timeout={4000}>
               <Card>
                 <CardImage src={MATERIAL} />
                 <CardContent>
@@ -258,7 +258,7 @@ class Develop extends Component {
             </Grow>
           </Grid>
           <Grid item md={2}>
-            <Grow in={true} timeout={10000}>
+            <Grow in={true} timeout={5000}>
               <Card>
                 <CardImage src={BOOTSTRAP} />
                 <CardContent>

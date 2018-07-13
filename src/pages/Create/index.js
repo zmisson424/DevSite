@@ -279,7 +279,7 @@ class Create extends Component {
                 <Grid item md={2} />
               </Grid>
             </div>
-            <TextDiv>
+            <TextDiv style={{ marginBottom: 50 }}>
               <Dots />
               <Typography className={classes.header} variant="display3">
                 Services
