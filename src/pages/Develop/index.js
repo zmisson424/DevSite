@@ -9,7 +9,10 @@ import {
   CardContent,
   Grid,
   Divider,
-  Grow
+  Grow,
+  Button,
+  Modal,
+  Paper
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -65,10 +68,37 @@ const styles = theme => ({
   actions: {
     paddingTop: 13,
     paddingBottom: 13
+  },
+  paper: {
+    position: 'absolute',
+    padding: 15,
+    [theme.breakpoints.up('md')]: {
+      width: '50%',
+      top: '30%',
+      marginLeft: '25%'
+    }
+  },
+  button: {
+    paddingLeft: 0,
+    paddingTop: 0,
+    paddingBottom: 0,
+    color: colors.secondary
   }
 });
 
 class Develop extends Component {
+  state = {
+    open: false
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
   render() {
     const { classes } = this.props;
     return (
@@ -89,7 +119,9 @@ class Develop extends Component {
                 </CardContent>
                 <Divider />
                 <CardActions className={classes.actions}>
-                  <a href="#">Learn More</a>
+                  <Button onClick={this.handleOpen} className={classes.button}>
+                    Learn More
+                  </Button>
                 </CardActions>
               </Card>
             </Grow>
@@ -281,6 +313,11 @@ class Develop extends Component {
             </Grow>
           </Grid>
         </Grid>
+        <Modal open={this.state.open} onClose={this.handleClose}>
+          <Paper className={classes.paper}>
+            <Typography variant="display3">Contact</Typography>
+          </Paper>
+        </Modal>
       </BackDiv>
     );
   }
