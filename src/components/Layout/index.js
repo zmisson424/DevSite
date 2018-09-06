@@ -40,9 +40,13 @@ const LogoImg = styled.img`
   padding-top: 25px;
 `;
 
-const SocialImg = styled.img`
-  width: 25%;
+const A = styled.a`
   display: inline-block;
+  width: 100%;
+`;
+
+const SocialImg = styled.img`
+  width: 85%;
 `;
 
 const SocialBar = styled.div`
@@ -94,7 +98,7 @@ const styles = theme => ({
 
 class Layout extends Component {
   state = {
-    pageNumber: 4,
+    pageNumber: 1,
     mobileOpen: false
   };
 
@@ -195,9 +199,15 @@ class Layout extends Component {
             <Divider style={{ marginTop: 25 }} />
             <div style={{ position: 'absolute', bottom: 0 }}>
               <SocialBar>
-                <SocialImg src={GITHUB} alt="Github" />
-                <SocialImg src={STACKOVERFLOW} alt="Stackoverflow" />
-                <SocialImg src={GITLAB} alt="Gitlab" />
+                <A href="https://www.github.com/zmisson424">
+                  <SocialImg src={GITHUB} alt="Github" />
+                </A>
+                <A href="https://stackoverflow.com/users/4560040/zach-misson?tab=profile">
+                  <SocialImg src={STACKOVERFLOW} alt="Stackoverflow" />
+                </A>
+                <A href="https://gitlab.com/zmisson424">
+                  <SocialImg src={GITLAB} alt="Gitlab" />
+                </A>
               </SocialBar>
             </div>
           </Drawer>
@@ -301,9 +311,15 @@ class Layout extends Component {
             <Divider style={{ marginTop: 25 }} />
             <div style={{ position: 'absolute', bottom: 0 }}>
               <SocialBar>
-                <SocialImg src={GITHUB} alt="Github" />
-                <SocialImg src={STACKOVERFLOW} alt="Stackoverflow" />
-                <SocialImg src={GITLAB} alt="Gitlab" />
+                <A href="https://www.github.com/zmisson424">
+                  <SocialImg src={GITHUB} alt="Github" />
+                </A>
+                <A href="https://stackoverflow.com/users/4560040/zach-misson?tab=profile">
+                  <SocialImg src={STACKOVERFLOW} alt="Stackoverflow" />
+                </A>
+                <A href="https://gitlab.com/zmisson424">
+                  <SocialImg src={GITLAB} alt="Gitlab" />
+                </A>
               </SocialBar>
             </div>
           </Drawer>
