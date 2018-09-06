@@ -1,38 +1,58 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { colors } from "../../config";
+import React, { Component } from 'react';
 
-import {Card, CardTitle, CardText } from "reactstrap";
-
-const StyledCard = styled(Card)`
-  margin-top: 20px;
-  padding: 10px;
-`;
+import SlideOne from './components/SlideOne';
+import SlideTwo from './components/SlideTwo';
+import SlideThree from './components/SlideThree';
 
 class Home extends Component {
+  state = {
+    slide: 1,
+    permSlide: 1
+  };
+
+  componentDidMount = (prevProps, prevState) => {
+    setInterval(() => {
+      this.nextSlide();
+    }, 7000);
+  };
+
+  nextSlide = () => {
+    var slide = this.state.slide;
+    if (slide < 3) {
+      slide = slide + 1;
+      this.setState({
+        slide
+      });
+    } else if (slide === 3) {
+      this.setState({
+        slide: 1
+      });
+    }
+  };
+
+  previousSlide = () => {
+    var slide = this.state.slide;
+    if (slide > 1) {
+      slide = slide - 1;
+      this.setState({
+        slide
+      });
+    }
+  };
+
   render() {
+    const slide = this.state.slide;
+    //const slide = this.state.permSlide;
     return (
-      <div>
-        <StyledCard>
-          <CardTitle>Embark on your new idea</CardTitle>
-          <CardText>
-            Quick, fast development to get your project off the ground.
-          </CardText>
-        </StyledCard>
-
-        <StyledCard>
-          <CardTitle>Development</CardTitle>
-          <CardText>
-            Wide range of skills to optimize and deploy your application.
-          </CardText>
-        </StyledCard>
-
-        <StyledCard>
-          <CardTitle>Rapid Development</CardTitle>
-          <CardText>
-            Fast project deployment using a variety of languages.
-          </CardText>
-        </StyledCard>
+      <div
+        style={{
+          height: '100%',
+          width: '100%'
+        }}
+      >
+        {slide === 1 ? <SlideOne /> : null}
+        {slide === 2 ? <SlideTwo /> : null}
+        {slide === 3 ? <SlideThree /> : null}
       </div>
     );
   }

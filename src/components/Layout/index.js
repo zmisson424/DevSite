@@ -1,86 +1,100 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { compose } from 'recompose';
-import PropTypes from 'prop-types';
-
+import styled from 'styled-components';
 import { colors } from '../../config';
+
 import {
   Drawer,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  Divider,
-  Typography
+  Avatar,
+  Divider
 } from '@material-ui/core';
 import {
   Dashboard as DashIcon,
   CloudUpload,
   Assignment,
-  Help as HelpIcon,
-  Settings as SetIcon
+  Help as HelpIcon
 } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
 
+import { Home, Create, Develop, Contact } from '../../pages';
+import LOGO from './components/embarklogo.png';
+import GITHUB from './components/github.png';
+import STACKOVERFLOW from './components/stackoverflow.png';
+import GITLAB from './components/gitlab.png';
+
 const drawerWidth = 245;
+
+const LogoImg = styled.img`
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 25px;
+`;
+
+const SocialImg = styled.img`
+  width: 25%;
+  display: inline-block;
+`;
+
+const SocialBar = styled.div`
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+`;
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex'
+    zIndex: 1
   },
   drawerPaper: {
-    position: 'relative',
+    position: 'fixed',
     width: drawerWidth,
     backgroundColor: colors.primaryDark
   },
   content: {
-    flexGrow: 1,
-    backgroundColor: '#FAFAFA'
+    backgroundColor: '#FAFAFA',
+    position: 'relative',
+    float: 'right',
+    height: '100%',
+    width: 'calc(100% - 245px)'
+  },
+  avatar: {
+    height: 200,
+    width: 200,
+    marginLeft: '10%',
+    marginRight: '10%',
+    marginTop: 25,
+    color: colors.secondary
   },
   item: {
     color: '#ffffff'
-  },
-  bottomList: {
-    position: 'absolute',
-    bottom: 0
   }
 });
 
 class Layout extends Component {
+  state = {
+    pageNumber: 2
+  };
 
-  header = () => {
-    return (
-      <div
-        style={{
-          marginBottom: 10
-        }}
-      >
-        <div
-          style={{
-            marginLeft: 23
-          }}
-        >
-          <h2
-            style={{
-              color: '#ffffff',
-              marginBottom: 0
-            }}
-          >
-            Learning Express
-          </h2>
-          <Typography style={{ color: '#ffffff' }}>of Columbus</Typography>
-        </div>
-        <Divider style={{ marginTop: 25 }} />
-      </div>
-    );
+  changePageNumber = number => {
+    this.setState({
+      pageNumber: number
+    });
   };
 
   render() {
     const { classes } = this.props;
+    const pageNumber = this.state.pageNumber;
+
     return (
       <div className={classes.root}>
         <Drawer
@@ -89,10 +103,17 @@ class Layout extends Component {
             paper: classes.drawerPaper
           }}
         >
-          {this.header()}
+          <div
+            style={{
+              marginBottom: 10
+            }}
+          >
+            <LogoImg src={LOGO} />
+            <Divider style={{ marginTop: 50, marginBottom: 20 }} />
+          </div>
 
           <List>
-            <ListItem button onClick={() => this.props.changePageNumber(1)}>
+            <ListItem button onClick={() => this.changePageNumber(1)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -101,13 +122,13 @@ class Layout extends Component {
                 <DashIcon />
               </ListItemIcon>
               <ListItemText
-                primary="Dashboard"
+                primary="Home"
                 classes={{
                   primary: classes.item
                 }}
               />
             </ListItem>
-            <ListItem button onClick={() => this.props.changePageNumber(2)}>
+            <ListItem button onClick={() => this.changePageNumber(2)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -116,13 +137,13 @@ class Layout extends Component {
                 <Assignment />
               </ListItemIcon>
               <ListItemText
-                primary="Reports"
+                primary="Create"
                 classes={{
                   primary: classes.item
                 }}
               />
             </ListItem>
-            <ListItem button onClick={() => this.props.changePageNumber(3)}>
+            <ListItem button onClick={() => this.changePageNumber(3)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -131,19 +152,13 @@ class Layout extends Component {
                 <CloudUpload />
               </ListItemIcon>
               <ListItemText
-                primary="Upload"
+                primary="Develop"
                 classes={{
                   primary: classes.item
                 }}
               />
             </ListItem>
-          </List>
-          <List
-            classes={{
-              root: classes.bottomList
-            }}
-          >
-            <ListItem button onClick={() => this.props.changePageNumber(4)}>
+            <ListItem button onClick={() => this.changePageNumber(4)}>
               <ListItemIcon
                 classes={{
                   root: classes.item
@@ -152,40 +167,30 @@ class Layout extends Component {
                 <HelpIcon />
               </ListItemIcon>
               <ListItemText
-                primary="Help"
-                classes={{
-                  primary: classes.item
-                }}
-              />
-            </ListItem>
-            <ListItem button onClick={() => this.props.changePageNumber(5)}>
-              <ListItemIcon
-                classes={{
-                  root: classes.item
-                }}
-              >
-                <SetIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Settings"
+                primary="Contact"
                 classes={{
                   primary: classes.item
                 }}
               />
             </ListItem>
           </List>
+          <Divider style={{ marginTop: 25 }} />
+          <div style={{ position: 'absolute', bottom: 0 }}>
+            <SocialBar>
+              <SocialImg src={GITHUB} alt="Github" />
+              <SocialImg src={STACKOVERFLOW} alt="Stackoverflow" />
+              <SocialImg src={GITLAB} alt="Gitlab" />
+            </SocialBar>
+          </div>
         </Drawer>
         <main className={classes.content}>
-          {this.props.pageNumber === 1 && <Dashboard />}
-          {this.props.pageNumber === 2 && <Reports />}
-          {this.props.pageNumber === 3 && <Upload />}
-          {this.props.pageNumber === 4 && <Help />}
-          {this.props.pageNumber === 5 && <Settings />}
+          {pageNumber === 1 && <Home />}
+          {pageNumber === 2 && <Create />}
+          {pageNumber === 3 && <Develop />}
+          {pageNumber === 4 && <Contact />}
         </main>
       </div>
     );
   }
 }
-export default compose(connect(mapStateToProps, mapDispatchToProps))(
-  withStyles(styles)(Layout)
-);
+export default withStyles(styles)(Layout);
