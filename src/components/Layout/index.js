@@ -82,7 +82,7 @@ const styles = theme => ({
 
 class Layout extends Component {
   state = {
-    pageNumber: 2
+    pageNumber: 4
   };
 
   changePageNumber = number => {
