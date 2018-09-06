@@ -14,6 +14,12 @@ const BackDiv = styled.div`
   width: 100%;
   height: 100%;
   position: fixed;
+
+  @media (max-width: 1100px) {
+    top: 0;
+    left: 0;
+    background-position: 55% 50%;
+  }
 `;
 
 const CenterDiv = styled.div`
@@ -22,11 +28,22 @@ const CenterDiv = styled.div`
   text-align: center;
   position: absolute;
   top: 35%;
+
+  @media (max-width: 1100px) {
+    top: 30%;
+    padding-right: 0px;
+  }
 `;
 
 const HeaderH1 = styled.div`
   font-size: 4em;
   color: ${colors.secondaryLight};
+
+  @media (max-width: 1100px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 3em;
+  }
 `;
 
 const styles = theme => ({

@@ -12,6 +12,11 @@ const BackDiv = styled.div`
   padding-left: 40px;
   padding-right: 40px;
   position: fixed;
+
+  @media (max-width: 1100px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 
 const CenterDiv = styled.div`
@@ -20,6 +25,11 @@ const CenterDiv = styled.div`
   padding-left: 25%;
   position: absolute;
   top: 30%;
+
+  @media (max-width: 1100px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 const styles = theme => ({
@@ -27,8 +37,12 @@ const styles = theme => ({
     display: 'flex'
   },
   paper: {
-    width: '50%',
-    padding: 15
+    padding: 15,
+    marginRight: 20,
+    [theme.breakpoints.up('md')]: {
+      width: '50%',
+      marginRight: 0
+    }
   },
   header: {
     color: colors.secondary

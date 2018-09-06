@@ -42,6 +42,7 @@ class Home extends Component {
 
   render() {
     const slide = this.state.slide;
+
     //const slide = this.state.permSlide;
     return (
       <div
