@@ -9,7 +9,8 @@ import {
   Divider,
   CardActions,
   Grid,
-  Fade
+  Fade,
+  Hidden
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -41,6 +42,11 @@ const TextDiv = styled.div`
   text-align: center;
   padding-left: 200px;
   padding-right: 200px;
+
+  @media (max-width: 1100px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 const CardImage = styled.img`
   width: auto;
@@ -62,6 +68,11 @@ const Dots = styled.div`
   margin-bottom: 75px;
   margin-right: auto;
   margin-left: auto;
+
+  @media (max-width: 1100px) {
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
 `;
 
 const styles = theme => ({
@@ -114,8 +125,10 @@ class Create extends Component {
               }}
             >
               <Grid container spacing={16}>
-                <Grid item md={3} />
-                <Grid item md={2}>
+                <Hidden smDown>
+                  <Grid item md={3} />
+                </Hidden>
+                <Grid item md={2} xs={6}>
                   <Card>
                     <CardImage src={SHOPIFY} />
                     <CardContent>
@@ -134,7 +147,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2}>
+                <Grid item md={2} xs={6}>
                   <Card>
                     <CardImage src={SQUARESPACE} />
                     <CardContent>
@@ -153,7 +166,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2}>
+                <Grid item md={2} xs={6}>
                   <Card>
                     <CardImage src={WORDPRESS} />
                     <CardContent>
@@ -172,7 +185,9 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={3} />
+                <Hidden smDown>
+                  <Grid item md={3} />
+                </Hidden>
               </Grid>
             </div>
             <TextDiv>
@@ -199,8 +214,10 @@ class Create extends Component {
               }}
             >
               <Grid container spacing={16}>
-                <Grid item md={2} />
-                <Grid item md={2}>
+                <Hidden smDown>
+                  <Grid item md={2} />
+                </Hidden>
+                <Grid item md={2} xs={6}>
                   <Card>
                     <CardImage src={REACT} />
                     <CardContent>
@@ -219,7 +236,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2}>
+                <Grid item md={2} xs={6}>
                   <Card>
                     <CardImage src={ANGULAR} />
                     <CardContent>
@@ -238,7 +255,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2}>
+                <Grid item md={2} xs={6}>
                   <Card>
                     <CardImage src={ANDROID} />
                     <CardContent>
@@ -257,7 +274,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2}>
+                <Grid item md={2} xs={6}>
                   <Card>
                     <CardImage src={FLUTTER} />
                     <CardContent>
@@ -276,7 +293,9 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} />
+                <Hidden smDown>
+                  <Grid item md={2} />
+                </Hidden>
               </Grid>
             </div>
             <TextDiv style={{ marginBottom: 50 }}>
@@ -285,7 +304,7 @@ class Create extends Component {
                 Services
               </Typography>
               <Typography className={classes.body} variant="headline">
-                If you already have a websiter or application, but are just
+                If you already have a website or application, but are just
                 looking for some new additions, this can be done as well. For
                 example, local churches might look to update their website to
                 support live streaming to broadcast Sunday service. They might

@@ -69,11 +69,11 @@ const styles = theme => ({
   content: {
     backgroundColor: '#FAFAFA',
     position: 'relative',
-    float: 'right',
     height: '100%',
     [theme.breakpoints.up('md')]: {
+      float: 'right',
       width: `calc(100% - ${drawerWidth}px)`
-    },
+    }
   },
   avatar: {
     height: 200,
@@ -94,7 +94,7 @@ const styles = theme => ({
 
 class Layout extends Component {
   state = {
-    pageNumber: 1,
+    pageNumber: 2,
     mobileOpen: false
   };
 
