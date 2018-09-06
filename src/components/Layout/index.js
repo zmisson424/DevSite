@@ -71,7 +71,9 @@ const styles = theme => ({
     position: 'relative',
     float: 'right',
     height: '100%',
-    width: 'calc(100% - 245px)'
+    [theme.breakpoints.up('md')]: {
+      width: `calc(100% - ${drawerWidth}px)`
+    },
   },
   avatar: {
     height: 200,
