@@ -13,7 +13,7 @@ const BackDiv = styled.div`
   padding-right: 40px;
   position: fixed;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -26,7 +26,7 @@ const CenterDiv = styled.div`
   position: absolute;
   top: 30%;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     padding-left: 0;
     padding-right: 0;
   }

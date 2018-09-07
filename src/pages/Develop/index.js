@@ -35,7 +35,7 @@ const BackDiv = styled.div`
   padding-left: 40px;
   padding-right: 40px;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;

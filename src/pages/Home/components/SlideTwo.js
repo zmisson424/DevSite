@@ -15,7 +15,7 @@ const BackDiv = styled.div`
   height: 100%;
   position: fixed;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     top: 0;
     left: 0;
     background-position: 50% 50%;
@@ -29,7 +29,7 @@ const CenterDiv = styled.div`
   position: absolute;
   top: 35%;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     top: 30%;
     padding-right: 0px;
   }
@@ -39,7 +39,7 @@ const HeaderH1 = styled.div`
   font-size: 4em;
   color: ${colors.secondary};
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 3em;

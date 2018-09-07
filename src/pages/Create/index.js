@@ -43,7 +43,7 @@ const TextDiv = styled.div`
   padding-left: 200px;
   padding-right: 200px;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -69,7 +69,7 @@ const Dots = styled.div`
   margin-right: auto;
   margin-left: auto;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     margin-top: 35px;
     margin-bottom: 20px;
   }
