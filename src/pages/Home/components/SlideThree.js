@@ -37,7 +37,7 @@ const CenterDiv = styled.div`
 
 const HeaderH1 = styled.div`
   font-size: 4em;
-  color: ${colors.secondaryLight};
+  color: ${colors.secondary};
 
   @media (max-width: 960px) {
     padding-left: 10px;

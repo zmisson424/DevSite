@@ -80,7 +80,7 @@ const styles = theme => ({
     display: 'flex'
   },
   header: {
-    color: colors.primaryLight,
+    color: colors.secondary,
     marginBottom: 15
   },
   body: {

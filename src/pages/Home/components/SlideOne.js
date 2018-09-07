@@ -36,6 +36,7 @@ const CenterDiv = styled.div`
 `;
 
 const HeaderH1 = styled.div`
+  font-family: Impact, Charcoal, sans-serif;
   font-size: 5em;
   color: ${colors.secondary};
 
