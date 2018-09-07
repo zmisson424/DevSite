@@ -125,10 +125,10 @@ class Create extends Component {
               }}
             >
               <Grid container spacing={16}>
-                <Hidden smDown>
-                  <Grid item md={3} />
+                <Hidden mdDown>
+                  <Grid item lg={3} />
                 </Hidden>
-                <Grid item md={2} xs={6}>
+                <Grid item lg={2} md={4} xs={6}>
                   <Card>
                     <CardImage src={SHOPIFY} />
                     <CardContent>
@@ -147,7 +147,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
+                <Grid item lg={2} md={4} xs={6}>
                   <Card>
                     <CardImage src={SQUARESPACE} />
                     <CardContent>
@@ -166,7 +166,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
+                <Grid item lg={2} md={4} xs={6}>
                   <Card>
                     <CardImage src={WORDPRESS} />
                     <CardContent>
@@ -185,8 +185,8 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Hidden smDown>
-                  <Grid item md={3} />
+                <Hidden mdDown>
+                  <Grid item lg={3} />
                 </Hidden>
               </Grid>
             </div>
@@ -214,10 +214,10 @@ class Create extends Component {
               }}
             >
               <Grid container spacing={16}>
-                <Hidden smDown>
-                  <Grid item md={2} />
+                <Hidden mdDown>
+                  <Grid item lg={2} />
                 </Hidden>
-                <Grid item md={2} xs={6}>
+                <Grid item lg={2} md={3} xs={6}>
                   <Card>
                     <CardImage src={REACT} />
                     <CardContent>
@@ -236,7 +236,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
+                <Grid item lg={2} md={3} xs={6}>
                   <Card>
                     <CardImage src={ANGULAR} />
                     <CardContent>
@@ -255,7 +255,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
+                <Grid item lg={2} md={3} xs={6}>
                   <Card>
                     <CardImage src={ANDROID} />
                     <CardContent>
@@ -274,7 +274,7 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
+                <Grid item lg={2} md={3} xs={6}>
                   <Card>
                     <CardImage src={FLUTTER} />
                     <CardContent>
@@ -293,8 +293,8 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Hidden smDown>
-                  <Grid item md={2} />
+                <Hidden mdDown>
+                  <Grid item lg={2} />
                 </Hidden>
               </Grid>
             </div>

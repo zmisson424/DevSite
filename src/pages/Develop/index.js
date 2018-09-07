@@ -108,7 +108,7 @@ class Develop extends Component {
       <BackDiv>
         <SectionHeader>Web</SectionHeader>
         <Grid container spacing={16}>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true}>
               <Card className={classes.card}>
                 <CardImage src={HTML5} />
@@ -125,7 +125,7 @@ class Develop extends Component {
               </Card>
             </Grow>
           </Grid>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={1000}>
               <Card className={classes.card}>
                 <CardImage src={REACT} />
@@ -142,7 +142,7 @@ class Develop extends Component {
               </Card>
             </Grow>
           </Grid>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={2000}>
               <Card className={classes.card}>
                 <CardImage src={ANGULAR} />
@@ -162,7 +162,7 @@ class Develop extends Component {
 
         <SectionHeader>Apps</SectionHeader>
         <Grid container spacing={16}>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={1000}>
               <Card className={classes.card}>
                 <CardImage src={ANDROID} />
@@ -180,7 +180,7 @@ class Develop extends Component {
               </Card>
             </Grow>
           </Grid>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={2000}>
               <Card className={classes.card}>
                 <CardImage src={FLUTTER} />
@@ -202,7 +202,7 @@ class Develop extends Component {
         <SectionHeader>Services</SectionHeader>
 
         <Grid container spacing={16}>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={3000}>
               <Card className={classes.card}>
                 <CardImage src={FIREBASE} />
@@ -219,7 +219,7 @@ class Develop extends Component {
               </Card>
             </Grow>
           </Grid>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={4000}>
               <Card className={classes.card}>
                 <CardImage src={GOOGLE} />
@@ -235,7 +235,7 @@ class Develop extends Component {
               </Card>
             </Grow>
           </Grid>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={5000}>
               <Card className={classes.card}>
                 <CardImage src={AWS} />
@@ -252,7 +252,7 @@ class Develop extends Component {
               </Card>
             </Grow>
           </Grid>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={6000}>
               <Card className={classes.card}>
                 <CardImage src={MONGO} />
@@ -272,7 +272,7 @@ class Develop extends Component {
 
         <SectionHeader>Design</SectionHeader>
         <Grid container spacing={16} style={{ marginBottom: 25 }}>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={4000}>
               <Card className={classes.card}>
                 <CardImage src={MATERIAL} />
@@ -290,7 +290,7 @@ class Develop extends Component {
               </Card>
             </Grow>
           </Grid>
-          <Grid item md={2} xs={6}>
+          <Grid item lg={2} md={3} xs={6}>
             <Grow in={true} timeout={5000}>
               <Card className={classes.card}>
                 <CardImage src={BOOTSTRAP} />
