@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../../config';
 
-import { Typography, Grow, Fade } from '@material-ui/core';
+import { Typography, Grow } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 import BackgroundImage from './ohio_background.jpg';

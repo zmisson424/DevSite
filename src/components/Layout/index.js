@@ -8,7 +8,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Avatar,
   Divider,
   Hidden,
   AppBar,
@@ -196,7 +195,6 @@ class Layout extends Component {
                 />
               </ListItem>
             </List>
-            <Divider style={{ marginTop: 25 }} />
             <div style={{ position: 'absolute', bottom: 0 }}>
               <SocialBar>
                 <A href="https://www.github.com/zmisson424">

@@ -5,14 +5,9 @@ import { colors } from '../../config';
 import {
   Typography,
   Card,
-  CardActions,
   CardContent,
   Grid,
-  Divider,
   Grow,
-  Button,
-  Modal,
-  Paper
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
