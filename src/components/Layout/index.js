@@ -97,7 +97,7 @@ const styles = theme => ({
 
 class Layout extends Component {
   state = {
-    pageNumber: 2,
+    pageNumber: 1,
     mobileOpen: false
   };
 
