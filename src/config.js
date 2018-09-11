@@ -6,5 +6,5 @@ export const colors = {
   secondaryDark: '#009faf',
   secondaryLight: '#88ffff',
   white: '#fafafa',
-  background: '#212121'
+  background: '#424242'
 };
