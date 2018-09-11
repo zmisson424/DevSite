@@ -312,8 +312,8 @@ class Create extends Component {
                         Flutter
                       </Typography>
                       <Typography component="p">
-                        Still in early development, Flutter uses a React like
-                        framework to create for both Android and iOS.
+                        Still in early development, Flutter uses a framework
+                        similar to React to create for both Android and iOS.
                       </Typography>
                     </CardContent>
                     <Divider />
