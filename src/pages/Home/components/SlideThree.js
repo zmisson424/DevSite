@@ -63,10 +63,10 @@ class SlideThree extends Component {
       <BackDiv>
         <Grow in={true} timeout={1500}>
           <CenterDiv>
-            <HeaderH1>Local Development</HeaderH1>
+            <HeaderH1>Based in Columbus, Ohio</HeaderH1>
             <Typography className={classes.text}>
-              Based out of Columbus, it is easy to help all corners of Ohio make
-              their projects possible.
+              Centrally located to help all parts of the U.S. make their
+              projects possible
             </Typography>
           </CenterDiv>
         </Grow>
