@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../../config';
 
-import { Typography, Grow, Hidden } from '@material-ui/core';
+import { Typography, Grow } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
 import BackgroundImage from './computer_background.jpg';
@@ -15,7 +15,7 @@ const BackDiv = styled.div`
   height: 100%;
   position: fixed;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     top: 0;
     left: 0;
     background-position: 50% 50%;
@@ -29,17 +29,18 @@ const CenterDiv = styled.div`
   position: absolute;
   top: 35%;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     top: 30%;
     padding-right: 0px;
   }
 `;
 
 const HeaderH1 = styled.div`
+  font-family: Impact, Charcoal, sans-serif;
   font-size: 5em;
   color: ${colors.secondary};
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     font-size: 4em;
   }
 `;

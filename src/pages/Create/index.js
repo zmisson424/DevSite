@@ -43,7 +43,7 @@ const TextDiv = styled.div`
   padding-left: 200px;
   padding-right: 200px;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -69,7 +69,7 @@ const Dots = styled.div`
   margin-right: auto;
   margin-left: auto;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 960px) {
     margin-top: 35px;
     margin-bottom: 20px;
   }
@@ -80,11 +80,20 @@ const styles = theme => ({
     display: 'flex'
   },
   header: {
-    color: colors.primaryLight,
+    color: colors.secondary,
     marginBottom: 15
   },
   body: {
     color: colors.white
+  },
+  card: {
+    height: '100%'
+  },
+  cardContent: {
+    height: '38%'
+  },
+  actions: {
+    //
   }
 });
 
@@ -98,22 +107,22 @@ class Create extends Component {
           <div>
             <TextDiv>
               <Typography className={classes.header} variant="display3">
-                Where to start?
+                Lets Get Started
               </Typography>
               <Typography className={classes.body} variant="headline">
-                There are lots of different approaches to make the perfect
-                application that fits your buisness.
+                Embark Developing is here to make your vision a reality.
               </Typography>
               <Dots />
               <Typography className={classes.header} variant="display3">
                 Small Business
               </Typography>
               <Typography className={classes.body} variant="headline">
-                For small business trying to make a space for themselves in the
-                world, it can be best to use Shopify or Squarespace. Embark can
-                help launch and create a site that perfectly matches your
-                vision. Then it will be easy for you to maintain and update your
-                site with out the need of a developer. Simple and intuitive.
+                For small businesses trying to make a name for themselves in the
+                digital world, Shopify, Squarespace and WordPress are ideal.
+                Embark can help launch and create a site that perfectly matches
+                your vision. Easy for you to maintain and update, these options
+                eliminate the need of constant developer input. Simple and
+                intuitive.
               </Typography>
             </TextDiv>
             <div
@@ -125,13 +134,13 @@ class Create extends Component {
               }}
             >
               <Grid container spacing={16}>
-                <Hidden smDown>
-                  <Grid item md={3} />
+                <Hidden mdDown>
+                  <Grid item lg={3} />
                 </Hidden>
-                <Grid item md={2} xs={6}>
-                  <Card>
+                <Grid item lg={2} md={4} xs={6}>
+                  <Card className={classes.card}>
                     <CardImage src={SHOPIFY} />
-                    <CardContent>
+                    <CardContent className={classes.cardContent}>
                       <Typography
                         gutterBottom
                         variant="headline"
@@ -139,7 +148,10 @@ class Create extends Component {
                       >
                         Shopify
                       </Typography>
-                      <Typography component="p">Shopify</Typography>
+                      <Typography component="p">
+                        Make cusomizable retail websites that can be updated and
+                        changed without a permanent developer.
+                      </Typography>
                     </CardContent>
                     <Divider />
                     <CardActions className={classes.actions}>
@@ -147,10 +159,10 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
-                  <Card>
+                <Grid item lg={2} md={4} xs={6}>
+                  <Card className={classes.card}>
                     <CardImage src={SQUARESPACE} />
-                    <CardContent>
+                    <CardContent className={classes.cardContent}>
                       <Typography
                         gutterBottom
                         variant="headline"
@@ -158,7 +170,10 @@ class Create extends Component {
                       >
                         Squarespace
                       </Typography>
-                      <Typography component="p">Shopify</Typography>
+                      <Typography component="p">
+                        Create a unique site that can show off any style of
+                        business from retail to generating a blog.
+                      </Typography>
                     </CardContent>
                     <Divider />
                     <CardActions className={classes.actions}>
@@ -166,10 +181,10 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
-                  <Card>
+                <Grid item lg={2} md={4} xs={6}>
+                  <Card className={classes.card}>
                     <CardImage src={WORDPRESS} />
-                    <CardContent>
+                    <CardContent className={classes.cardContent}>
                       <Typography
                         gutterBottom
                         variant="headline"
@@ -177,7 +192,10 @@ class Create extends Component {
                       >
                         WordPress
                       </Typography>
-                      <Typography component="p">Shopify</Typography>
+                      <Typography component="p">
+                        A powerful tool to get any business off the ground,
+                        WordPress is ideal for meeting every need.
+                      </Typography>
                     </CardContent>
                     <Divider />
                     <CardActions className={classes.actions}>
@@ -185,8 +203,8 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Hidden smDown>
-                  <Grid item md={3} />
+                <Hidden mdDown>
+                  <Grid item lg={3} />
                 </Hidden>
               </Grid>
             </div>
@@ -196,13 +214,13 @@ class Create extends Component {
                 Startup
               </Typography>
               <Typography className={classes.body} variant="headline">
-                Do you have a great idea and want to launch your own tech
-                service on the web, mobile application or both, but might not
+                Do you have a great idea? Do you want to launch your own tech
+                service on the web, mobile application or both, but {"don't "}
                 know where to start? A fresh build might be the solution. Using
                 modern frameworks such as React or Angular can help speed up the
-                development process for your Web App. Using Android Studio a new
-                Android Application can also be built from the ground up to do
-                exactyl as you envision.
+                development process for your Web App. Using Android Studio, a
+                new Android Application can be built from the ground up to do
+                exactly as you envision.
               </Typography>
             </TextDiv>
             <div
@@ -214,13 +232,13 @@ class Create extends Component {
               }}
             >
               <Grid container spacing={16}>
-                <Hidden smDown>
-                  <Grid item md={2} />
+                <Hidden mdDown>
+                  <Grid item lg={2} />
                 </Hidden>
-                <Grid item md={2} xs={6}>
-                  <Card>
+                <Grid item lg={2} md={3} xs={6}>
+                  <Card className={classes.card}>
                     <CardImage src={REACT} />
-                    <CardContent>
+                    <CardContent className={classes.cardContent}>
                       <Typography
                         gutterBottom
                         variant="headline"
@@ -228,7 +246,10 @@ class Create extends Component {
                       >
                         React
                       </Typography>
-                      <Typography component="p">Shopify</Typography>
+                      <Typography component="p">
+                        Fast, simple and scalable. React is one of the most
+                        popular frameworks to build a modern Web App.
+                      </Typography>
                     </CardContent>
                     <Divider />
                     <CardActions className={classes.actions}>
@@ -236,10 +257,10 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
-                  <Card>
+                <Grid item lg={2} md={3} xs={6}>
+                  <Card className={classes.card}>
                     <CardImage src={ANGULAR} />
-                    <CardContent>
+                    <CardContent className={classes.cardContent}>
                       <Typography
                         gutterBottom
                         variant="headline"
@@ -247,7 +268,10 @@ class Create extends Component {
                       >
                         Angular
                       </Typography>
-                      <Typography component="p">Shopify</Typography>
+                      <Typography component="p">
+                        Arguably as popular as React, Angular is another
+                        fantastic Web App framework.
+                      </Typography>
                     </CardContent>
                     <Divider />
                     <CardActions className={classes.actions}>
@@ -255,10 +279,10 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
-                  <Card>
+                <Grid item lg={2} md={3} xs={6}>
+                  <Card className={classes.card}>
                     <CardImage src={ANDROID} />
-                    <CardContent>
+                    <CardContent className={classes.cardContent}>
                       <Typography
                         gutterBottom
                         variant="headline"
@@ -266,7 +290,9 @@ class Create extends Component {
                       >
                         Android
                       </Typography>
-                      <Typography component="p">Shopify</Typography>
+                      <Typography component="p">
+                        The most popular mobile operating system in the world.
+                      </Typography>
                     </CardContent>
                     <Divider />
                     <CardActions className={classes.actions}>
@@ -274,10 +300,10 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Grid item md={2} xs={6}>
-                  <Card>
+                <Grid item lg={2} md={3} xs={6}>
+                  <Card className={classes.card}>
                     <CardImage src={FLUTTER} />
-                    <CardContent>
+                    <CardContent className={classes.cardContent}>
                       <Typography
                         gutterBottom
                         variant="headline"
@@ -285,7 +311,10 @@ class Create extends Component {
                       >
                         Flutter
                       </Typography>
-                      <Typography component="p">Shopify</Typography>
+                      <Typography component="p">
+                        Still in early development, Flutter uses a framework
+                        similar to React to create for both Android and iOS.
+                      </Typography>
                     </CardContent>
                     <Divider />
                     <CardActions className={classes.actions}>
@@ -293,8 +322,8 @@ class Create extends Component {
                     </CardActions>
                   </Card>
                 </Grid>
-                <Hidden smDown>
-                  <Grid item md={2} />
+                <Hidden mdDown>
+                  <Grid item lg={2} />
                 </Hidden>
               </Grid>
             </div>
@@ -304,12 +333,11 @@ class Create extends Component {
                 Services
               </Typography>
               <Typography className={classes.body} variant="headline">
-                If you already have a website or application, but are just
-                looking for some new additions, this can be done as well. For
-                example, local churches might look to update their website to
-                support live streaming to broadcast Sunday service. They might
-                also want to add a spot to accept donations through a credit
-                card. These small imporvements are always possible.
+                Embark Developing can help you make new additions to your
+                existing website or application. Whether you want to create an
+                easy way to accept donations for your non-profit or allow live
+                streaming of you event, Embark can help you access a greater
+                audience.
               </Typography>
             </TextDiv>
           </div>

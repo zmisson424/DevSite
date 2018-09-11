@@ -10,5 +10,3 @@ import "bootstrap/dist/css/bootstrap.css";
 addDecorator(story => (
   <div style={{ fontFamily: "Nunito, sans-serif" }}>{story()}</div>
 ));
-
-require("./components/header");
