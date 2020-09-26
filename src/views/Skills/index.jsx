@@ -72,6 +72,7 @@ function Skills() {
           <ListItem text="Firebase" />
           <ListItem text="DigitalOcean" />
           <ListItem text="Jira" />
+          <ListItem text="MySQL/NoSQL/Graph DB" />
         </div>
       </div>
     </div>
