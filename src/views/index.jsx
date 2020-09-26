@@ -13,6 +13,7 @@ import { MyColors } from "../theme/colors";
 
 const useStyles = makeStyles({
   root: {
+    height: "100vh",
     overflowY: "auto",
     backgroundColor: MyColors.background
   },

@@ -2,9 +2,12 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { MyColors } from "../theme/colors";
 
 const useStyles = makeStyles({
   root: {
+    position: "absolute",
+    backgroundColor: MyColors.background,
     width: "100%",
     display: "flex",
     alignItems: "center",
