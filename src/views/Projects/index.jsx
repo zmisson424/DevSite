@@ -8,8 +8,18 @@ const useStyles = makeStyles({
     width: "100%",
     minHeight: "100vh",
     display: "flex",
-    justifyContent: "start",
-    alignItems: "center"
+    flexDirection: "column",
+    alignItems: "end",
+    justifyContent: "center"
+  },
+  wrapper: {
+    width: "75%"
+  },
+  header: {
+    marginBottom: 48
+  },
+  summary: {
+    color: MyColors.white
   }
 });
 
@@ -18,9 +28,20 @@ function Projects() {
 
   return (
     <div className={classes.root}>
-      <Typography variant="h6" color="secondary">
-        Projects
+      <Typography variant="h3" color="secondary" className={classes.header}>
+        Experience
       </Typography>
+      <div className={classes.wrapper}>
+        <Typography variant="h5" style={{ color: MyColors.white }}>
+          SpeakEasy
+        </Typography>
+        <Typography variant="h5" style={{ color: MyColors.white }}>
+          Bluequeue
+        </Typography>
+        <Typography variant="h5" style={{ color: MyColors.white }}>
+          Learning Express
+        </Typography>
+      </div>
     </div>
   );
 }
