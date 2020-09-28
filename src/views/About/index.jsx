@@ -49,7 +49,7 @@ function About() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="about" className={classes.root}>
       <Typography variant="h3" color="secondary" className={classes.header}>
         About
       </Typography>

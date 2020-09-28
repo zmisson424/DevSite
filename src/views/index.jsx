@@ -41,7 +41,7 @@ function Home() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="app-root" className={classes.root}>
       <AppBar />
       <div className={classes.wrapper}>
         <Header />

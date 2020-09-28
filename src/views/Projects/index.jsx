@@ -27,7 +27,7 @@ function Projects() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="projects" className={classes.root}>
       <Typography variant="h3" color="secondary" className={classes.header}>
         Experience
       </Typography>

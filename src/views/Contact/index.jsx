@@ -27,7 +27,7 @@ function Contact() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="contact" className={classes.root}>
       <div className={classes.wrapper}>
         <div className={classes.header}>
           <Typography variant="h3" color="secondary">

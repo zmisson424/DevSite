@@ -39,7 +39,7 @@ function Skills() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div id="skills" className={classes.root}>
       <Typography variant="h3" color="secondary" className={classes.header}>
         Skills
       </Typography>
