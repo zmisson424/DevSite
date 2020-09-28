@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Tooltip from "@material-ui/core/Tooltip";
 import GithubIcon from "../assets/images/github-light.png";
 import CodepenIcon from "../assets/images/codepen-light.png";
@@ -7,6 +8,8 @@ import StackOverflowIcon from "../assets/images/stackoverflow-light.png";
 import LinkedInIcon from "../assets/images/linkedin-light.png";
 import { MyColors } from "../theme/colors";
 import { SocialLinks } from "../config";
+
+import "./styles.css";
 
 const useStyles = makeStyles({
   root: {
@@ -26,8 +29,17 @@ const useStyles = makeStyles({
 
 function SocialIcons({ text }) {
   const classes = useStyles();
-  var url;
+
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(!show);
+    }, 1000);
+  }, []);
+
   const handleClick = type => {
+    var url;
     switch (type) {
       case "github":
         url = SocialLinks.github;
@@ -57,10 +69,20 @@ function SocialIcons({ text }) {
         className={classes.iconWrapper}
         onClick={() => handleClick("github")}
       >
-        <Tooltip title="Github" placement="left-start">
-          <img className={classes.icon} src={GithubIcon} />
-        </Tooltip>
+        <TransitionGroup component={null}>
+          <CSSTransition
+            className="slide"
+            in={show}
+            timeout={{ enter: 350, exit: 350 }}
+            key="github"
+          >
+            <Tooltip title="Github" placement="left-start">
+              <img className={classes.icon} src={GithubIcon} />
+            </Tooltip>
+          </CSSTransition>
+        </TransitionGroup>
       </div>
+
       <div
         className={classes.iconWrapper}
         onClick={() => handleClick("stackoverflow")}
