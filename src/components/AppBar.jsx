@@ -37,10 +37,14 @@ const useStyles = makeStyles({
     flexGrow: 1
   },
   action: {
-    width: 100
+    width: 125,
+    textAlign: "center"
   },
   logo: {
     height: 40
+  },
+  button: {
+    marginLeft: 16
   }
 });
 
@@ -75,8 +79,13 @@ function AppBar() {
         </Link>
       </div>
       <div className={classes.action}>
-        <Link href="#skills" variant="body1" color="secondary" underline="none">
-          Skills
+        <Link
+          href="#expertise"
+          variant="body1"
+          color="secondary"
+          underline="none"
+        >
+          Expertise
         </Link>
       </div>
       <div className={classes.action}>
