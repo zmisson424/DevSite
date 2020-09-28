@@ -14,8 +14,8 @@ import "./styles.css";
 const useStyles = makeStyles({
   root: {
     position: "absolute",
-    bottom: 20,
-    right: 20
+    bottom: 30,
+    right: 30
   },
   iconWrapper: {
     padding: 12,
