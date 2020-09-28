@@ -1,38 +1,30 @@
-.bigImage {
-  width: 250px;
-  height: 250px;
-}
-
-.fade-enter {
-  opacity: 0.01;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: 500ms;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-  opacity: 0.01;
-  transition: 1200ms;
-}
-
 /* ANIMATIONS */
 .slide-enter {
-  transform: translateX(100%);
+  transform: translateY(100%);
 }
 .slide-enter-active {
-  transform: translateX(0%);
-  transition: transform 1000ms ease-in-out;
+  transform: translateY(0%);
+  transition: transform 1200ms ease-in-out;
 }
 .slide-exit {
-  transform: translateX(0%);
+  transform: translateY(0%);
 }
 .slide-exit-active {
-  transform: translateX(-100%);
-  transition: transform 1000ms ease-in-out;
+  transform: translateY(-100%);
+  transition: transform 1200ms ease-in-out;
+}
+
+.bounce-enter {
+  transform: translateY(100%);
+}
+.bounce-enter-active {
+  transform: translateY(0%);
+  transition: transform 1200ms ease-in-out;
+}
+.bounce-exit {
+  transform: translateY(0%);
+}
+.bounce-exit-active {
+  transform: translateY(-100%);
+  transition: transform 1200ms ease-in-out;
 }

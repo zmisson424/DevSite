@@ -29,13 +29,10 @@ const useStyles = makeStyles({
 
 function SocialIcons({ text }) {
   const classes = useStyles();
-
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShow(!show);
-    }, 1000);
+    setShow(true);
   }, []);
 
   const handleClick = type => {
@@ -64,50 +61,43 @@ function SocialIcons({ text }) {
   };
 
   return (
-    <div className={classes.root}>
-      <div
-        className={classes.iconWrapper}
-        onClick={() => handleClick("github")}
-      >
-        <TransitionGroup component={null}>
-          <CSSTransition
-            className="slide"
-            in={show}
-            timeout={{ enter: 350, exit: 350 }}
-            key="github"
-          >
-            <Tooltip title="Github" placement="left-start">
-              <img className={classes.icon} src={GithubIcon} />
-            </Tooltip>
-          </CSSTransition>
-        </TransitionGroup>
-      </div>
+    <CSSTransition in={show} timeout={1500} classNames="slide">
+      <div className={classes.root}>
+        <div
+          className={classes.iconWrapper}
+          onClick={() => handleClick("github")}
+        >
+          <Tooltip title="Github" placement="left-start">
+            <img className={classes.icon} src={GithubIcon} />
+          </Tooltip>
+        </div>
 
-      <div
-        className={classes.iconWrapper}
-        onClick={() => handleClick("stackoverflow")}
-      >
-        <Tooltip title="StackOverflow" placement="left-start">
-          <img className={classes.icon} src={StackOverflowIcon} />
-        </Tooltip>
+        <div
+          className={classes.iconWrapper}
+          onClick={() => handleClick("stackoverflow")}
+        >
+          <Tooltip title="StackOverflow" placement="left-start">
+            <img className={classes.icon} src={StackOverflowIcon} />
+          </Tooltip>
+        </div>
+        <div
+          className={classes.iconWrapper}
+          onClick={() => handleClick("codepen")}
+        >
+          <Tooltip title="CodePen" placement="left-start">
+            <img className={classes.icon} src={CodepenIcon} />
+          </Tooltip>
+        </div>
+        <div
+          className={classes.iconWrapper}
+          onClick={() => handleClick("linkedin")}
+        >
+          <Tooltip title="LinkedIn" placement="left-start">
+            <img className={classes.icon} src={LinkedInIcon} />
+          </Tooltip>
+        </div>
       </div>
-      <div
-        className={classes.iconWrapper}
-        onClick={() => handleClick("codepen")}
-      >
-        <Tooltip title="CodePen" placement="left-start">
-          <img className={classes.icon} src={CodepenIcon} />
-        </Tooltip>
-      </div>
-      <div
-        className={classes.iconWrapper}
-        onClick={() => handleClick("linkedin")}
-      >
-        <Tooltip title="LinkedIn" placement="left-start">
-          <img className={classes.icon} src={LinkedInIcon} />
-        </Tooltip>
-      </div>
-    </div>
+    </CSSTransition>
   );
 }
 
