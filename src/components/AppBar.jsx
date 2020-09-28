@@ -10,12 +10,28 @@ const useStyles = makeStyles({
     position: "fixed",
     backgroundColor: MyColors.background,
     width: "100%",
+    height: 80,
     display: "flex",
     alignItems: "center",
     paddingTop: 20,
     paddingBottom: 20,
     paddingLeft: 48,
-    paddingRight: 48
+    paddingRight: 48,
+    transition: "all 0.50s cubic-bezier(0.645, 0.045, 0.355, 1)",
+    transform: "translateY(0)"
+  },
+  rootHide: {
+    position: "fixed",
+    backgroundColor: MyColors.background,
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingLeft: 48,
+    paddingRight: 48,
+    transition: "all 0.50s cubic-bezier(0.645, 0.045, 0.355, 1)",
+    transform: "translateY(-80px)"
   },
   filler: {
     flexGrow: 1
@@ -30,15 +46,28 @@ const useStyles = makeStyles({
 
 function AppBar() {
   const classes = useStyles();
+  const [showAppBar, setShowAppBar] = useState(true);
 
   useEffect(() => {
+    let previousScrollPosition = 0;
+
     document.querySelector("#app-root").addEventListener("scroll", () => {
-      console.log("Scrolling??");
+      var position = document.querySelector("#app-root").scrollTop;
+
+      console.log(position);
+      console.log(previousScrollPosition);
+      if (position > previousScrollPosition) {
+        setShowAppBar(false);
+        previousScrollPosition = position;
+      } else if (previousScrollPosition > position) {
+        setShowAppBar(true);
+        previousScrollPosition = position;
+      }
     });
   }, []);
 
   return (
-    <div className={classes.root}>
+    <div className={showAppBar ? classes.root : classes.rootHide}>
       <Link href="/">
         <img src={Embark} className={classes.logo} />
       </Link>
