@@ -27,7 +27,9 @@ function ListItem({ text }) {
   return (
     <div className={classes.root}>
       <span className={classes.bullet}>&lt;/&gt;</span>
-      <Typography className={classes.text}>{text}</Typography>
+      <Typography align="left" className={classes.text}>
+        {text}
+      </Typography>
     </div>
   );
 }

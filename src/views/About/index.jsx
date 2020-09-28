@@ -1,7 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import ListItem from "../../components/ListItem";
 import { MyColors } from "../../theme/colors";
+import Eleanor from "../../assets/images/eleanor.jpg";
+import Podrick from "../../assets/images/podrick.jpg";
 
 const useStyles = makeStyles({
   root: {
@@ -12,36 +15,41 @@ const useStyles = makeStyles({
     alignItems: "end",
     justifyContent: "center"
   },
-  header: {
-    marginBottom: 48
-  },
-  summary: {
+  text: {
     color: MyColors.white
   },
   section: {
-    width: "75%",
+    width: "95%",
+    display: "flex"
+  },
+  images: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: "center"
   },
-  image: {
-    width: 200,
-    height: 250,
+  smallImage: {
+    width: 150,
+    height: 200,
+    borderRadius: 10,
+    objectFit: "cover"
+  },
+  largeImage: {
+    width: 225,
+    height: 275,
+    borderRadius: 10,
     objectFit: "cover",
-    borderRadius: 10,
-    mixBlendMode: "multiply",
-    "&:hover": {
-      mixBlendMode: "normal"
-    }
+    marginLeft: 16,
+    marginRight: 16
   },
-  imageWrapper: {
-    width: 200,
-    height: 250,
-    backgroundColor: MyColors.secondary,
-    borderRadius: 10,
-    boxShadow: `-10px 10px 10px  ${MyColors.primary}`
+  fun: {
+    width: "100%",
+    paddingLeft: "20%",
+    paddingRight: "20%",
+    textAlign: "center",
+    marginTop: 48
   },
-  imageBox: {
-    marginRight: 48
+  textArea: {
+    marginLeft: 48
   }
 });
 
@@ -50,28 +58,33 @@ function About() {
 
   return (
     <div id="about" className={classes.root}>
-      <Typography variant="h3" color="secondary" className={classes.header}>
-        About
+      <Typography variant="h2" color="secondary">
+        About Me
       </Typography>
       <div className={classes.section}>
-        <div className={classes.imageBox}>
-          <div className={classes.imageWrapper}>
-            <img
-              className={classes.image}
-              src="https://res.cloudinary.com/jerrick/image/upload/fl_progressive,q_auto,w_1024/mw3sd1epiw7tsejmfqhg.jpg"
-            />
+        <div className={classes.images}>
+          <img className={classes.smallImage} src={Eleanor} />
+          <img className={classes.largeImage} src={Eleanor} />
+          <img className={classes.smallImage} src={Podrick} />
+        </div>
+        <div className={classes.textArea}>
+          <Typography variant="body1" className={classes.text}>
+            Born and raised in Ohio. I obtained my bachelors degree from The
+            Ohio State University and then relocated to Chicago. I have been
+            professionaly programming for six years and operating my own
+            personal freelance agency for four years. I am currently employeed
+            at SpeakEasy as the Senior Software Developer.
+          </Typography>
+          <div className={classes.fun}>
+            <Typography variant="h5" color="secondary">
+              Fun Facts
+            </Typography>
+            <ListItem text="I am getting married on September 25, 2021" />
+            <ListItem text="I have a puppy (her name is Eleanor) and a bunny (his name is Podrick)" />
+            <ListItem text="I'm a big sports guy" />
+            <ListItem text="I like to travel" />
           </div>
         </div>
-        <Typography className={classes.summary}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
-          pulvinar proin gravida hendrerit lectus a. Urna id volutpat lacus
-          laoreet non curabitur gravida. Dapibus ultrices in iaculis nunc. Dui
-          ut ornare lectus sit. Odio facilisis mauris sit amet massa. Diam quis
-          enim lobortis scelerisque fermentum dui faucibus. Placerat duis
-          ultricies lacus sed turpis tincidunt id aliquet. Ipsum consequat nisl
-          vel pretium lectus quam id. In est ante in nibh.
-        </Typography>
       </div>
     </div>
   );
