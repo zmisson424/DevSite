@@ -53,9 +53,6 @@ function AppBar() {
 
     document.querySelector("#app-root").addEventListener("scroll", () => {
       var position = document.querySelector("#app-root").scrollTop;
-
-      console.log(position);
-      console.log(previousScrollPosition);
       if (position > previousScrollPosition) {
         setShowAppBar(false);
         previousScrollPosition = position;
