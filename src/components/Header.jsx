@@ -13,22 +13,21 @@ const useStyles = makeStyles({
     justifyContent: "center"
   },
   name: {
-    fontSize: 75,
+    fontSize: 50,
     fontWeight: "bold",
     color: MyColors.offWhite,
-    paddingTop: 16,
-    paddingBottom: 16
+    marginTop: -30
   },
   headerText: {
     color: MyColors.secondary,
-    fontSize: 20
+    fontSize: 100
   },
   summary: {
-    width: 400
+    width: 500
   },
   summaryText: {
-    color: MyColors.primary,
-    fontSize: 20
+    color: MyColors.white,
+    fontSize: 18
   }
 });
 
@@ -39,13 +38,18 @@ function Header() {
   return (
     <div className={classes.root}>
       <div>
-        <Typography className={classes.headerText}>Hello World</Typography>
-        <Typography className={classes.name}>Zachery Misson</Typography>
+        <Typography className={classes.headerText}>
+          {"</ Hello World >"}
+        </Typography>
+        <Typography className={classes.name}>
+          My name is Zachery Misson
+        </Typography>
         <div className={classes.summary}>
           <Typography className={classes.summaryText}>
-            Summary of a bunch of cool stuff about me that will sound really
-            cool and make people want to hire me for a job that pays really
-            well.
+            I am a software developer for both mobile and web. I consider myself
+            full stack, with lots of experience in both front and back end
+            applications. I work with several popular frameworks including
+            ReactJS, Angular, and Flutter.
           </Typography>
         </div>
       </div>
