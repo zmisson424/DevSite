@@ -8,6 +8,9 @@ const theme = createMuiTheme({
     },
     secondary: {
       main: MyColors.secondary
+    },
+    text: {
+      primary: MyColors.white
     }
   },
   typography: {
