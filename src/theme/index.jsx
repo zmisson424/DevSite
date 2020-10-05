@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 import { MyColors } from "./colors";
 
 const theme = createMuiTheme({
@@ -15,7 +15,12 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: ["Lato"]
+  },
+  overrides: {
+    MuiTypography: {
+      h2: {}
+    }
   }
 });
 
-export default theme;
+export default responsiveFontSizes(theme);
