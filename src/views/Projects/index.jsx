@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
-    alignItems: "end",
+    alignItems: "center",
     justifyContent: "center"
   },
   wrapper: {

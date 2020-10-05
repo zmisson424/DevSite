@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 import { MyColors } from "../../theme/colors";
 
 const useStyles = makeStyles({
@@ -12,14 +13,19 @@ const useStyles = makeStyles({
     alignItems: "center"
   },
   wrapper: {
-    width: "75%"
+    textAlign: "center"
   },
-  header: {
-    textAlign: "center",
-    marginBottom: 48
+  buttonRow: {
+    display: "flex",
+    marginTop: 48
   },
-  summary: {
-    color: MyColors.white
+  buttonBlock: {
+    flexGrow: 1,
+    textAlign: "center"
+  },
+  button: {
+    color: MyColors.white,
+    width: 100
   }
 });
 
@@ -29,21 +35,32 @@ function Contact() {
   return (
     <div id="contact" className={classes.root}>
       <div className={classes.wrapper}>
-        <div className={classes.header}>
-          <Typography variant="h3" color="secondary">
-            Contact
-          </Typography>
-        </div>
-        <Typography className={classes.summary}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
-          pulvinar proin gravida hendrerit lectus a. Urna id volutpat lacus
-          laoreet non curabitur gravida. Dapibus ultrices in iaculis nunc. Dui
-          ut ornare lectus sit. Odio facilisis mauris sit amet massa. Diam quis
-          enim lobortis scelerisque fermentum dui faucibus. Placerat duis
-          ultricies lacus sed turpis tincidunt id aliquet. Ipsum consequat nisl
-          vel pretium lectus quam id. In est ante in nibh.
+        <Typography variant="h2" color="secondary">
+          Contact
         </Typography>
+        <Typography variant="body1">
+          Hey! If you want to get to know me more, feel free to send an email.
+        </Typography>
+        <div className={classes.buttonRow}>
+          <div className={classes.buttonBlock}>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.button}
+            >
+              Email
+            </Button>
+          </div>
+          <div className={classes.buttonBlock}>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.button}
+            >
+              Resume
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );
