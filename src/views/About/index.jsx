@@ -6,7 +6,7 @@ import { MyColors } from "../../theme/colors";
 import Eleanor from "../../assets/images/eleanor.jpg";
 import Podrick from "../../assets/images/podrick.jpg";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     minHeight: "100vh",
@@ -51,7 +51,7 @@ const useStyles = makeStyles({
   textArea: {
     marginLeft: 48
   }
-});
+}));
 
 function About() {
   const classes = useStyles();

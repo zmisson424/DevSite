@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { MyColors } from "../theme/colors";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     minHeight: "100vh",
@@ -16,20 +16,33 @@ const useStyles = makeStyles({
     fontSize: 50,
     fontWeight: "bold",
     color: MyColors.offWhite,
-    marginTop: -30
+    marginTop: -30,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 25,
+      marginTop: 0
+    }
   },
   headerText: {
     color: MyColors.secondary,
-    fontSize: 100
+    fontSize: 100,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 40
+    }
   },
   summary: {
-    width: 500
+    width: 500,
+    [theme.breakpoints.down("sm")]: {
+      width: 275,
+      marginTop: 10
+    }
   },
   summaryText: {
-    color: MyColors.white,
-    fontSize: 18
+    fontSize: 18,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 14
+    }
   }
-});
+}));
 
 function Header() {
   const classes = useStyles();

@@ -11,7 +11,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import { MyColors } from "../theme/colors";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     height: "100vh",
     overflowY: "auto",
@@ -33,9 +33,13 @@ const useStyles = makeStyles({
   wrapper: {
     width: "100%",
     paddingLeft: 250,
-    paddingRight: 250
+    paddingRight: 250,
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: 24,
+      paddingRight: 24
+    }
   }
-});
+}));
 
 function Home() {
   const classes = useStyles();
