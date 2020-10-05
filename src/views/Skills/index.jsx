@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import ListItem from "../../components/ListItem";
 import { MyColors } from "../../theme/colors";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     minHeight: "100vh",
@@ -15,25 +15,32 @@ const useStyles = makeStyles({
   },
   wrapper: {
     width: "75%",
-    marginTop: 24
+    marginTop: 24,
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      marginTop: 10
+    }
   },
   grid: {
     display: "flex",
-    marginTop: 24
-  },
-  header: {
-    marginBottom: 48
-  },
-  summary: {
-    color: MyColors.white
+    marginTop: 24,
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      justifyContent: "center",
+      width: "100%",
+      alignItems: "center"
+    }
   },
   columns: {
-    flexGrow: 1
+    flexGrow: 1,
+    marginBottom: 24
   },
   columnHeader: {
-    color: MyColors.white
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center"
+    }
   }
-});
+}));
 
 function Skills() {
   const classes = useStyles();
@@ -44,7 +51,7 @@ function Skills() {
         Expertise
       </Typography>
       <div className={classes.wrapper}>
-        <Typography style={{ color: MyColors.white }} variant="body1">
+        <Typography variant="body1">
           I am a Full Stack developer for both web and mobile interfaces. On
           web, I generally develop using an Angular or ReactJS frontend and
           combine this with a RESTful backend. I have built both Express and
