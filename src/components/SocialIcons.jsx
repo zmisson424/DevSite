@@ -11,21 +11,32 @@ import { SocialLinks } from "../config";
 
 import "./styles.css";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     position: "absolute",
     bottom: 30,
-    right: 30
+    right: 30,
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      bottom: 0,
+      right: 0
+    }
   },
   iconWrapper: {
     padding: 12,
-    cursor: "pointer"
+    cursor: "pointer",
+    [theme.breakpoints.down("sm")]: {
+      padding: 24
+    }
   },
   icon: {
     width: 24,
     height: 24
   }
-});
+}));
 
 function SocialIcons({ text }) {
   const classes = useStyles();

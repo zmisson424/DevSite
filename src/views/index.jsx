@@ -54,8 +54,8 @@ function Home() {
         <Projects />
         <Contact />
       </div>
-      <Footer />
       <SocialIcons />
+      <Footer />
     </div>
   );
 }
