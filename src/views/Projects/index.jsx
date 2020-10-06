@@ -1,40 +1,53 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import ListItem from "../../components/ListItem";
+import Tooltip from "@material-ui/core/Tooltip";
+import Grid from "@material-ui/core/Grid";
 import { MyColors } from "../../theme/colors";
+import ReactIcon from "../../assets/images/react.svg";
+import FlutterIcon from "../../assets/images/flutter.svg";
+import ParseIcon from "../../assets/images/parse.svg";
+import DigitalOceanIcon from "../../assets/images/digitalocean.svg";
+import FirebaseIcon from "../../assets/images/firebase.svg";
+import AwsIcon from "../../assets/images/aws.svg";
+import ProjectCard from "../../components/ProjectCard";
+
+import TempImage from "../../assets/images/temp.jpg";
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    minHeight: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  wrapper: {
-    width: "80%"
-  },
-  summary: {
-    color: MyColors.white
+    minHeight: "100vh"
   },
   project: {
     marginTop: 48
   },
-  overview: {
-    marginBottom: 24,
-    marginTop: 24
+  grid: {
+    display: "flex",
+    width: "100%"
+  },
+  column: {
+    flexGrow: 1
   },
   description: {
+    width: 350
+  },
+  job: {
+    marginTop: 10
+  },
+  icon: {
+    width: 24,
+    height: 24,
+    marginRight: 16
+  },
+  iconRow: {
     width: "100%",
+    marginTop: 24,
     display: "flex",
     justifyContent: "center"
   },
-  columns: {
-    width: 300,
-    marginLeft: 48,
-    marginRight: 48
+  others: {
+    marginTop: 48
   }
 });
 
@@ -44,7 +57,7 @@ function Projects() {
   return (
     <div id="projects" className={classes.root}>
       <Typography variant="h2" color="secondary">
-        Work and Projects
+        Projects
       </Typography>
       <div className={classes.project}>
         <Typography variant="h3" align="right">
@@ -55,160 +68,106 @@ function Projects() {
             2018 - Present (Full Time)
           </Typography>
         </div>
-        <div className={classes.overview}>
-          <Typography variant="body1">
-            SpeakEasy is a modern solution to marketing. Build and design
-            campaigns and easily deliver them to you customers at the right
-            time. Using dark social messaging (WhatsApp, SMS, iMessage, Facebook
-            Messenger, etc...) to reach recipients in a more modern way. The
-            campaigns are designed to engage and encourage interaction.
-          </Typography>
-        </div>
-        <div className={classes.description}>
-          <div className={classes.columns}>
-            <Typography variant="h5">Job</Typography>
+        <div className={classes.grid}>
+          <div className={classes.column}>
+            <Typography>Photos over here</Typography>
+          </div>
+          <div className={classes.description}>
             <Typography variant="subtitle2">
-              My official title is Senior Software Engineer. I am in charge of
-              all development. The company is running two websites and a mobile
-              application. One website is the account site that mangaes and
-              creates the marketing campaign. I migrated this site from Ruby on
-              Rails to React. The other site acts as a micro-site that is to
-              display and manage all marketing campaigns that go out to the
-              recipients. Originally, this was a small website built in PHP, but
-              is now a full-blown Web App in React. SpeakEasy also has a mobile
-              application on both iOS and Android. This is created using
-              Flutter.
+              SpeakEasy is a modern solution to content distribution. Build and
+              design campaigns and easily deliver them to your recicipients in
+              the most appropriate place (WhatsApp, SMS, iMessage, Facebook
+              Messenger, etc...).
             </Typography>
-          </div>
-          <div className={classes.columns}>
-            <Typography variant="h5">Stack</Typography>
-            <ListItem text="React" />
-            <ListItem text="Parse" />
-            <ListItem text="Express" />
-            <ListItem text="Flutter" />
-            <ListItem text="Ruby on Rails" />
-            <ListItem text="PHP" />
-          </div>
-          <div className={classes.columns}>
-            <Typography variant="h5">Services</Typography>
-            <ListItem text="AWS" />
-            <ListItem text="Firebase" />
-            <ListItem text="DigitalOcean" />
-            <ListItem text="Atlassian Products" />
-            <ListItem text="Zoho" />
-            <ListItem text="Stripe" />
-            <ListItem text="MongoDB" />
+            <Typography className={classes.job} variant="h6">
+              Job
+            </Typography>
+            <Typography variant="subtitle2">
+              I am the Senior Software Developer in charge of two websites, the
+              backend, and an iOS and Android app. I am in charge of improving
+              the platform and running the development team.
+            </Typography>
+            <div className={classes.iconRow}>
+              <Tooltip title="React">
+                <img src={ReactIcon} className={classes.icon} />
+              </Tooltip>
+              <Tooltip title="Flutter">
+                <img src={FlutterIcon} className={classes.icon} />
+              </Tooltip>
+              <Tooltip title="Parse">
+                <img src={ParseIcon} className={classes.icon} />
+              </Tooltip>
+              <Tooltip title="AWS">
+                <img src={AwsIcon} className={classes.icon} />
+              </Tooltip>
+              <Tooltip title="Firebase">
+                <img src={FirebaseIcon} className={classes.icon} />
+              </Tooltip>
+              <Tooltip title="DigitalOcean">
+                <img src={DigitalOceanIcon} className={classes.icon} />
+              </Tooltip>
+            </div>
           </div>
         </div>
       </div>
       <div className={classes.project}>
         <Typography variant="h3" align="left">
-          Bluequeue
+          BlueQueue
         </Typography>
-        <Typography align="right" variant="caption" color="secondary">
-          2019 - Present (Part Time)
-        </Typography>
-        <div className={classes.overview}>
-          <Typography variant="body1">
-            SpeakEasy is a modern solution to marketing. Build and design
-            campaigns and easily deliver them to you customers at the right
-            time. Using dark social messaging (WhatsApp, SMS, iMessage, Facebook
-            Messenger, etc...) to reach recipients in a more modern way. The
-            campaigns are designed to engage and encourage interaction.
-          </Typography>
-        </div>
-        <div className={classes.description}>
-          <div className={classes.columns}>
-            <Typography variant="h5">Job</Typography>
-            <Typography variant="subtitle2">
-              My official title is Senior Software Engineer. I am in charge of
-              all development. The company is running two websites and a mobile
-              application. One website is the account site that mangaes and
-              creates the marketing campaign. I migrated this site from Ruby on
-              Rails to React. The other site acts as a micro-site that is to
-              display and manage all marketing campaigns that go out to the
-              recipients. Originally, this was a small website built in PHP, but
-              is now a full-blown Web App in React. SpeakEasy also has a mobile
-              application on both iOS and Android. This is created using
-              Flutter.
-            </Typography>
-          </div>
-          <div className={classes.columns}>
-            <Typography variant="h5">Stack</Typography>
-            <ListItem text="React" />
-            <ListItem text="Parse" />
-            <ListItem text="Express" />
-            <ListItem text="Flutter" />
-            <ListItem text="Ruby on Rails" />
-            <ListItem text="PHP" />
-          </div>
-          <div className={classes.columns}>
-            <Typography variant="h5">Services</Typography>
-            <ListItem text="AWS" />
-            <ListItem text="Firebase" />
-            <ListItem text="DigitalOcean" />
-            <ListItem text="Atlassian Products" />
-            <ListItem text="Zoho" />
-            <ListItem text="Stripe" />
-            <ListItem text="MongoDB" />
-          </div>
-        </div>
-      </div>
-      <div className={classes.project}>
-        <Typography variant="h3" align="right">
-          Learning Express (Columbus)
-        </Typography>
-        <div style={{ width: "100%", textAlign: "right" }}>
+        <div style={{ width: "100%", textAlign: "left" }}>
           <Typography align="right" variant="caption" color="secondary">
-            2013 - 2018 (Full Time)
+            2019 - Present (Full Time)
           </Typography>
         </div>
-        <div className={classes.overview}>
-          <Typography variant="body1">
-            SpeakEasy is a modern solution to marketing. Build and design
-            campaigns and easily deliver them to you customers at the right
-            time. Using dark social messaging (WhatsApp, SMS, iMessage, Facebook
-            Messenger, etc...) to reach recipients in a more modern way. The
-            campaigns are designed to engage and encourage interaction.
-          </Typography>
-        </div>
-        <div className={classes.description}>
-          <div className={classes.columns}>
-            <Typography variant="h5">Job</Typography>
+        <div className={classes.grid}>
+          <div className={classes.description}>
             <Typography variant="subtitle2">
-              My official title is Senior Software Engineer. I am in charge of
-              all development. The company is running two websites and a mobile
-              application. One website is the account site that mangaes and
-              creates the marketing campaign. I migrated this site from Ruby on
-              Rails to React. The other site acts as a micro-site that is to
-              display and manage all marketing campaigns that go out to the
-              recipients. Originally, this was a small website built in PHP, but
-              is now a full-blown Web App in React. SpeakEasy also has a mobile
-              application on both iOS and Android. This is created using
-              Flutter.
+              SpeakEasy is a modern solution to content distribution. Build and
+              design campaigns and easily deliver them to your recicipients in
+              the most appropriate place (WhatsApp, SMS, iMessage, Facebook
+              Messenger, etc...).
             </Typography>
+            <Typography className={classes.job} variant="h6">
+              Job
+            </Typography>
+            <Typography variant="subtitle2">
+              I am the Senior Software Developer in charge of two websites, the
+              backend, and an iOS and Android app. I am in charge of improving
+              the platform and running the development team.
+            </Typography>
+            <div className={classes.iconRow}>
+              <Tooltip title="Flutter">
+                <img src={FlutterIcon} className={classes.icon} />
+              </Tooltip>
+              <Tooltip title="Firebase">
+                <img src={FirebaseIcon} className={classes.icon} />
+              </Tooltip>
+              <Tooltip title="DigitalOcean">
+                <img src={DigitalOceanIcon} className={classes.icon} />
+              </Tooltip>
+            </div>
           </div>
-          <div className={classes.columns}>
-            <Typography variant="h5">Stack</Typography>
-            <ListItem text="React" />
-            <ListItem text="Parse" />
-            <ListItem text="Express" />
-            <ListItem text="Flutter" />
-            <ListItem text="Ruby on Rails" />
-            <ListItem text="PHP" />
-          </div>
-          <div className={classes.columns}>
-            <Typography variant="h5">Services</Typography>
-            <ListItem text="AWS" />
-            <ListItem text="Firebase" />
-            <ListItem text="DigitalOcean" />
-            <ListItem text="Atlassian Products" />
-            <ListItem text="Zoho" />
-            <ListItem text="Stripe" />
-            <ListItem text="MongoDB" />
+          <div className={classes.column}>
+            <Typography>Photos over here</Typography>
           </div>
         </div>
       </div>
+      <Grid container spacing={2} justify="center" className={classes.others}>
+        <Grid item md={4} ms={12}>
+          <ProjectCard
+            title="Recipe App"
+            description="This is an easy to use recipe app. Easily create, store, and share recipes. Easy too use and understand. Built in measurement conversions. Easy to upload photos of expected results."
+            imageUrl={TempImage}
+          />
+        </Grid>
+        <Grid item md={4} sm={12}>
+          <ProjectCard
+            title="GameTime"
+            description="This is my project during the pandemic. Easily play classic board games with your friends and family in real-time. It includes in-game chat and leaderboards."
+            imageUrl={TempImage}
+          />
+        </Grid>
+      </Grid>
     </div>
   );
 }
