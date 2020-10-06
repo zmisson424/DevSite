@@ -26,18 +26,21 @@ const useStyles = makeStyles(theme => ({
     marginTop: 24,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      justifyContent: "center",
       width: "100%",
       alignItems: "center"
     }
   },
   columns: {
     flexGrow: 1,
-    marginBottom: 24
+    marginBottom: 24,
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      textAlign: "center"
+    }
   },
   columnHeader: {
     [theme.breakpoints.down("sm")]: {
-      textAlign: "center"
+      textAlign: "left"
     }
   }
 }));
@@ -61,9 +64,9 @@ function Skills() {
         </Typography>
         <div className={classes.grid}>
           <div className={classes.columns}>
-            <Typography className={classes.columnHeader} variant="h5">
-              Frameworks
-            </Typography>
+            <div className={classes.columnHeader}>
+              <Typography variant="h5">Frameworks</Typography>
+            </div>
             <ListItem text="React" />
             <ListItem text="Angular" />
             <ListItem text="Flutter" />

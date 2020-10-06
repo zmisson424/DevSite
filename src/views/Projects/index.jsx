@@ -14,7 +14,7 @@ import ProjectCard from "../../components/ProjectCard";
 
 import TempImage from "../../assets/images/temp.jpg";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     minHeight: "100vh"
@@ -24,7 +24,10 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "flex",
-    width: "100%"
+    width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column"
+    }
   },
   column: {
     flexGrow: 1
@@ -49,7 +52,7 @@ const useStyles = makeStyles({
   others: {
     marginTop: 48
   }
-});
+}));
 
 function Projects() {
   const classes = useStyles();
