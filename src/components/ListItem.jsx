@@ -8,8 +8,7 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "start",
-    padding: 8,
-    width: 250
+    padding: 8
   },
   bullet: {
     color: MyColors.secondary,
