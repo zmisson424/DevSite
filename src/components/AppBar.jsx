@@ -130,7 +130,7 @@ function AppBar() {
             color="secondary"
             underline="none"
           >
-            Expertise
+            Experience
           </Link>
         </div>
         <div className={classes.action}>
@@ -180,7 +180,7 @@ function AppBar() {
               <ListItemText className={classes.listText} primary="About" />
             </ListItem>
             <ListItem button component="a" key={"expertise"} href="#expertise">
-              <ListItemText className={classes.listText} primary="Expertise" />
+              <ListItemText className={classes.listText} primary="Experience" />
             </ListItem>
             <ListItem button component="a" key={"projects"} href="#projects">
               <ListItemText className={classes.listText} primary="Projects" />

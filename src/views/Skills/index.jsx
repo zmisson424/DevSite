@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "start"
   },
   wrapper: {
-    width: "75%",
+    width: 500,
     marginTop: 24,
     [theme.breakpoints.down("sm")]: {
       width: "100%",
@@ -23,7 +23,9 @@ const useStyles = makeStyles(theme => ({
   },
   grid: {
     display: "flex",
-    marginTop: 24,
+    marginTop: 48,
+    width: "100%",
+    justifyContent: "center",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       width: "100%",
@@ -51,7 +53,7 @@ function Skills() {
   return (
     <div id="expertise" className={classes.root}>
       <Typography variant="h2" color="secondary">
-        Expertise
+        Experience
       </Typography>
       <div className={classes.wrapper}>
         <Typography variant="body1">
@@ -62,39 +64,39 @@ function Skills() {
           use on Flutter and React Native. I also develop for native Android in
           both Kotlin and Java.
         </Typography>
-        <div className={classes.grid}>
-          <div className={classes.columns}>
-            <div className={classes.columnHeader}>
-              <Typography variant="h5">Frameworks</Typography>
-            </div>
-            <ListItem text="React" />
-            <ListItem text="Angular" />
-            <ListItem text="Flutter" />
-            <ListItem text="Express" />
-          </div>
-          <div className={classes.columns}>
-            <Typography className={classes.columnHeader} variant="h5">
-              Languages
-            </Typography>
-            <ListItem text="Javascript" />
-            <ListItem text="Python" />
-            <ListItem text="Kotlin" />
-            <ListItem text="Java" />
-            <ListItem text="Dart" />
-            <ListItem text="HTML/CSS/SASS" />
-          </div>
-          <div className={classes.columns}>
-            <Typography className={classes.columnHeader} variant="h5">
-              Services
-            </Typography>
-            <ListItem text="AWS" />
-            <ListItem text="Firebase" />
-            <ListItem text="Parse" />
-            <ListItem text="DigitalOcean" />
-            <ListItem text="Jira" />
-            <ListItem text="MySQL/NoSQL/Graph DB" />
-            <ListItem text="Github/Gitlab/Bitbucket" />
-          </div>
+      </div>
+      <div className={classes.grid}>
+        <div className={classes.columns}>
+          <Typography className={classes.columnHeader} variant="h5">
+            Frameworks
+          </Typography>
+          <ListItem text="React" />
+          <ListItem text="Angular" />
+          <ListItem text="Flutter" />
+          <ListItem text="Express" />
+        </div>
+        <div className={classes.columns}>
+          <Typography className={classes.columnHeader} variant="h5">
+            Languages
+          </Typography>
+          <ListItem text="Javascript" />
+          <ListItem text="Python" />
+          <ListItem text="Kotlin" />
+          <ListItem text="Java" />
+          <ListItem text="Dart" />
+          <ListItem text="HTML/CSS/SASS" />
+        </div>
+        <div className={classes.columns}>
+          <Typography className={classes.columnHeader} variant="h5">
+            Services
+          </Typography>
+          <ListItem text="AWS" />
+          <ListItem text="Firebase" />
+          <ListItem text="Parse" />
+          <ListItem text="DigitalOcean" />
+          <ListItem text="Jira" />
+          <ListItem text="MySQL/NoSQL/Graph DB" />
+          <ListItem text="Github/Gitlab/Bitbucket" />
         </div>
       </div>
     </div>
