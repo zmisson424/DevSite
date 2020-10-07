@@ -35,12 +35,6 @@ const useStyles = makeStyles(theme => ({
       width: 275,
       marginTop: 10
     }
-  },
-  summaryText: {
-    fontSize: 18,
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 14
-    }
   }
 }));
 
@@ -58,11 +52,10 @@ function Header() {
           My name is Zachery Misson
         </Typography>
         <div className={classes.summary}>
-          <Typography className={classes.summaryText}>
-            I am a software developer for both mobile and web. I consider myself
-            full stack, with lots of experience in both front and back end
-            applications. I work with several popular frameworks including
-            ReactJS, Angular, and Flutter.
+          <Typography variant="body1">
+            I am a full stack software developer for both mobile and web. I work
+            with several popular frameworks including ReactJS, Angular, and
+            Flutter.
           </Typography>
         </div>
       </div>
