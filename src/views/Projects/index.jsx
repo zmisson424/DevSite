@@ -11,6 +11,7 @@ import DigitalOceanIcon from "../../assets/images/digitalocean.svg";
 import FirebaseIcon from "../../assets/images/firebase.svg";
 import AwsIcon from "../../assets/images/aws.svg";
 import ProjectCard from "../../components/ProjectCard";
+import SpeakEasy from "../../assets/images/speakeasy.png";
 
 import TempImage from "../../assets/images/temp.jpg";
 
@@ -30,7 +31,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   column: {
-    flexGrow: 1
+    flexGrow: 1,
+    textAlign: "center"
   },
   description: {
     width: 350
@@ -51,6 +53,9 @@ const useStyles = makeStyles(theme => ({
   },
   others: {
     marginTop: 48
+  },
+  speakeasy: {
+    width: 550
   }
 }));
 
@@ -59,7 +64,7 @@ function Projects() {
 
   return (
     <div id="projects" className={classes.root}>
-      <Typography variant="h2" color="secondary">
+      <Typography variant="h2" color="secondary" align="center">
         Projects
       </Typography>
       <div className={classes.project}>
@@ -73,7 +78,7 @@ function Projects() {
         </div>
         <div className={classes.grid}>
           <div className={classes.column}>
-            <Typography>Photos over here</Typography>
+            <img src={SpeakEasy} className={classes.speakeasy} />
           </div>
           <div className={classes.description}>
             <Typography variant="subtitle2">
