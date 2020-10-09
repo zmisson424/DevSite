@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 48,
     paddingRight: 48,
     transition: "all 0.50s cubic-bezier(0.645, 0.045, 0.355, 1)",
-    transform: "translateY(-80px)"
+    transform: "translateY(-100px)"
   },
   filler: {
     flexGrow: 1
