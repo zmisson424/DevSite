@@ -13,6 +13,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { MyColors } from "../theme/colors";
 import Embark from "../assets/images/embark.png";
+import { ResumeLink } from "../config";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -154,7 +155,12 @@ function AppBar() {
           </Link>
         </div>
         <div className={classes.button}>
-          <Button variant="outlined" color="secondary">
+          <Button
+            variant="outlined"
+            color="secondary"
+            component="a"
+            href={ResumeLink}
+          >
             Resume
           </Button>
         </div>
@@ -190,7 +196,12 @@ function AppBar() {
             </ListItem>
           </List>
           <div className={classes.drawerButton}>
-            <Button variant="outlined" color="secondary">
+            <Button
+              variant="outlined"
+              color="secondary"
+              component="a"
+              href={ResumeLink}
+            >
               Resume
             </Button>
           </div>
