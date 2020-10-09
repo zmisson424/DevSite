@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
+import Hidden from "@material-ui/core/Hidden";
 import { MyColors } from "../../theme/colors";
 import ReactIcon from "../../assets/images/react.svg";
 import FlutterIcon from "../../assets/images/flutter.svg";
@@ -24,7 +25,10 @@ const useStyles = makeStyles(theme => ({
     minHeight: "100vh"
   },
   project: {
-    marginTop: 48
+    marginTop: 48,
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 24
+    }
   },
   grid: {
     display: "flex",
@@ -59,10 +63,16 @@ const useStyles = makeStyles(theme => ({
     marginTop: 48
   },
   speakeasy: {
-    width: 550
+    width: 550,
+    [theme.breakpoints.down("sm")]: {
+      width: "100%"
+    }
   },
   bluequeue: {
-    height: 300
+    height: 300,
+    [theme.breakpoints.down("sm")]: {
+      height: 250
+    }
   }
 }));
 
@@ -135,6 +145,11 @@ function Projects() {
           </Typography>
         </div>
         <div className={classes.grid}>
+          <Hidden mdUp>
+            <div className={classes.column}>
+              <img src={Bluequeue} className={classes.bluequeue} />
+            </div>
+          </Hidden>
           <div className={classes.description}>
             <Typography variant="subtitle2">
               Enhancing the consumer product. This application focuses on easily
@@ -161,9 +176,11 @@ function Projects() {
               </Tooltip>
             </div>
           </div>
-          <div className={classes.column}>
-            <img src={Bluequeue} className={classes.bluequeue} />
-          </div>
+          <Hidden smDown>
+            <div className={classes.column}>
+              <img src={Bluequeue} className={classes.bluequeue} />
+            </div>
+          </Hidden>
         </div>
       </div>
       <Grid container spacing={2} justify="center" className={classes.others}>

@@ -13,7 +13,10 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "end",
-    justifyContent: "center"
+    justifyContent: "center",
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center"
+    }
   },
   section: {
     width: "100%",
@@ -32,8 +35,7 @@ const useStyles = makeStyles(theme => ({
   photo: {
     width: 500,
     [theme.breakpoints.down("sm")]: {
-      width: 100,
-      height: 125
+      width: "100%"
     }
   },
   fun: {
@@ -41,8 +43,9 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     marginRight: 48,
     [theme.breakpoints.down("sm")]: {
-      paddingLeft: 0,
-      paddingRight: 0
+      marginRight: 0,
+      marginTop: 24,
+      textAlign: "center"
     }
   },
   textArea: {
@@ -64,15 +67,17 @@ function About() {
         About Me
       </Typography>
       <div className={classes.section}>
-        <div className={classes.fun}>
-          <Typography variant="h5" color="secondary">
-            Fun Facts
-          </Typography>
-          <ListItem text="I am getting married on September 25, 2021" />
-          <ListItem text="I have a puppy (her name is Eleanor) and a bunny (his name is Podrick)" />
-          <ListItem text="I'm a big sports guy" />
-          <ListItem text="I like to travel" />
-        </div>
+        <Hidden smDown>
+          <div className={classes.fun}>
+            <Typography variant="h5" color="secondary">
+              Fun Facts
+            </Typography>
+            <ListItem text="I am getting married on September 25, 2021" />
+            <ListItem text="I have a puppy (her name is Eleanor) and a bunny (his name is Podrick)" />
+            <ListItem text="I'm a big sports guy" />
+            <ListItem text="I like to travel" />
+          </div>
+        </Hidden>
         <div className={classes.textArea}>
           <Typography variant="body1">
             I recievied my bachelors degree from The Ohio State University and
@@ -82,6 +87,17 @@ function About() {
             Developer.
           </Typography>
         </div>
+        <Hidden mdUp>
+          <div className={classes.fun}>
+            <Typography variant="h5" color="secondary">
+              Fun Facts
+            </Typography>
+            <ListItem text="I am getting married on September 25, 2021" />
+            <ListItem text="I have a puppy (her name is Eleanor) and a bunny (his name is Podrick)" />
+            <ListItem text="I'm a big sports guy" />
+            <ListItem text="I like to travel" />
+          </div>
+        </Hidden>
       </div>
       <div className={classes.images}>
         <img className={classes.photo} src={Photo} />

@@ -11,7 +11,12 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "start"
+    alignItems: "start",
+    marginTop: 250,
+    marginBottom: 250,
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "center"
+    }
   },
   wrapper: {
     width: 500,
