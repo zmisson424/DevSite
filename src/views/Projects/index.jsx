@@ -12,6 +12,9 @@ import FirebaseIcon from "../../assets/images/firebase.svg";
 import AwsIcon from "../../assets/images/aws.svg";
 import ProjectCard from "../../components/ProjectCard";
 import SpeakEasy from "../../assets/images/speakeasy.png";
+import Bluequeue from "../../assets/images/bluequeue.png";
+import Recipe from "../../assets/images/recipe_app.png";
+import Game from "../../assets/images/game_app.png";
 
 import TempImage from "../../assets/images/temp.jpg";
 
@@ -26,6 +29,7 @@ const useStyles = makeStyles(theme => ({
   grid: {
     display: "flex",
     width: "100%",
+    marginTop: 24,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column"
     }
@@ -56,6 +60,9 @@ const useStyles = makeStyles(theme => ({
   },
   speakeasy: {
     width: 550
+  },
+  bluequeue: {
+    height: 300
   }
 }));
 
@@ -130,18 +137,17 @@ function Projects() {
         <div className={classes.grid}>
           <div className={classes.description}>
             <Typography variant="subtitle2">
-              SpeakEasy is a modern solution to content distribution. Build and
-              design campaigns and easily deliver them to your recicipients in
-              the most appropriate place (WhatsApp, SMS, iMessage, Facebook
-              Messenger, etc...).
+              Enhancing the consumer product. This application focuses on easily
+              bringing consumer products, coupons, instructions, videos, reviews
+              and more all in one social place.
             </Typography>
             <Typography className={classes.job} variant="h6">
               Job
             </Typography>
             <Typography variant="subtitle2">
-              I am the Senior Software Developer in charge of two websites, the
-              backend, and an iOS and Android app. I am in charge of improving
-              the platform and running the development team.
+              I am the Front End devloper for this startup. The app uses Flutter
+              to quickly deploy to both iOS and Android. I have helped with
+              Backend work as well using Express and Neo4J.
             </Typography>
             <div className={classes.iconRow}>
               <Tooltip title="Flutter">
@@ -156,7 +162,7 @@ function Projects() {
             </div>
           </div>
           <div className={classes.column}>
-            <Typography>Photos over here</Typography>
+            <img src={Bluequeue} className={classes.bluequeue} />
           </div>
         </div>
       </div>
@@ -165,14 +171,14 @@ function Projects() {
           <ProjectCard
             title="Recipe App"
             description="This is an easy to use recipe app. Easily create, store, and share recipes. Easy too use and understand. Built in measurement conversions. Easy to upload photos of expected results."
-            imageUrl={TempImage}
+            imageUrl={Recipe}
           />
         </Grid>
         <Grid item md={4} sm={12}>
           <ProjectCard
             title="GameTime"
             description="This is my project during the pandemic. Easily play classic board games with your friends and family in real-time. It includes in-game chat and leaderboards."
-            imageUrl={TempImage}
+            imageUrl={Game}
           />
         </Grid>
       </Grid>
