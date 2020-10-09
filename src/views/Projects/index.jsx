@@ -4,7 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
-import { MyColors } from "../../theme/colors";
 import ReactIcon from "../../assets/images/react.svg";
 import FlutterIcon from "../../assets/images/flutter.svg";
 import ParseIcon from "../../assets/images/parse.svg";
@@ -16,8 +15,6 @@ import SpeakEasy from "../../assets/images/speakeasy.png";
 import Bluequeue from "../../assets/images/bluequeue.png";
 import Recipe from "../../assets/images/recipe_app.png";
 import Game from "../../assets/images/game_app.png";
-
-import TempImage from "../../assets/images/temp.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -95,7 +92,11 @@ function Projects() {
         </div>
         <div className={classes.grid}>
           <div className={classes.column}>
-            <img src={SpeakEasy} className={classes.speakeasy} />
+            <img
+              src={SpeakEasy}
+              alt="SpeakEasy"
+              className={classes.speakeasy}
+            />
           </div>
           <div className={classes.description}>
             <Typography variant="subtitle2">
@@ -114,22 +115,30 @@ function Projects() {
             </Typography>
             <div className={classes.iconRow}>
               <Tooltip title="React">
-                <img src={ReactIcon} className={classes.icon} />
+                <img src={ReactIcon} alt="React" className={classes.icon} />
               </Tooltip>
               <Tooltip title="Flutter">
-                <img src={FlutterIcon} className={classes.icon} />
+                <img src={FlutterIcon} alt="Flutter" className={classes.icon} />
               </Tooltip>
               <Tooltip title="Parse">
-                <img src={ParseIcon} className={classes.icon} />
+                <img src={ParseIcon} alt="Parse" className={classes.icon} />
               </Tooltip>
               <Tooltip title="AWS">
-                <img src={AwsIcon} className={classes.icon} />
+                <img src={AwsIcon} alt="AWS" className={classes.icon} />
               </Tooltip>
               <Tooltip title="Firebase">
-                <img src={FirebaseIcon} className={classes.icon} />
+                <img
+                  src={FirebaseIcon}
+                  alt="Firebase"
+                  className={classes.icon}
+                />
               </Tooltip>
               <Tooltip title="DigitalOcean">
-                <img src={DigitalOceanIcon} className={classes.icon} />
+                <img
+                  src={DigitalOceanIcon}
+                  alt="DigitalOcean"
+                  className={classes.icon}
+                />
               </Tooltip>
             </div>
           </div>
@@ -147,7 +156,11 @@ function Projects() {
         <div className={classes.grid}>
           <Hidden mdUp>
             <div className={classes.column}>
-              <img src={Bluequeue} className={classes.bluequeue} />
+              <img
+                src={Bluequeue}
+                alt="Bluequeue"
+                className={classes.bluequeue}
+              />
             </div>
           </Hidden>
           <div className={classes.description}>
@@ -166,19 +179,31 @@ function Projects() {
             </Typography>
             <div className={classes.iconRow}>
               <Tooltip title="Flutter">
-                <img src={FlutterIcon} className={classes.icon} />
+                <img src={FlutterIcon} alt="Flutter" className={classes.icon} />
               </Tooltip>
               <Tooltip title="Firebase">
-                <img src={FirebaseIcon} className={classes.icon} />
+                <img
+                  src={FirebaseIcon}
+                  alt="Firebase"
+                  className={classes.icon}
+                />
               </Tooltip>
               <Tooltip title="DigitalOcean">
-                <img src={DigitalOceanIcon} className={classes.icon} />
+                <img
+                  src={DigitalOceanIcon}
+                  alt="DigitalOcean"
+                  className={classes.icon}
+                />
               </Tooltip>
             </div>
           </div>
           <Hidden smDown>
             <div className={classes.column}>
-              <img src={Bluequeue} className={classes.bluequeue} />
+              <img
+                src={Bluequeue}
+                alt="Bluequeue"
+                className={classes.bluequeue}
+              />
             </div>
           </Hidden>
         </div>

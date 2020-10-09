@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import Tooltip from "@material-ui/core/Tooltip";
 import GithubIcon from "../assets/images/github-light.png";
 import CodepenIcon from "../assets/images/codepen-light.png";
 import StackOverflowIcon from "../assets/images/stackoverflow-light.png";
 import LinkedInIcon from "../assets/images/linkedin-light.png";
-import { MyColors } from "../theme/colors";
 import { SocialLinks } from "../config";
 
 import "./styles.css";
@@ -79,7 +78,7 @@ function SocialIcons({ text }) {
           onClick={() => handleClick("github")}
         >
           <Tooltip title="Github" placement="left-start">
-            <img className={classes.icon} src={GithubIcon} />
+            <img className={classes.icon} alt="Github" src={GithubIcon} />
           </Tooltip>
         </div>
 
@@ -88,7 +87,11 @@ function SocialIcons({ text }) {
           onClick={() => handleClick("stackoverflow")}
         >
           <Tooltip title="StackOverflow" placement="left-start">
-            <img className={classes.icon} src={StackOverflowIcon} />
+            <img
+              className={classes.icon}
+              alt="StackOverflow"
+              src={StackOverflowIcon}
+            />
           </Tooltip>
         </div>
         <div
@@ -96,7 +99,7 @@ function SocialIcons({ text }) {
           onClick={() => handleClick("codepen")}
         >
           <Tooltip title="CodePen" placement="left-start">
-            <img className={classes.icon} src={CodepenIcon} />
+            <img className={classes.icon} alt="CodePen" src={CodepenIcon} />
           </Tooltip>
         </div>
         <div
@@ -104,7 +107,7 @@ function SocialIcons({ text }) {
           onClick={() => handleClick("linkedin")}
         >
           <Tooltip title="LinkedIn" placement="left-start">
-            <img className={classes.icon} src={LinkedInIcon} />
+            <img className={classes.icon} alt="LinkedIn" src={LinkedInIcon} />
           </Tooltip>
         </div>
       </div>

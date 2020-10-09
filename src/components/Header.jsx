@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import { MyColors } from "../theme/colors";
 
 const useStyles = makeStyles(theme => ({
@@ -40,7 +39,6 @@ const useStyles = makeStyles(theme => ({
 
 function Header() {
   const classes = useStyles();
-  const [show, setShow] = useState(false);
 
   return (
     <div className={classes.root}>

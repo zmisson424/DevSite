@@ -7,9 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { MyColors } from "../theme/colors";
 import Embark from "../assets/images/embark.png";
@@ -111,7 +109,7 @@ function AppBar() {
     <div className={showAppBar ? classes.root : classes.rootHide}>
       <Hidden smDown>
         <Link href="/">
-          <img src={Embark} className={classes.logo} />
+          <img src={Embark} alt="Business Logo" className={classes.logo} />
         </Link>
         <div className={classes.filler} />
         <div className={classes.action}>
@@ -167,7 +165,7 @@ function AppBar() {
       </Hidden>
       <Hidden mdUp>
         <Link href="/">
-          <img src={Embark} className={classes.logo} />
+          <img src={Embark} alt="Business Logo" className={classes.logo} />
         </Link>
         <div className={classes.filler} />
         <IconButton onClick={() => setDrawerOpen(true)}>

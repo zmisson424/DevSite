@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ListItem from "../../components/ListItem";
 import Hidden from "@material-ui/core/Hidden";
-import { MyColors } from "../../theme/colors";
 import Photo from "../../assets/images/about.png";
 
 const useStyles = makeStyles(theme => ({
@@ -100,7 +99,7 @@ function About() {
         </Hidden>
       </div>
       <div className={classes.images}>
-        <img className={classes.photo} src={Photo} />
+        <img className={classes.photo} alt="Me" src={Photo} />
       </div>
     </div>
   );

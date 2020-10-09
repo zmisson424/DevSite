@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ListItem from "../../components/ListItem";
-import { MyColors } from "../../theme/colors";
 
 const useStyles = makeStyles(theme => ({
   root: {

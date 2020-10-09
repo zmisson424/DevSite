@@ -35,7 +35,7 @@ function ProjectCard({ title, description, imageUrl }) {
     <div className={classes.root}>
       <Typography variant="h6">{title}</Typography>
       <div className={classes.imageWrapper}>
-        <img src={imageUrl} className={classes.image} />
+        <img src={imageUrl} alt="Project" className={classes.image} />
       </div>
       <Typography variant="caption">{description}</Typography>
       <div className={classes.soon}>

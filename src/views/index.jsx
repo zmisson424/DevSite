@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import AppBar from "../components/AppBar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
