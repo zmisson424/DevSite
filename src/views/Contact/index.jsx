@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     textAlign: "center"
   },
   button: {
-    color: MyColors.white,
+    color: MyColors.background,
     width: 100
   }
 });
