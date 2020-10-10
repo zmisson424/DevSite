@@ -8,3 +8,7 @@ export const SocialLinks = {
 export const Email = "email@gmail.com";
 
 export const ResumeLink = "https://google.com";
+
+export const GoogleAnalytics = {
+  trackingId: ""
+};
