@@ -4,3 +4,7 @@ export const SocialLinks = {
   linkedin: "insert linkedin link",
   codepen: "insert codepen link"
 };
+
+export const Email = "email@gmail.com";
+
+export const ResumeLink = "https://google.com";
