@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import ReactGA from "react-ga";
 import AppBar from "../components/AppBar";
-// import Header from "../components/Header";
-// import Footer from "../components/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 // import SocialIcons from "../components/SocialIcons";
 // import About from "./About";
 // import Skills from "./Skills";
@@ -45,14 +45,15 @@ function Home() {
       <Box
         sx={{
           width: "100%",
-          paddingLeft: 250,
-          paddingRight: 250,
+          paddingLeft: "250px",
+          paddingRight: "250px",
           [theme.breakpoints.down("sm")]: {
-            paddingLeft: 24,
-            paddingRight: 24,
+            paddingLeft: "24px",
+            paddingRight: "24px",
           },
         }}
       >
+        <Header />
         {/* <Header />
         <About />
         <Skills />
@@ -60,7 +61,7 @@ function Home() {
         <Contact /> */}
       </Box>
       {/* <SocialIcons /> */}
-      {/* <Footer /> */}
+      <Footer />
     </Box>
   );
 }
