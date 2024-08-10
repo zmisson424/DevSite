@@ -1,28 +1,24 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
+import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import Home from "./views";
 import { MyColors } from "./theme/colors";
 
-const useStyles = makeStyles({
-  root: {
-    backgroundColor: MyColors.background,
-    width: "100%",
-    height: "100vh"
-  }
-});
-
 function App() {
-  const classes = useStyles();
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div className={classes.root}>
+      <Box
+        sx={{
+          backgroundColor: MyColors.background,
+          width: "100%",
+          height: "100vh",
+        }}
+      >
         <Home />
-      </div>
+      </Box>
     </ThemeProvider>
   );
 }
