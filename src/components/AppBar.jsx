@@ -104,14 +104,14 @@ function AppBar() {
             Experience
           </Link>
         </Box>
-        <Box sx={{ width: "125px", textAlign: "center" }}>
+        <Box sx={{ width: "150px", textAlign: "center" }}>
           <Link
             href="#projects"
             variant="body1"
             color="secondary"
             underline="none"
           >
-            Projects
+            Work and Projects
           </Link>
         </Box>
         <Box sx={{ width: "125px", textAlign: "center" }}>
@@ -186,7 +186,7 @@ function AppBar() {
             <ListItem button component="a" key={"projects"} href="#projects">
               <ListItemText
                 sx={{ color: MyColors.secondary, textAlign: "center" }}
-                primary="Projects"
+                primary="Work and Projects"
               />
             </ListItem>
             <ListItem button component="a" key={"contact"} href="#contact">
