@@ -13,7 +13,7 @@ import {
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { MyColors } from "../theme/colors";
-import Embark from "../assets/images/embark.png";
+import PersonalLogo from "../assets/images/personal_logo.png";
 import { ResumeLink } from "../config";
 
 function AppBar() {
@@ -75,7 +75,23 @@ function AppBar() {
     >
       <Hidden smDown>
         <Link href="/">
-          <img src={Embark} alt="Business Logo" style={{ height: "40px" }} />
+          <Box
+            style={{
+              width: "60px",
+              height: "60px",
+              borderRadius: "12px",
+              backgroundColor: "#FAFAFA",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={PersonalLogo}
+              alt="Business Logo"
+              style={{ height: "50px" }}
+            />
+          </Box>
         </Link>
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ width: "125px", textAlign: "center" }}>
@@ -131,7 +147,23 @@ function AppBar() {
       </Hidden>
       <Hidden mdUp>
         <Link href="/">
-          <img src={Embark} alt="Business Logo" sx={{ height: "40px" }} />
+          <Box
+            style={{
+              width: "50px",
+              height: "50px",
+              borderRadius: "12px",
+              backgroundColor: "#FAFAFA",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={PersonalLogo}
+              alt="Business Logo"
+              style={{ height: "40px" }}
+            />
+          </Box>
         </Link>
         <Box sx={{ flexGrow: 1 }} />
         <IconButton onClick={() => setDrawerOpen(true)}>
