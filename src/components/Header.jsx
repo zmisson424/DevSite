@@ -33,7 +33,7 @@ function Header() {
             fontSize: "50px",
             fontWeight: "bold",
             color: MyColors.offWhite,
-            marginTop: "-30px",
+            marginTop: "-20px",
             [theme.breakpoints.down("sm")]: {
               fontSize: "25px",
               marginTop: 0,
@@ -52,9 +52,11 @@ function Header() {
           }}
         >
           <Typography variant="body1">
-            I am a full stack software developer for both mobile and web. I work
-            with several popular frameworks including ReactJS, Angular, and
-            Flutter.
+            I'm a seasoned full-stack software developer with 7+ years of
+            experience, dedicated to creating cutting-edge web and mobile
+            solutions for startups and tech companies. My expertise spans Native
+            Android, ReactJS, and Flutter, enabling me to deliver seamless
+            experiences across platforms.
           </Typography>
         </Box>
       </Box>
