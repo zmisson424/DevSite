@@ -6,7 +6,6 @@ import AppBar from "../components/AppBar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SocialIcons from "../components/SocialIcons";
-import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
@@ -54,7 +53,6 @@ function Home() {
         }}
       >
         <Header />
-        <About />
         <Skills />
         <Projects />
         <Contact />

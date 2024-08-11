@@ -96,16 +96,6 @@ function AppBar() {
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ width: "125px", textAlign: "center" }}>
           <Link
-            href="#about"
-            variant="body1"
-            color="secondary"
-            underline="none"
-          >
-            About
-          </Link>
-        </Box>
-        <Box sx={{ width: "125px", textAlign: "center" }}>
-          <Link
             href="#expertise"
             variant="body1"
             color="secondary"
@@ -187,12 +177,6 @@ function AppBar() {
         >
           <Box sx={{ height: "200px" }}></Box>
           <List>
-            <ListItem button component="a" key={"about"} href="#about">
-              <ListItemText
-                sx={{ color: MyColors.secondary, textAlign: "center" }}
-                primary="About"
-              />
-            </ListItem>
             <ListItem button component="a" key={"expertise"} href="#expertise">
               <ListItemText
                 sx={{ color: MyColors.secondary, textAlign: "center" }}
