@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SocialIcons from "../components/SocialIcons";
 import About from "./About";
-// import Skills from "./Skills";
+import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { MyColors } from "../theme/colors";
@@ -55,13 +55,9 @@ function Home() {
       >
         <Header />
         <About />
-
-        <Projects />
-        <Contact />
-        {/* 
         <Skills />
         <Projects />
-        <Contact /> */}
+        <Contact />
       </Box>
       <SocialIcons />
       <Footer />
