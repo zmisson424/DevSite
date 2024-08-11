@@ -82,6 +82,8 @@ function Skills() {
           <ListItem text="Angular" />
           <ListItem text="Flutter" />
           <ListItem text="Express" />
+          <ListItem text="UI5" />
+          <ListItem text="SAP MDK" />
         </Box>
         <Box
           sx={{
@@ -104,10 +106,12 @@ function Skills() {
             Languages
           </Typography>
           <ListItem text="Javascript" />
+          <ListItem text="Typescript" />
           <ListItem text="Python" />
           <ListItem text="Kotlin" />
           <ListItem text="Java" />
           <ListItem text="Dart" />
+          <ListItem text="C++" />
           <ListItem text="HTML/CSS/SASS" />
         </Box>
         <Box
@@ -135,8 +139,37 @@ function Skills() {
           <ListItem text="Parse" />
           <ListItem text="DigitalOcean" />
           <ListItem text="Jira" />
+          <ListItem text="Confluence" />
+          <ListItem text="SAP" />
           <ListItem text="MySQL/NoSQL/Graph DB" />
           <ListItem text="Github/Gitlab/Bitbucket" />
+        </Box>
+        <Box
+          sx={{
+            flexGrow: 1,
+            marginBottom: "24px",
+            [theme.breakpoints.down("sm")]: {
+              width: "100%",
+              textAlign: "center",
+            },
+          }}
+        >
+          <Typography
+            sx={{
+              [theme.breakpoints.down("sm")]: {
+                textAlign: "left",
+              },
+            }}
+            variant="h5"
+          >
+            AI
+          </Typography>
+          <ListItem text="Googel AI Studio" />
+          <ListItem text="Tensor Flow" />
+          <ListItem text="Gemini & Gemini Flash" />
+          <ListItem text="Vertex AI" />
+          <ListItem text="Firebase ML" />
+          <ListItem text="Chat GPT API" />
         </Box>
       </Box>
     </Box>
