@@ -1,26 +1,26 @@
-import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { MyColors } from "./colors";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
-      main: MyColors.primary
+      main: MyColors.primary,
     },
     secondary: {
-      main: MyColors.secondary
+      main: MyColors.secondary,
     },
     text: {
-      primary: MyColors.white
-    }
+      primary: MyColors.white,
+    },
   },
   typography: {
-    fontFamily: ["Lato"]
+    fontFamily: ["Lato"],
   },
   overrides: {
     MuiTypography: {
-      h2: {}
-    }
-  }
+      h2: {},
+    },
+  },
 });
 
 export default responsiveFontSizes(theme);

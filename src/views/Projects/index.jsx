@@ -1,9 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Tooltip from "@material-ui/core/Tooltip";
-import Grid from "@material-ui/core/Grid";
-import Hidden from "@material-ui/core/Hidden";
+import { Box, Hidden, Typography, Tooltip, Grid } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import ReactIcon from "../../assets/images/react.svg";
 import FlutterIcon from "../../assets/images/flutter.svg";
 import ParseIcon from "../../assets/images/parse.svg";
@@ -16,96 +13,80 @@ import Bluequeue from "../../assets/images/bluequeue.png";
 import Recipe from "../../assets/images/recipe_app.png";
 import Game from "../../assets/images/game_app.png";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    minHeight: "100vh"
-  },
-  project: {
-    marginTop: 48,
-    [theme.breakpoints.down("sm")]: {
-      marginTop: 24
-    }
-  },
-  grid: {
-    display: "flex",
-    width: "100%",
-    marginTop: 24,
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column"
-    }
-  },
-  column: {
-    flexGrow: 1,
-    textAlign: "center"
-  },
-  description: {
-    width: 350
-  },
-  job: {
-    marginTop: 10
-  },
-  icon: {
-    width: 24,
-    height: 24,
-    marginRight: 16
-  },
-  iconRow: {
-    width: "100%",
-    marginTop: 24,
-    display: "flex",
-    justifyContent: "center"
-  },
-  others: {
-    marginTop: 48
-  },
-  speakeasy: {
-    width: 550,
-    [theme.breakpoints.down("sm")]: {
-      width: "100%"
-    }
-  },
-  bluequeue: {
-    height: 300,
-    [theme.breakpoints.down("sm")]: {
-      height: 250
-    }
-  }
-}));
-
 function Projects() {
-  const classes = useStyles();
+  const theme = useTheme();
 
   return (
-    <div id="projects" className={classes.root}>
+    <Box
+      id="projects"
+      sx={{
+        width: "100%",
+        minHeight: "100vh",
+      }}
+    >
       <Typography variant="h2" color="secondary" align="center">
         Projects
       </Typography>
-      <div className={classes.project}>
+      <Box
+        sx={{
+          marginTop: "48px",
+          [theme.breakpoints.down("sm")]: {
+            marginTop: "24px",
+          },
+        }}
+      >
         <Typography variant="h3" align="right">
           SpeakEasy
         </Typography>
-        <div style={{ width: "100%", textAlign: "right" }}>
+        <Box sx={{ width: "100%", textAlign: "right" }}>
           <Typography align="right" variant="caption" color="secondary">
             2018 - Present (Full Time)
           </Typography>
-        </div>
-        <div className={classes.grid}>
-          <div className={classes.column}>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            marginTop: "24px",
+            [theme.breakpoints.down("sm")]: {
+              flexDirection: "column",
+            },
+          }}
+        >
+          <Box
+            sx={{
+              flexGrow: 1,
+              textAlign: "center",
+            }}
+          >
             <img
               src={SpeakEasy}
               alt="SpeakEasy"
-              className={classes.speakeasy}
+              style={{
+                width: "550px",
+                [theme.breakpoints.down("sm")]: {
+                  width: "100%",
+                },
+              }}
             />
-          </div>
-          <div className={classes.description}>
+          </Box>
+          <Box
+            sx={{
+              width: "350px",
+            }}
+          >
             <Typography variant="subtitle2">
               SpeakEasy is a modern solution to content distribution. Build and
               design campaigns and easily deliver them to your recicipients in
               the most appropriate place (WhatsApp, SMS, iMessage, Facebook
               Messenger, etc...).
             </Typography>
-            <Typography className={classes.job} variant="h6">
+            <Typography
+              sx={{
+                marginTop: "10px",
+              }}
+              variant="h6"
+            >
               Job
             </Typography>
             <Typography variant="subtitle2">
@@ -113,63 +94,145 @@ function Projects() {
               backend, and an iOS and Android app. I am in charge of improving
               the platform and running the development team.
             </Typography>
-            <div className={classes.iconRow}>
+            <Box
+              sx={{
+                width: "100%",
+                marginTop: "24px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <Tooltip title="React">
-                <img src={ReactIcon} alt="React" className={classes.icon} />
+                <img
+                  src={ReactIcon}
+                  alt="React"
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
+                />
               </Tooltip>
               <Tooltip title="Flutter">
-                <img src={FlutterIcon} alt="Flutter" className={classes.icon} />
+                <img
+                  src={FlutterIcon}
+                  alt="Flutter"
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
+                />
               </Tooltip>
               <Tooltip title="Parse">
-                <img src={ParseIcon} alt="Parse" className={classes.icon} />
+                <img
+                  src={ParseIcon}
+                  alt="Parse"
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
+                />
               </Tooltip>
               <Tooltip title="AWS">
-                <img src={AwsIcon} alt="AWS" className={classes.icon} />
+                <img
+                  src={AwsIcon}
+                  alt="AWS"
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
+                />
               </Tooltip>
               <Tooltip title="Firebase">
                 <img
                   src={FirebaseIcon}
                   alt="Firebase"
-                  className={classes.icon}
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
                 />
               </Tooltip>
               <Tooltip title="DigitalOcean">
                 <img
                   src={DigitalOceanIcon}
                   alt="DigitalOcean"
-                  className={classes.icon}
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
                 />
               </Tooltip>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={classes.project}>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          marginTop: "48px",
+          [theme.breakpoints.down("sm")]: {
+            marginTop: "24px",
+          },
+        }}
+      >
         <Typography variant="h3" align="left">
           BlueQueue
         </Typography>
-        <div style={{ width: "100%", textAlign: "left" }}>
+        <Box sx={{ width: "100%", textAlign: "left" }}>
           <Typography align="right" variant="caption" color="secondary">
             2019 - Present (Full Time)
           </Typography>
-        </div>
-        <div className={classes.grid}>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            marginTop: "24px",
+            [theme.breakpoints.down("sm")]: {
+              flexDirection: "column",
+            },
+          }}
+        >
           <Hidden mdUp>
-            <div className={classes.column}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                textAlign: "center",
+              }}
+            >
               <img
                 src={Bluequeue}
                 alt="Bluequeue"
-                className={classes.bluequeue}
+                style={{
+                  height: "300px",
+                  [theme.breakpoints.down("sm")]: {
+                    height: "250px",
+                  },
+                }}
               />
-            </div>
+            </Box>
           </Hidden>
-          <div className={classes.description}>
+          <Box
+            sx={{
+              width: "350px",
+            }}
+          >
             <Typography variant="subtitle2">
               Enhancing the consumer product. This application focuses on easily
               bringing consumer products, coupons, instructions, videos, reviews
               and more all in one social place.
             </Typography>
-            <Typography className={classes.job} variant="h6">
+            <Typography
+              sx={{
+                marginTop: "10px",
+              }}
+              variant="h6"
+            >
               Job
             </Typography>
             <Typography variant="subtitle2">
@@ -177,38 +240,78 @@ function Projects() {
               to quickly deploy to both iOS and Android. I have helped with
               Backend work as well using Express and Neo4J.
             </Typography>
-            <div className={classes.iconRow}>
+            <Box
+              sx={{
+                width: "100%",
+                marginTop: "24px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
               <Tooltip title="Flutter">
-                <img src={FlutterIcon} alt="Flutter" className={classes.icon} />
+                <img
+                  src={FlutterIcon}
+                  alt="Flutter"
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
+                />
               </Tooltip>
               <Tooltip title="Firebase">
                 <img
                   src={FirebaseIcon}
                   alt="Firebase"
-                  className={classes.icon}
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
                 />
               </Tooltip>
               <Tooltip title="DigitalOcean">
                 <img
                   src={DigitalOceanIcon}
                   alt="DigitalOcean"
-                  className={classes.icon}
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
                 />
               </Tooltip>
-            </div>
-          </div>
+            </Box>
+          </Box>
           <Hidden smDown>
-            <div className={classes.column}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                textAlign: "center",
+              }}
+            >
               <img
                 src={Bluequeue}
                 alt="Bluequeue"
-                className={classes.bluequeue}
+                style={{
+                  height: "300px",
+                  [theme.breakpoints.down("sm")]: {
+                    height: "250px",
+                  },
+                }}
               />
-            </div>
+            </Box>
           </Hidden>
-        </div>
-      </div>
-      <Grid container spacing={2} justify="center" className={classes.others}>
+        </Box>
+      </Box>
+      <Grid
+        container
+        spacing={2}
+        justify="center"
+        sx={{
+          marginTop: "48px",
+        }}
+      >
         <Grid item md={4} ms={12}>
           <ProjectCard
             title="Recipe App"
@@ -224,7 +327,7 @@ function Projects() {
           />
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 }
 

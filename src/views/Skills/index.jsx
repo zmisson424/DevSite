@@ -1,65 +1,41 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import { Box, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import ListItem from "../../components/ListItem";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    minHeight: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "start",
-    marginTop: 250,
-    marginBottom: 250,
-    [theme.breakpoints.down("sm")]: {
-      alignItems: "center"
-    }
-  },
-  wrapper: {
-    width: 500,
-    marginTop: 24,
-    [theme.breakpoints.down("sm")]: {
-      width: "100%",
-      marginTop: 10
-    }
-  },
-  grid: {
-    display: "flex",
-    marginTop: 48,
-    width: "100%",
-    justifyContent: "center",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-      width: "100%",
-      alignItems: "center"
-    }
-  },
-  columns: {
-    flexGrow: 1,
-    marginBottom: 24,
-    [theme.breakpoints.down("sm")]: {
-      width: "100%",
-      textAlign: "center"
-    }
-  },
-  columnHeader: {
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "left"
-    }
-  }
-}));
-
 function Skills() {
-  const classes = useStyles();
+  const theme = useTheme();
 
   return (
-    <div id="expertise" className={classes.root}>
+    <Box
+      id="expertise"
+      sx={{
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "start",
+        marginTop: "250px",
+        marginBottom: "250px",
+        [theme.breakpoints.down("sm")]: {
+          alignItems: "center",
+        },
+      }}
+    >
       <Typography variant="h2" color="secondary">
         Experience
       </Typography>
-      <div className={classes.wrapper}>
+      <Box
+        sx={{
+          width: "500px",
+          marginTop: "24px",
+          [theme.breakpoints.down("sm")]: {
+            width: "100%",
+            marginTop: "10px",
+          },
+        }}
+      >
         <Typography variant="body1">
           I am a Full Stack developer for both web and mobile interfaces. On
           web, I generally develop using an Angular or ReactJS frontend and
@@ -68,19 +44,63 @@ function Skills() {
           use on Flutter and React Native. I also develop for native Android in
           both Kotlin and Java.
         </Typography>
-      </div>
-      <div className={classes.grid}>
-        <div className={classes.columns}>
-          <Typography className={classes.columnHeader} variant="h5">
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          marginTop: "48px",
+          width: "100%",
+          justifyContent: "center",
+          [theme.breakpoints.down("sm")]: {
+            flexDirection: "column",
+            width: "100%",
+            alignItems: "center",
+          },
+        }}
+      >
+        <Box
+          sx={{
+            flexGrow: 1,
+            marginBottom: "24px",
+            [theme.breakpoints.down("sm")]: {
+              width: "100%",
+              textAlign: "center",
+            },
+          }}
+        >
+          <Typography
+            sx={{
+              [theme.breakpoints.down("sm")]: {
+                textAlign: "left",
+              },
+            }}
+            variant="h5"
+          >
             Frameworks
           </Typography>
           <ListItem text="React" />
           <ListItem text="Angular" />
           <ListItem text="Flutter" />
           <ListItem text="Express" />
-        </div>
-        <div className={classes.columns}>
-          <Typography className={classes.columnHeader} variant="h5">
+        </Box>
+        <Box
+          sx={{
+            flexGrow: 1,
+            marginBottom: "24px",
+            [theme.breakpoints.down("sm")]: {
+              width: "100%",
+              textAlign: "center",
+            },
+          }}
+        >
+          <Typography
+            sx={{
+              [theme.breakpoints.down("sm")]: {
+                textAlign: "left",
+              },
+            }}
+            variant="h5"
+          >
             Languages
           </Typography>
           <ListItem text="Javascript" />
@@ -89,9 +109,25 @@ function Skills() {
           <ListItem text="Java" />
           <ListItem text="Dart" />
           <ListItem text="HTML/CSS/SASS" />
-        </div>
-        <div className={classes.columns}>
-          <Typography className={classes.columnHeader} variant="h5">
+        </Box>
+        <Box
+          sx={{
+            flexGrow: 1,
+            marginBottom: "24px",
+            [theme.breakpoints.down("sm")]: {
+              width: "100%",
+              textAlign: "center",
+            },
+          }}
+        >
+          <Typography
+            sx={{
+              [theme.breakpoints.down("sm")]: {
+                textAlign: "left",
+              },
+            }}
+            variant="h5"
+          >
             Services
           </Typography>
           <ListItem text="AWS" />
@@ -101,9 +137,9 @@ function Skills() {
           <ListItem text="Jira" />
           <ListItem text="MySQL/NoSQL/Graph DB" />
           <ListItem text="Github/Gitlab/Bitbucket" />
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 

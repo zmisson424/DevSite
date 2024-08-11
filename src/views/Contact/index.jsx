@@ -1,74 +1,79 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import { Box, Button, Typography } from "@mui/material";
 import { MyColors } from "../../theme/colors";
 import { Email } from "../../config";
 import { ResumeLink } from "../../config";
 
-const useStyles = makeStyles({
-  root: {
-    width: "100%",
-    minHeight: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  wrapper: {
-    textAlign: "center"
-  },
-  buttonRow: {
-    display: "flex",
-    marginTop: 48
-  },
-  buttonBlock: {
-    flexGrow: 1,
-    textAlign: "center"
-  },
-  button: {
-    color: MyColors.background,
-    width: 100
-  }
-});
-
 function Contact() {
-  const classes = useStyles();
-
   return (
-    <div id="contact" className={classes.root}>
-      <div className={classes.wrapper}>
+    <Box
+      id="contact"
+      sx={{
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Box
+        sx={{
+          textAlign: "center",
+        }}
+      >
         <Typography variant="h2" color="secondary">
           Contact
         </Typography>
         <Typography variant="body1">
           Hey! If you want to get to know me more, feel free to send an email.
         </Typography>
-        <div className={classes.buttonRow}>
-          <div className={classes.buttonBlock}>
+        <Box
+          sx={{
+            display: "flex",
+            marginTop: "48px",
+          }}
+        >
+          <Box
+            sx={{
+              flexGrow: 1,
+              textAlign: "center",
+            }}
+          >
             <Button
               variant="contained"
               color="secondary"
-              className={classes.button}
+              sx={{
+                color: MyColors.background,
+                width: "100px",
+              }}
               component="a"
               href={"mailto:" + Email}
             >
               Email
             </Button>
-          </div>
-          <div className={classes.buttonBlock}>
+          </Box>
+          <Box
+            sx={{
+              flexGrow: 1,
+              textAlign: "center",
+            }}
+          >
             <Button
               variant="contained"
               color="secondary"
-              className={classes.button}
+              sx={{
+                color: MyColors.background,
+                width: "100px",
+              }}
               component="a"
               href={ResumeLink}
             >
               Resume
             </Button>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
