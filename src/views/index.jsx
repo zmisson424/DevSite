@@ -9,7 +9,7 @@ import SocialIcons from "../components/SocialIcons";
 import About from "./About";
 // import Skills from "./Skills";
 // import Projects from "./Projects";
-// import Contact from "./Contact";
+import Contact from "./Contact";
 import { MyColors } from "../theme/colors";
 import { GoogleAnalytics } from "../config";
 
@@ -55,6 +55,8 @@ function Home() {
       >
         <Header />
         <About />
+
+        <Contact />
         {/* 
         <Skills />
         <Projects />
