@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { CSSTransition } from "react-transition-group";
-import Tooltip from "@material-ui/core/Tooltip";
+import { Box, Tooltip } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import GithubIcon from "../assets/images/github-light.png";
 import CodepenIcon from "../assets/images/codepen-light.png";
 import StackOverflowIcon from "../assets/images/stackoverflow-light.png";
@@ -10,42 +10,15 @@ import { SocialLinks } from "../config";
 
 import "./styles.css";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    position: "absolute",
-    bottom: 30,
-    right: 30,
-    [theme.breakpoints.down("sm")]: {
-      position: "relative",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      bottom: 0,
-      right: 0
-    }
-  },
-  iconWrapper: {
-    padding: 12,
-    cursor: "pointer",
-    [theme.breakpoints.down("sm")]: {
-      padding: 24
-    }
-  },
-  icon: {
-    width: 24,
-    height: 24
-  }
-}));
-
 function SocialIcons({ text }) {
-  const classes = useStyles();
   const [show, setShow] = useState(false);
+  const theme = useTheme();
 
   useEffect(() => {
     setShow(true);
   }, []);
 
-  const handleClick = type => {
+  const handleClick = (type) => {
     var url;
     switch (type) {
       case "github":
@@ -72,45 +45,107 @@ function SocialIcons({ text }) {
 
   return (
     <CSSTransition in={show} timeout={1500} classNames="slide">
-      <div className={classes.root}>
-        <div
-          className={classes.iconWrapper}
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "30px",
+          right: "30px",
+          [theme.breakpoints.down("sm")]: {
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            bottom: 0,
+            right: 0,
+          },
+        }}
+      >
+        <Box
+          sx={{
+            padding: "12px",
+            cursor: "pointer",
+            [theme.breakpoints.down("sm")]: {
+              padding: "24px",
+            },
+          }}
           onClick={() => handleClick("github")}
         >
           <Tooltip title="Github" placement="left-start">
-            <img className={classes.icon} alt="Github" src={GithubIcon} />
+            <img
+              style={{
+                width: "24px",
+                height: "24px",
+              }}
+              alt="Github"
+              src={GithubIcon}
+            />
           </Tooltip>
-        </div>
+        </Box>
 
-        <div
-          className={classes.iconWrapper}
+        <Box
+          sx={{
+            padding: "12px",
+            cursor: "pointer",
+            [theme.breakpoints.down("sm")]: {
+              padding: "24px",
+            },
+          }}
           onClick={() => handleClick("stackoverflow")}
         >
           <Tooltip title="StackOverflow" placement="left-start">
             <img
-              className={classes.icon}
+              style={{
+                width: "24px",
+                height: "24px",
+              }}
               alt="StackOverflow"
               src={StackOverflowIcon}
             />
           </Tooltip>
-        </div>
-        <div
-          className={classes.iconWrapper}
+        </Box>
+        <Box
+          sx={{
+            padding: "12px",
+            cursor: "pointer",
+            [theme.breakpoints.down("sm")]: {
+              padding: "24px",
+            },
+          }}
           onClick={() => handleClick("codepen")}
         >
           <Tooltip title="CodePen" placement="left-start">
-            <img className={classes.icon} alt="CodePen" src={CodepenIcon} />
+            <img
+              style={{
+                width: "24px",
+                height: "24px",
+              }}
+              alt="CodePen"
+              src={CodepenIcon}
+            />
           </Tooltip>
-        </div>
-        <div
-          className={classes.iconWrapper}
+        </Box>
+        <Box
+          sx={{
+            padding: "12px",
+            cursor: "pointer",
+            [theme.breakpoints.down("sm")]: {
+              padding: "24px",
+            },
+          }}
           onClick={() => handleClick("linkedin")}
         >
           <Tooltip title="LinkedIn" placement="left-start">
-            <img className={classes.icon} alt="LinkedIn" src={LinkedInIcon} />
+            <img
+              style={{
+                width: "24px",
+                height: "24px",
+              }}
+              alt="LinkedIn"
+              src={LinkedInIcon}
+            />
           </Tooltip>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </CSSTransition>
   );
 }

@@ -5,7 +5,7 @@ import ReactGA from "react-ga";
 import AppBar from "../components/AppBar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import SocialIcons from "../components/SocialIcons";
+import SocialIcons from "../components/SocialIcons";
 // import About from "./About";
 // import Skills from "./Skills";
 // import Projects from "./Projects";
@@ -60,7 +60,7 @@ function Home() {
         <Projects />
         <Contact /> */}
       </Box>
-      {/* <SocialIcons /> */}
+      <SocialIcons />
       <Footer />
     </Box>
   );
