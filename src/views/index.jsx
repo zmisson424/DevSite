@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import SocialIcons from "../components/SocialIcons";
 import About from "./About";
 // import Skills from "./Skills";
-// import Projects from "./Projects";
+import Projects from "./Projects";
 import Contact from "./Contact";
 import { MyColors } from "../theme/colors";
 import { GoogleAnalytics } from "../config";
@@ -56,6 +56,7 @@ function Home() {
         <Header />
         <About />
 
+        <Projects />
         <Contact />
         {/* 
         <Skills />

@@ -29,7 +29,11 @@ function ProjectCard({ title, description, imageUrl }) {
         />
       </Box>
       <Typography variant="caption">{description}</Typography>
-      <Box className={classes.soon}>
+      <Box
+        sx={{
+          marginTop: "px",
+        }}
+      >
         <Typography variant="overline">
           Coming to iOS and Android soon
         </Typography>
