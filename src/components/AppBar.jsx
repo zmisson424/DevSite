@@ -14,7 +14,6 @@ import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { MyColors } from "../theme/colors";
 import PersonalLogo from "../assets/images/personal_logo.png";
-import { ResumeLink } from "../config";
 
 function AppBar() {
   const [showAppBar, setShowAppBar] = useState(true);
@@ -129,7 +128,7 @@ function AppBar() {
             variant="outlined"
             color="secondary"
             component="a"
-            href={ResumeLink}
+            href="/resume.pdf"
           >
             Resume
           </Button>
@@ -208,7 +207,7 @@ function AppBar() {
               variant="outlined"
               color="secondary"
               component="a"
-              href={ResumeLink}
+              href="/resume.pdf"
             >
               Resume
             </Button>

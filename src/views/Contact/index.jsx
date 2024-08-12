@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { MyColors } from "../../theme/colors";
 import { Email } from "../../config";
-import { ResumeLink } from "../../config";
 
 function Contact() {
   return (
@@ -66,7 +65,7 @@ function Contact() {
                 width: "100px",
               }}
               component="a"
-              href={ResumeLink}
+              href="/resume.pdf"
             >
               Resume
             </Button>
