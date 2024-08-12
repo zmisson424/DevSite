@@ -6,7 +6,6 @@ import GithubIcon from "../assets/images/github-light.png";
 import CodepenIcon from "../assets/images/codepen-light.png";
 import StackOverflowIcon from "../assets/images/stackoverflow-light.png";
 import LinkedInIcon from "../assets/images/linkedin-light.png";
-import { SocialLinks } from "../config";
 
 import "./styles.css";
 
@@ -22,16 +21,16 @@ function SocialIcons({ text }) {
     var url;
     switch (type) {
       case "github":
-        url = SocialLinks.github;
+        url = "https://github.com/zmisson424";
         break;
       case "stackoverflow":
-        url = SocialLinks.stackoverflow;
+        url = "https://stackoverflow.com/users/4560040/zachery-misson";
         break;
       case "codepen":
-        url = SocialLinks.codepen;
+        url = "https://codepen.io/zmisson424";
         break;
       case "linkedin":
-        url = SocialLinks.linkedin;
+        url = "https://www.linkedin.com/in/zachery-dev/";
         break;
       default:
         break;

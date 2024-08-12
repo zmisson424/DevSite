@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import { MyColors } from "../../theme/colors";
-import { Email } from "../../config";
 
 function Contact() {
   return (
@@ -46,7 +45,7 @@ function Contact() {
                 width: "100px",
               }}
               component="a"
-              href={"mailto:" + Email}
+              href={"mailto:zmisson424@gmail.com"}
             >
               Email
             </Button>
