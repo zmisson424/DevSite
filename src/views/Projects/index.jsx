@@ -349,6 +349,13 @@ function Projects() {
             sx={{
               flexGrow: 1,
               textAlign: "center",
+              display: {
+                xl: "block",
+                md: "block",
+                lg: "block",
+                sm: "none",
+                xs: "none",
+              },
             }}
           >
             <img
@@ -356,9 +363,31 @@ function Projects() {
               alt="SpeakEasy"
               style={{
                 width: "550px",
-                [theme.breakpoints.down("sm")]: {
-                  width: "100%",
+                [theme.breakpoints.down("md")]: {
+                  width: "200px",
+                  boxFit: "contain",
                 },
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              flexGrow: 1,
+              textAlign: "center",
+              display: {
+                xl: "none",
+                md: "none",
+                lg: "none",
+                sm: "block",
+                xs: "block",
+              },
+            }}
+          >
+            <img
+              src={SpeakEasy}
+              alt="SpeakEasy"
+              style={{
+                width: "100%",
               }}
             />
           </Box>
