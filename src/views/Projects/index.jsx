@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Hidden, Typography, Tooltip, Grid } from "@mui/material";
+import { Box, Hidden, Typography, Tooltip } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import ReactIcon from "../../assets/images/react.svg";
 import FlutterIcon from "../../assets/images/flutter.svg";
@@ -35,6 +35,9 @@ function Projects() {
       >
         <Typography variant="h3" align="right">
           Havensight
+        </Typography>
+        <Typography variant="body2" align="right">
+          Technical Lead / Software Developer
         </Typography>
         <Box sx={{ width: "100%", textAlign: "right" }}>
           <Typography align="right" variant="caption" color="secondary">
