@@ -62,6 +62,8 @@ function Skills() {
           sx={{
             flexGrow: 1,
             marginBottom: "24px",
+            paddingLeft: "8px",
+            paddingRight: "8px",
             [theme.breakpoints.down("sm")]: {
               width: "100%",
               textAlign: "center",
@@ -89,6 +91,8 @@ function Skills() {
           sx={{
             flexGrow: 1,
             marginBottom: "24px",
+            paddingLeft: "8px",
+            paddingRight: "8px",
             [theme.breakpoints.down("sm")]: {
               width: "100%",
               textAlign: "center",
@@ -112,12 +116,14 @@ function Skills() {
           <ListItem text="Java" />
           <ListItem text="Dart" />
           <ListItem text="C++" />
-          <ListItem text="HTML/CSS/SASS" />
+          <ListItem text="HTML5" />
         </Box>
         <Box
           sx={{
             flexGrow: 1,
             marginBottom: "24px",
+            paddingLeft: "8px",
+            paddingRight: "8px",
             [theme.breakpoints.down("sm")]: {
               width: "100%",
               textAlign: "center",
@@ -141,13 +147,15 @@ function Skills() {
           <ListItem text="Jira" />
           <ListItem text="Confluence" />
           <ListItem text="SAP" />
-          <ListItem text="MySQL/NoSQL/Graph DB" />
-          <ListItem text="Github/Gitlab/Bitbucket" />
+          <ListItem text="MySQL/NoSQL" />
+          <ListItem text="Git" />
         </Box>
         <Box
           sx={{
             flexGrow: 1,
             marginBottom: "24px",
+            paddingLeft: "8px",
+            paddingRight: "8px",
             [theme.breakpoints.down("sm")]: {
               width: "100%",
               textAlign: "center",
