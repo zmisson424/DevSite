@@ -14,6 +14,7 @@ import TypescriptIcon from "../../assets/images/typescript.svg";
 import SpeakEasy from "../../assets/images/speakeasy.png";
 import Bluequeue from "../../assets/images/bluequeue.png";
 import HCGTemplate from "../../assets/images/hcg_template.png";
+import Bizi from "../../assets/images/bizi.png";
 
 function Projects() {
   const theme = useTheme();
@@ -163,9 +164,23 @@ function Projects() {
           },
         }}
       >
-        <Typography variant="h3" align="left">
-          Bizi
-        </Typography>
+        <Box
+          sx={{
+            width: "100%",
+          }}
+        >
+          <Link
+            href="https://getbizi.io/"
+            variant="h3"
+            target="_blank"
+            rel="noopener"
+            color="inherit"
+            underline="hover"
+          >
+            Bizi
+          </Link>
+        </Box>
+        <Typography variant="body2">Project Manager</Typography>
         <Box sx={{ width: "100%", textAlign: "left" }}>
           <Typography align="right" variant="caption" color="secondary">
             2023 - Present (Part Time)
@@ -189,8 +204,8 @@ function Projects() {
               }}
             >
               <img
-                src={Bluequeue}
-                alt="Bluequeue"
+                src={Bizi}
+                alt="Bizi"
                 style={{
                   height: "300px",
                   [theme.breakpoints.down("sm")]: {
@@ -206,22 +221,10 @@ function Projects() {
             }}
           >
             <Typography variant="subtitle2">
-              Enhancing the consumer product. This application focuses on easily
-              bringing consumer products, coupons, instructions, videos, reviews
-              and more all in one social place.
-            </Typography>
-            <Typography
-              sx={{
-                marginTop: "10px",
-              }}
-              variant="h6"
-            >
-              Job
-            </Typography>
-            <Typography variant="subtitle2">
-              I was the Front End devloper for this startup. The app uses
-              Flutter to quickly deploy to both iOS and Android. I have helped
-              with Backend work as well using Express and Neo4J.
+              Bizi is a platform designed for the self employed. It allows users
+              to easily create a website, market their services, and manage
+              their analytics. The platform is designed to be simple and easy to
+              use.
             </Typography>
             <Box
               sx={{
@@ -231,6 +234,17 @@ function Projects() {
                 justifyContent: "center",
               }}
             >
+              <Tooltip title="React">
+                <img
+                  src={ReactIcon}
+                  alt="React"
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
+                />
+              </Tooltip>
               <Tooltip title="Flutter">
                 <img
                   src={FlutterIcon}
@@ -274,10 +288,10 @@ function Projects() {
               }}
             >
               <img
-                src={Bluequeue}
-                alt="Bluequeue"
+                src={Bizi}
+                alt="Bizi"
                 style={{
-                  height: "300px",
+                  height: "324px",
                   [theme.breakpoints.down("sm")]: {
                     height: "250px",
                   },
