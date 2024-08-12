@@ -1,20 +1,14 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
-import ReactGA from "react-ga";
 import AppBar from "../components/AppBar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SocialIcons from "../components/SocialIcons";
-import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { MyColors } from "../theme/colors";
-import { GoogleAnalytics } from "../config";
-
-// ReactGA.initialize(GoogleAnalytics.trackingId);
-// ReactGA.pageview(window.location.pathname + window.location.search);
 
 function Home() {
   const theme = useTheme();
@@ -54,7 +48,6 @@ function Home() {
         }}
       >
         <Header />
-        <About />
         <Skills />
         <Projects />
         <Contact />

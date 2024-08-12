@@ -13,8 +13,7 @@ import {
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { MyColors } from "../theme/colors";
-import Embark from "../assets/images/embark.png";
-import { ResumeLink } from "../config";
+import PersonalLogo from "../assets/images/personal_logo.png";
 
 function AppBar() {
   const [showAppBar, setShowAppBar] = useState(true);
@@ -75,19 +74,25 @@ function AppBar() {
     >
       <Hidden smDown>
         <Link href="/">
-          <img src={Embark} alt="Business Logo" style={{ height: "40px" }} />
+          <Box
+            style={{
+              width: "60px",
+              height: "60px",
+              borderRadius: "12px",
+              backgroundColor: "#FAFAFA",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={PersonalLogo}
+              alt="Business Logo"
+              style={{ height: "50px" }}
+            />
+          </Box>
         </Link>
         <Box sx={{ flexGrow: 1 }} />
-        <Box sx={{ width: "125px", textAlign: "center" }}>
-          <Link
-            href="#about"
-            variant="body1"
-            color="secondary"
-            underline="none"
-          >
-            About
-          </Link>
-        </Box>
         <Box sx={{ width: "125px", textAlign: "center" }}>
           <Link
             href="#expertise"
@@ -98,14 +103,14 @@ function AppBar() {
             Experience
           </Link>
         </Box>
-        <Box sx={{ width: "125px", textAlign: "center" }}>
+        <Box sx={{ width: "150px", textAlign: "center" }}>
           <Link
             href="#projects"
             variant="body1"
             color="secondary"
             underline="none"
           >
-            Projects
+            Work and Projects
           </Link>
         </Box>
         <Box sx={{ width: "125px", textAlign: "center" }}>
@@ -123,7 +128,7 @@ function AppBar() {
             variant="outlined"
             color="secondary"
             component="a"
-            href={ResumeLink}
+            href="/resume.pdf"
           >
             Resume
           </Button>
@@ -131,7 +136,23 @@ function AppBar() {
       </Hidden>
       <Hidden mdUp>
         <Link href="/">
-          <img src={Embark} alt="Business Logo" sx={{ height: "40px" }} />
+          <Box
+            style={{
+              width: "50px",
+              height: "50px",
+              borderRadius: "12px",
+              backgroundColor: "#FAFAFA",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={PersonalLogo}
+              alt="Business Logo"
+              style={{ height: "40px" }}
+            />
+          </Box>
         </Link>
         <Box sx={{ flexGrow: 1 }} />
         <IconButton onClick={() => setDrawerOpen(true)}>
@@ -155,12 +176,6 @@ function AppBar() {
         >
           <Box sx={{ height: "200px" }}></Box>
           <List>
-            <ListItem button component="a" key={"about"} href="#about">
-              <ListItemText
-                sx={{ color: MyColors.secondary, textAlign: "center" }}
-                primary="About"
-              />
-            </ListItem>
             <ListItem button component="a" key={"expertise"} href="#expertise">
               <ListItemText
                 sx={{ color: MyColors.secondary, textAlign: "center" }}
@@ -170,7 +185,7 @@ function AppBar() {
             <ListItem button component="a" key={"projects"} href="#projects">
               <ListItemText
                 sx={{ color: MyColors.secondary, textAlign: "center" }}
-                primary="Projects"
+                primary="Work and Projects"
               />
             </ListItem>
             <ListItem button component="a" key={"contact"} href="#contact">
@@ -192,7 +207,7 @@ function AppBar() {
               variant="outlined"
               color="secondary"
               component="a"
-              href={ResumeLink}
+              href="/resume.pdf"
             >
               Resume
             </Button>
