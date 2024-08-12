@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Hidden, Typography, Tooltip } from "@mui/material";
+import { Box, Hidden, Typography, Tooltip, Link } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import ReactIcon from "../../assets/images/react.svg";
 import FlutterIcon from "../../assets/images/flutter.svg";
@@ -7,6 +7,10 @@ import ParseIcon from "../../assets/images/parse.svg";
 import DigitalOceanIcon from "../../assets/images/digitalocean.svg";
 import FirebaseIcon from "../../assets/images/firebase.svg";
 import AwsIcon from "../../assets/images/aws.svg";
+import SAPIcon from "../../assets/images/sap.svg";
+import UI5Icon from "../../assets/images/ui5.svg";
+import JavascriptIcon from "../../assets/images/javascript.svg";
+import TypescriptIcon from "../../assets/images/typescript.svg";
 import SpeakEasy from "../../assets/images/speakeasy.png";
 import Bluequeue from "../../assets/images/bluequeue.png";
 
@@ -33,9 +37,23 @@ function Projects() {
           },
         }}
       >
-        <Typography variant="h3" align="right">
-          Havensight
-        </Typography>
+        <Box
+          sx={{
+            width: "100%",
+            textAlign: "right",
+          }}
+        >
+          <Link
+            href="https://www.havensightconsulting.com/"
+            variant="h3"
+            target="_blank"
+            rel="noopener"
+            color="inherit"
+            underline="hover"
+          >
+            Havensight
+          </Link>
+        </Box>
         <Typography variant="body2" align="right">
           Technical Lead / Software Developer
         </Typography>
@@ -74,26 +92,14 @@ function Projects() {
           <Box
             sx={{
               width: "350px",
+              marginLeft: "24px",
             }}
           >
             <Typography variant="subtitle2">
-              TappShare is a modern solution to content distribution. Build and
-              design campaigns and easily deliver them to your recicipients in
-              the most appropriate place (WhatsApp, SMS, iMessage, Facebook
-              Messenger, etc...).
-            </Typography>
-            <Typography
-              sx={{
-                marginTop: "10px",
-              }}
-              variant="h6"
-            >
-              Job
-            </Typography>
-            <Typography variant="subtitle2">
-              I am the Senior Software Developer in charge of two websites, the
-              backend, and an iOS and Android app. I am in charge of improving
-              the platform and running the development team.
+              Havensight created the original SAP Mobile Platform, and today
+              uses SAPUI5, HTML5 and the latest templates, tools and hardware to
+              implement SAP native mobile solutions and solve the biggest
+              operational challenge for the world’s largest companies.
             </Typography>
             <Box
               sx={{
@@ -103,10 +109,20 @@ function Projects() {
                 justifyContent: "center",
               }}
             >
-              <Tooltip title="React">
+              <Tooltip title="SAP">
                 <img
-                  src={ReactIcon}
-                  alt="React"
+                  src={SAPIcon}
+                  alt="SAP"
+                  style={{
+                    height: "24px",
+                    marginRight: "16px",
+                  }}
+                />
+              </Tooltip>
+              <Tooltip title="UI5">
+                <img
+                  src={UI5Icon}
+                  alt="UI5"
                   style={{
                     width: "24px",
                     height: "24px",
@@ -114,10 +130,10 @@ function Projects() {
                   }}
                 />
               </Tooltip>
-              <Tooltip title="Flutter">
+              <Tooltip title="Javascript">
                 <img
-                  src={FlutterIcon}
-                  alt="Flutter"
+                  src={JavascriptIcon}
+                  alt="Javascript"
                   style={{
                     width: "24px",
                     height: "24px",
@@ -125,43 +141,10 @@ function Projects() {
                   }}
                 />
               </Tooltip>
-              <Tooltip title="Parse">
+              <Tooltip title="Typescript">
                 <img
-                  src={ParseIcon}
-                  alt="Parse"
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    marginRight: "16px",
-                  }}
-                />
-              </Tooltip>
-              <Tooltip title="AWS">
-                <img
-                  src={AwsIcon}
-                  alt="AWS"
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    marginRight: "16px",
-                  }}
-                />
-              </Tooltip>
-              <Tooltip title="Firebase">
-                <img
-                  src={FirebaseIcon}
-                  alt="Firebase"
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    marginRight: "16px",
-                  }}
-                />
-              </Tooltip>
-              <Tooltip title="DigitalOcean">
-                <img
-                  src={DigitalOceanIcon}
-                  alt="DigitalOcean"
+                  src={TypescriptIcon}
+                  alt="Typescript"
                   style={{
                     width: "24px",
                     height: "24px",
