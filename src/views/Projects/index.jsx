@@ -310,8 +310,25 @@ function Projects() {
           },
         }}
       >
-        <Typography variant="h3" align="right">
-          TappShare
+        <Box
+          sx={{
+            width: "100%",
+            textAlign: "right",
+          }}
+        >
+          <Link
+            href="https://tappshare.io/"
+            variant="h3"
+            target="_blank"
+            rel="noopener"
+            color="inherit"
+            underline="hover"
+          >
+            TappShare
+          </Link>
+        </Box>
+        <Typography variant="body2" align="right">
+          Full Stack Developer
         </Typography>
         <Box sx={{ width: "100%", textAlign: "right" }}>
           <Typography align="right" variant="caption" color="secondary">
@@ -348,6 +365,7 @@ function Projects() {
           <Box
             sx={{
               width: "350px",
+              marginLeft: "24px",
             }}
           >
             <Typography variant="subtitle2">
@@ -355,19 +373,6 @@ function Projects() {
               design campaigns and easily deliver them to your recicipients in
               the most appropriate place (WhatsApp, SMS, iMessage, Facebook
               Messenger, etc...).
-            </Typography>
-            <Typography
-              sx={{
-                marginTop: "10px",
-              }}
-              variant="h6"
-            >
-              Job
-            </Typography>
-            <Typography variant="subtitle2">
-              I am the Senior Software Developer in charge of two websites, the
-              backend, and an iOS and Android app. I am in charge of improving
-              the platform and running the development team.
             </Typography>
             <Box
               sx={{
@@ -459,6 +464,7 @@ function Projects() {
         <Typography variant="h3" align="left">
           BlueQueue
         </Typography>
+        <Typography variant="body2">Front End Developer (Mobile)</Typography>
         <Box sx={{ width: "100%", textAlign: "left" }}>
           <Typography align="right" variant="caption" color="secondary">
             2019 - 2021 (Part Time)
@@ -502,19 +508,6 @@ function Projects() {
               Enhancing the consumer product. This application focuses on easily
               bringing consumer products, coupons, instructions, videos, reviews
               and more all in one social place.
-            </Typography>
-            <Typography
-              sx={{
-                marginTop: "10px",
-              }}
-              variant="h6"
-            >
-              Job
-            </Typography>
-            <Typography variant="subtitle2">
-              I was the Front End devloper for this startup. The app uses
-              Flutter to quickly deploy to both iOS and Android. I have helped
-              with Backend work as well using Express and Neo4J.
             </Typography>
             <Box
               sx={{
