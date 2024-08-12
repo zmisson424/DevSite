@@ -13,6 +13,7 @@ import JavascriptIcon from "../../assets/images/javascript.svg";
 import TypescriptIcon from "../../assets/images/typescript.svg";
 import SpeakEasy from "../../assets/images/speakeasy.png";
 import Bluequeue from "../../assets/images/bluequeue.png";
+import HCGTemplate from "../../assets/images/hcg_template.png";
 
 function Projects() {
   const theme = useTheme();
@@ -79,13 +80,10 @@ function Projects() {
             }}
           >
             <img
-              src={SpeakEasy}
-              alt="SpeakEasy"
+              src={HCGTemplate}
+              alt="Havensight Template"
               style={{
-                width: "550px",
-                [theme.breakpoints.down("sm")]: {
-                  width: "100%",
-                },
+                height: "324px",
               }}
             />
           </Box>
