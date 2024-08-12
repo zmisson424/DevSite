@@ -7,11 +7,8 @@ import ParseIcon from "../../assets/images/parse.svg";
 import DigitalOceanIcon from "../../assets/images/digitalocean.svg";
 import FirebaseIcon from "../../assets/images/firebase.svg";
 import AwsIcon from "../../assets/images/aws.svg";
-import ProjectCard from "../../components/ProjectCard";
 import SpeakEasy from "../../assets/images/speakeasy.png";
 import Bluequeue from "../../assets/images/bluequeue.png";
-import Recipe from "../../assets/images/recipe_app.png";
-import Game from "../../assets/images/game_app.png";
 
 function Projects() {
   const theme = useTheme();
