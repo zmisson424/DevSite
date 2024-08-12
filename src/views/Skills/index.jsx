@@ -52,9 +52,8 @@ function Skills() {
           width: "100%",
           justifyContent: "center",
           [theme.breakpoints.down("sm")]: {
-            flexDirection: "column",
             width: "100%",
-            alignItems: "center",
+            flexWrap: "wrap",
           },
         }}
       >
@@ -65,7 +64,8 @@ function Skills() {
             paddingLeft: "8px",
             paddingRight: "8px",
             [theme.breakpoints.down("sm")]: {
-              width: "100%",
+              width: "50%",
+              padding: 0,
               textAlign: "center",
             },
           }}
@@ -94,7 +94,8 @@ function Skills() {
             paddingLeft: "8px",
             paddingRight: "8px",
             [theme.breakpoints.down("sm")]: {
-              width: "100%",
+              width: "50%",
+              padding: 0,
               textAlign: "center",
             },
           }}
@@ -125,7 +126,8 @@ function Skills() {
             paddingLeft: "8px",
             paddingRight: "8px",
             [theme.breakpoints.down("sm")]: {
-              width: "100%",
+              width: "40%",
+              padding: 0,
               textAlign: "center",
             },
           }}
@@ -157,7 +159,8 @@ function Skills() {
             paddingLeft: "8px",
             paddingRight: "8px",
             [theme.breakpoints.down("sm")]: {
-              width: "100%",
+              width: "40%",
+              padding: 0,
               textAlign: "center",
             },
           }}
