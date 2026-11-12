@@ -17,7 +17,7 @@ npm run preview   # serve the production build locally
 src/
   data/        All site copy and links. Edit these to change content.
   sections/    One folder per chapter of the page (Hero, DayJob, PastRoles, …).
-  components/  Pieces shared across sections (header, footer, headings, thread marker).
+  components/  Pieces shared across sections (header, footer, headings, logo).
   hooks/       Small reusable hooks (animation clock, element size, reduced motion).
   styles/      Design tokens (colors, fonts, layout) and page-wide base styles.
 ```

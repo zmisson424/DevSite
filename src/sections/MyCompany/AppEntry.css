@@ -1,0 +1,58 @@
+.app-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Later apps get a rule above them so each one reads as its own entry. */
+.app-entry + .app-entry {
+  margin-top: 64px;
+  padding-top: 64px;
+  border-top: 1px solid #262a32;
+}
+
+.app-entry__mockup-stage {
+  flex: 0 1 300px;
+  min-width: 280px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-entry__text {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.app-entry__name {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(44px, 4.4vw, 62px);
+  line-height: 1;
+}
+
+.app-entry__pitch {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-soft-text);
+}
+
+.app-entry__detail {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-mist);
+}
+
+.app-entry__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}

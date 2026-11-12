@@ -1,14 +1,8 @@
-import { HERO_TAGLINES } from "../../data/hero";
-import { useRotatingItem } from "../../hooks/useRotatingItem";
-import ThreadGraph from "./ThreadGraph";
+import ConnectionGraph from "./ConnectionGraph";
 import "./Hero.css";
 
-const TAGLINE_INTERVAL_IN_MILLISECONDS = 2800;
-
-/** Intro: name, a rotating "I build apps for …" line, and the thread graph. */
+/** Intro: name, a one-line personal tagline, and the connection graph. */
 function Hero() {
-  const currentTagline = useRotatingItem(HERO_TAGLINES, TAGLINE_INTERVAL_IN_MILLISECONDS);
-
   return (
     <section aria-label="Intro" className="hero page-container">
       <div className="hero__intro">
@@ -19,16 +13,18 @@ function Hero() {
           <span className="hero__surname">Misson</span>
         </h1>
         <p className="hero__tagline">
-          I build apps for <span className="hero__tagline-ending">{currentTagline}</span>
+          I build things{" "}
+          <span className="hero__tagline-accent">for the fun of it</span>, and
+          I never quite stop tinkering.
         </p>
         <p className="hero__nudge">
           <span className="hero__nudge-dot blink" aria-hidden="true" />
-          pull on a thread →
+          pick a name to learn more →
         </p>
       </div>
 
       <div className="hero__graph">
-        <ThreadGraph />
+        <ConnectionGraph />
       </div>
     </section>
   );

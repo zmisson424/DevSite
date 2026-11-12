@@ -14,7 +14,7 @@
   border-bottom-color: #262a32;
 }
 
-/* Off-grid: the studio sits top right, the app drops in lower on the left. */
+/* Off-grid: the company sits top right, the apps drop in lower on the left. */
 .my-company__row {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -22,24 +22,35 @@
   margin-top: 64px;
 }
 
-.my-company__studio {
+.my-company__company {
   grid-column: 9 / span 4;
   grid-row: 1;
 }
 
-.my-company__app {
+.my-company__apps {
   grid-column: 1 / span 7;
   grid-row: 1;
   margin-top: 140px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
+}
+
+/* Small ruled label that names each column: "the company", "the apps". */
+.my-company__column-label {
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #262a32;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.my-company__app-count {
+  margin-left: 6px;
+  color: var(--color-signal);
 }
 
 /* ---------- Ember & Ash ---------- */
 
-.my-company__studio-name {
+.my-company__company-name {
   margin-top: 20px;
   font-family: var(--font-display);
   font-weight: 400;
@@ -47,18 +58,18 @@
   line-height: 0.95;
 }
 
-.my-company__studio-meta {
+.my-company__company-meta {
   margin-top: 10px;
 }
 
-.my-company__studio-summary {
+.my-company__company-summary {
   margin-top: 18px;
   font-size: 16px;
   line-height: 1.65;
   color: var(--color-mist);
 }
 
-.my-company__studio-link {
+.my-company__company-link {
   display: inline-block;
   margin-top: 14px;
   font-family: var(--font-mono);
@@ -66,78 +77,15 @@
   color: var(--color-soft-text);
 }
 
-/* ---------- StringTheory ---------- */
-
-.my-company__phone-stage {
-  flex: 0 1 300px;
-  min-width: 280px;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.my-company__app-text {
-  flex: 1 1 260px;
-  min-width: 0;
-}
-
-.my-company__app-name {
-  margin-top: 12px;
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(44px, 4.4vw, 62px);
-  line-height: 1;
-}
-
-.my-company__app-pitch {
-  margin-top: 18px;
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--color-soft-text);
-}
-
-.my-company__app-detail {
-  margin-top: 14px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--color-mist);
-}
-
-.my-company__store-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 20px;
-  font-family: var(--font-mono);
-  font-size: 13px;
-}
-
-.my-company__next-up {
-  max-width: 320px;
-  margin-top: 32px;
-  padding: 16px 18px;
-  border: 1px dashed var(--color-edge-strong);
-  border-radius: 16px;
-}
-
-.my-company__next-up .mono-label {
-  font-size: 11px;
-}
-
-.my-company__next-up-text {
-  margin-top: 6px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 22px;
-  color: var(--color-soft-text);
-}
-
 @media (max-width: 860px) {
-  .my-company__studio,
-  .my-company__app {
+  .my-company__company,
+  .my-company__apps {
     grid-column: 1 / -1;
     grid-row: auto;
     margin-top: 28px;
+  }
+
+  .my-company__apps {
+    margin-top: 72px;
   }
 }

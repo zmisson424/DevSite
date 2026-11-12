@@ -1,4 +1,4 @@
-.thread-graph {
+.connection-graph {
   position: relative;
   width: 100%;
   height: 100%;
@@ -8,7 +8,7 @@
   touch-action: pan-y;
 }
 
-.thread-graph__glow {
+.connection-graph__glow {
   position: absolute;
   width: 560px;
   height: 560px;
@@ -22,9 +22,9 @@
   pointer-events: none;
 }
 
-/* ---------- Threads ---------- */
+/* ---------- Links between nodes ---------- */
 
-.thread-graph__threads {
+.connection-graph__links {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -32,19 +32,19 @@
   pointer-events: none;
 }
 
-.thread-graph__thread {
+.connection-graph__link {
   stroke: rgb(236 237 239 / 0.12);
   stroke-width: 1;
   transition: stroke 0.3s;
 }
 
-.thread-graph__thread.is-lit {
+.connection-graph__link.is-lit {
   stroke: rgb(185 255 74 / 0.8);
 }
 
 /* ---------- Nodes ---------- */
 
-.thread-graph__node {
+.connection-graph__node {
   position: absolute;
   transform: translate(-50%, -50%);
   display: flex;
@@ -60,53 +60,53 @@
   transition: color 0.3s;
 }
 
-.thread-graph__node.is-dimmed {
+.connection-graph__node.is-dimmed {
   color: var(--color-muted);
 }
 
-.thread-graph__node.is-active {
+.connection-graph__node.is-active {
   color: var(--color-signal);
 }
 
-.thread-graph__dot {
+.connection-graph__dot {
   border-radius: 50%;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
-.thread-graph__node--major .thread-graph__dot {
+.connection-graph__node--major .connection-graph__dot {
   width: 9px;
   height: 9px;
   background: var(--color-soft-text);
 }
 
-.thread-graph__node--minor .thread-graph__dot {
+.connection-graph__node--minor .connection-graph__dot {
   width: 6px;
   height: 6px;
   background: #5c626c;
 }
 
-.thread-graph__node.is-active .thread-graph__dot {
+.connection-graph__node.is-active .connection-graph__dot {
   background: var(--color-signal);
   box-shadow: 0 0 18px 4px rgb(185 255 74 / 0.5);
 }
 
-.thread-graph__node--major .thread-graph__label {
+.connection-graph__node--major .connection-graph__label {
   font-family: var(--font-display);
   font-size: clamp(26px, 3vw, 36px);
 }
 
-.thread-graph__node--minor .thread-graph__label {
+.connection-graph__node--minor .connection-graph__label {
   font-family: var(--font-mono);
   font-size: 13px;
 }
 
-.thread-graph__node--italic .thread-graph__label {
+.connection-graph__node--italic .connection-graph__label {
   font-style: italic;
 }
 
 /* ---------- Caption ---------- */
 
-.thread-graph__caption {
+.connection-graph__caption {
   position: absolute;
   width: 250px;
   padding: 14px 16px;
@@ -117,13 +117,13 @@
   pointer-events: none;
 }
 
-.thread-graph__caption-kind {
+.connection-graph__caption-kind {
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--color-signal);
 }
 
-.thread-graph__caption-text {
+.connection-graph__caption-text {
   margin-top: 6px;
   font-size: 15px;
   line-height: 1.45;

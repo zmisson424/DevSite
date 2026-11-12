@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { THREAD_CONNECTIONS, THREAD_NODES } from "../../data/hero";
+import { GRAPH_CONNECTIONS, GRAPH_NODES } from "../../data/hero";
 import { useAnimationClock } from "../../hooks/useAnimationClock";
 import { useElementSize } from "../../hooks/useElementSize";
 import { usePrefersReducedMotion } from "../../hooks/usePrefersReducedMotion";
@@ -7,17 +7,17 @@ import {
   areNodesConnected,
   calculateCaptionPosition,
   calculateNodePositions,
-} from "./threadGraphLayout";
-import "./ThreadGraph.css";
+} from "./connectionGraphLayout";
+import "./ConnectionGraph.css";
 
 const FALLBACK_GRAPH_SIZE = { width: 760, height: 620 };
 const RESTING_POINTER_POSITION = { x: 0.62, y: 0.4 };
 
 /**
- * The hero's constellation of drifting labels joined by threads.
- * Hovering, focusing or tapping a node lights up its threads and shows a caption.
+ * The hero's constellation of drifting labels joined by lines.
+ * Hovering, focusing or tapping a node lights up its connections and shows a caption.
  */
-function ThreadGraph() {
+function ConnectionGraph() {
   const { elementRef, size: graphSize } = useElementSize(FALLBACK_GRAPH_SIZE);
   const prefersReducedMotion = usePrefersReducedMotion();
   const elapsedSeconds = useAnimationClock({ isPaused: prefersReducedMotion });
@@ -26,12 +26,12 @@ function ThreadGraph() {
   const [activeNodeId, setActiveNodeId] = useState(null);
 
   const nodePositions = calculateNodePositions(
-    THREAD_NODES,
+    GRAPH_NODES,
     graphSize,
     elapsedSeconds,
     pointerPosition,
   );
-  const activeNode = THREAD_NODES.find((node) => node.id === activeNodeId);
+  const activeNode = GRAPH_NODES.find((node) => node.id === activeNodeId);
 
   const handlePointerMove = (event) => {
     const bounds = elementRef.current.getBoundingClientRect();
@@ -44,19 +44,19 @@ function ThreadGraph() {
   return (
     <div
       ref={elementRef}
-      className="thread-graph"
+      className="connection-graph"
       onPointerMove={handlePointerMove}
       onPointerLeave={() => setActiveNodeId(null)}
     >
       {/* Soft lime glow that follows the pointer */}
       <div
-        className="thread-graph__glow"
+        className="connection-graph__glow"
         aria-hidden="true"
         style={{ left: `${pointerPosition.x * 100}%`, top: `${pointerPosition.y * 100}%` }}
       />
 
-      <svg className="thread-graph__threads" aria-hidden="true">
-        {THREAD_CONNECTIONS.map(([startId, endId]) => {
+      <svg className="connection-graph__links" aria-hidden="true">
+        {GRAPH_CONNECTIONS.map(([startId, endId]) => {
           const start = nodePositions[startId];
           const end = nodePositions[endId];
           const isLit = activeNodeId === startId || activeNodeId === endId;
@@ -68,25 +68,25 @@ function ThreadGraph() {
               y1={start.y}
               x2={end.x}
               y2={end.y}
-              className={isLit ? "thread-graph__thread is-lit" : "thread-graph__thread"}
+              className={isLit ? "connection-graph__link is-lit" : "connection-graph__link"}
             />
           );
         })}
       </svg>
 
-      {THREAD_NODES.map((node) => {
+      {GRAPH_NODES.map((node) => {
         const position = nodePositions[node.id];
         const isActive = node.id === activeNodeId;
         const isDimmed =
           activeNodeId !== null &&
           !isActive &&
-          !areNodesConnected(THREAD_CONNECTIONS, activeNodeId, node.id);
+          !areNodesConnected(GRAPH_CONNECTIONS, activeNodeId, node.id);
 
         const classNames = [
-          "thread-graph__node",
-          node.isMajor ? "thread-graph__node--major" : "thread-graph__node--minor",
+          "connection-graph__node",
+          node.isMajor ? "connection-graph__node--major" : "connection-graph__node--minor",
           // Every major label is italic except the short "H1".
-          node.isMajor && node.id !== "h1" ? "thread-graph__node--italic" : "",
+          node.isMajor && node.id !== "h1" ? "connection-graph__node--italic" : "",
           isActive ? "is-active" : "",
           isDimmed ? "is-dimmed" : "",
         ];
@@ -102,23 +102,23 @@ function ThreadGraph() {
             onFocus={() => setActiveNodeId(node.id)}
             onClick={() => setActiveNodeId(node.id)}
           >
-            <span className="thread-graph__dot" aria-hidden="true" />
-            <span className="thread-graph__label">{node.label}</span>
+            <span className="connection-graph__dot" aria-hidden="true" />
+            <span className="connection-graph__label">{node.label}</span>
           </button>
         );
       })}
 
       {activeNode && (
         <div
-          className="thread-graph__caption"
+          className="connection-graph__caption"
           style={calculateCaptionPosition(nodePositions[activeNode.id], graphSize)}
         >
-          <p className="thread-graph__caption-kind">{activeNode.kind}</p>
-          <p className="thread-graph__caption-text">{activeNode.caption}</p>
+          <p className="connection-graph__caption-kind">{activeNode.kind}</p>
+          <p className="connection-graph__caption-text">{activeNode.caption}</p>
         </div>
       )}
     </div>
   );
 }
 
-export default ThreadGraph;
+export default ConnectionGraph;

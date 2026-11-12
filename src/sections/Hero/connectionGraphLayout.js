@@ -1,5 +1,5 @@
 /*
- * Pure layout math for the hero's thread graph, kept apart from the component
+ * Pure layout math for the hero's connection graph, kept apart from the component
  * so the rendering code stays readable.
  */
 
@@ -42,7 +42,7 @@ export function calculateNodePositions(nodes, graphSize, elapsedSeconds, pointer
   return positionsById;
 }
 
-/** True when the two nodes are joined by a thread. */
+/** True when the two nodes are joined by a line. */
 export function areNodesConnected(connections, firstNodeId, secondNodeId) {
   return connections.some(
     ([startId, endId]) =>

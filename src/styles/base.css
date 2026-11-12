@@ -89,16 +89,6 @@ main[id] {
   background-size: 100% 1px;
 }
 
-/* Glowing lime dot, the end of every thread. */
-.signal-dot {
-  flex-shrink: 0;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--color-signal);
-  box-shadow: 0 0 16px 4px var(--color-signal-glow);
-}
-
 /* ---------- Motion ---------- */
 
 @keyframes float {
@@ -132,15 +122,6 @@ main[id] {
   }
 }
 
-@keyframes draw-down {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
-
 /* Floating work: set --tilt on the element for its resting angle. */
 .float {
   transform: rotate(var(--tilt, 0deg));
@@ -163,13 +144,6 @@ main[id] {
     animation-timeline: view();
     animation-range: entry 0% entry 45%;
   }
-
-  .thread-line {
-    transform-origin: top;
-    animation: draw-down linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 45%;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -180,8 +154,7 @@ main[id] {
   .float,
   .float-slow,
   .blink,
-  .reveal,
-  .thread-line {
+  .reveal {
     animation: none;
   }
 }

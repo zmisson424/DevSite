@@ -1,14 +1,7 @@
-// Content for the hero: the rotating tagline and the interactive thread graph.
-
-// Finishes the sentence "I build apps for …", cycling every few seconds.
-export const HERO_TAGLINES = [
-  "warehouse floors stuck in 1997.",
-  "cases that won’t stay cold.",
-  "whatever idea won’t leave me alone.",
-];
+// Content for the hero's interactive connection graph.
 
 /*
- * Nodes in the thread graph.
+ * Nodes in the connection graph.
  *   homeX / homeY    resting position as a fraction of the graph's width / height
  *   driftAmount      how far (px) the node bobs while idle
  *   driftSpeed       how fast it bobs
@@ -16,7 +9,7 @@ export const HERO_TAGLINES = [
  *   parallaxDepth    how far (px) it shifts as the pointer moves
  *   isMajor          major nodes get the big serif label and a bigger dot
  */
-export const THREAD_NODES = [
+export const GRAPH_NODES = [
   {
     id: "h1",
     label: "H1",
@@ -29,8 +22,8 @@ export const THREAD_NODES = [
   {
     id: "stringTheory",
     label: "StringTheory",
-    kind: "made by me",
-    caption: "A corkboard for the cases you can’t stop thinking about.",
+    kind: "my first app",
+    caption: "My first stand-alone app. Designed, built and shipped solo.",
     homeX: 0.68, homeY: 0.2,
     driftAmount: 12, driftSpeed: 0.42, driftPhase: 1.3, parallaxDepth: 34,
     isMajor: true,
@@ -39,7 +32,7 @@ export const THREAD_NODES = [
     id: "emberAndAsh",
     label: "Ember & Ash",
     kind: "my company",
-    caption: "My own LLC. Where the side projects grow up.",
+    caption: "My LLC. It publishes and distributes the software I make.",
     homeX: 0.74, homeY: 0.58,
     driftAmount: 9, driftSpeed: 0.37, driftPhase: 2.1, parallaxDepth: 20,
     isMajor: true,
@@ -110,14 +103,13 @@ export const THREAD_NODES = [
   },
 ];
 
-// Pairs of node ids joined by a thread.
-export const THREAD_CONNECTIONS = [
+// Pairs of node ids joined by a line.
+export const GRAPH_CONNECTIONS = [
   ["h1", "havensight"],
   ["h1", "flutter"],
   ["h1", "techLead"],
   ["h1", "ai"],
   ["stringTheory", "flutter"],
-  ["stringTheory", "emberAndAsh"],
   ["stringTheory", "ai"],
   ["flutter", "react"],
   ["react", "ai"],
