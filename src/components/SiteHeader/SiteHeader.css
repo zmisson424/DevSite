@@ -1,0 +1,120 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgb(12 13 16 / 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-edge-soft);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.site-header__wordmark {
+  margin-right: auto;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.site-header__wordmark-dot {
+  color: var(--color-signal);
+}
+
+/* Pill-shaped tab group for desktop. */
+.site-header__tabs {
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--color-edge);
+  background: var(--color-night);
+  font-size: 14px;
+}
+
+.site-header__tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: var(--color-soft-text);
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-header__tab:hover {
+  background: #1f232a;
+  color: var(--color-bone);
+}
+
+.site-header__contact {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--color-signal);
+  color: var(--color-ink);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.site-header__contact:hover {
+  background: var(--color-signal-hover);
+  color: var(--color-ink);
+}
+
+.site-header__menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--color-edge-strong);
+  background: var(--color-night);
+  color: var(--color-bone);
+  cursor: pointer;
+}
+
+.site-header__mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  padding-bottom: 16px;
+  border-top: 1px solid var(--color-edge-soft);
+}
+
+.site-header__mobile-link {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  font-family: var(--font-display);
+  font-size: 28px;
+  border-bottom: 1px solid var(--color-edge-soft);
+}
+
+/* Phones: swap the tab group for the menu button. */
+@media (max-width: 760px) {
+  .site-header__tabs {
+    display: none;
+  }
+
+  .site-header__menu-button {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 761px) {
+  .site-header__mobile-menu {
+    display: none;
+  }
+}

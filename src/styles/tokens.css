@@ -1,0 +1,39 @@
+/*
+ * Design tokens for the zm. brand (v4).
+ * Cool ink with one electric green. Use --color-signal sparingly:
+ * dots, threads, the active filter and one word per headline at most.
+ */
+:root {
+  /* Accent */
+  --color-signal: #b9ff4a;
+  --color-signal-hover: #d3ff8a;
+  --color-signal-glow: rgb(185 255 74 / 0.45);
+  --color-signal-tint: #1c2016;
+
+  /* Surfaces, darkest to lightest */
+  --color-ink: #0c0d10;
+  --color-band: #101217;
+  --color-night: #121419;
+  --color-raised: #1a1d24;
+
+  /* Lines */
+  --color-edge-soft: #1a1d23;
+  --color-edge: #22262d;
+  --color-edge-strong: #2c313a;
+
+  /* Text, quietest to loudest */
+  --color-muted: #858b95;
+  --color-mist: #9aa0aa;
+  --color-soft-text: #c3c7ce;
+  --color-bone: #ecedef;
+
+  /* Type */
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  /* Layout */
+  --page-max-width: 1320px;
+  --page-gutter: clamp(16px, 4vw, 48px);
+  --header-height: 84px;
+}

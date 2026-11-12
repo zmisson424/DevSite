@@ -1,0 +1,187 @@
+/* Page-wide basics and small utilities shared by several sections. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+a {
+  color: var(--color-bone);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-signal);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Keep anchored sections clear of the sticky header. */
+section[id],
+main[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+/* Centered content column used by every section. */
+.page-container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+/* Small lowercase mono label for dates, tech and nudges. */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.display-italic {
+  font-style: italic;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Link whose lime underline draws in on hover. */
+.underline-link {
+  background-image: linear-gradient(var(--color-signal), var(--color-signal));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.4s ease;
+}
+
+.underline-link:hover {
+  background-size: 100% 1px;
+}
+
+/* Glowing lime dot, the end of every thread. */
+.signal-dot {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-signal);
+  box-shadow: 0 0 16px 4px var(--color-signal-glow);
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--tilt, 0deg));
+  }
+  50% {
+    transform: translateY(-12px) rotate(var(--tilt, 0deg));
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes draw-down {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* Floating work: set --tilt on the element for its resting angle. */
+.float {
+  transform: rotate(var(--tilt, 0deg));
+  animation: float 7s ease-in-out infinite;
+}
+
+.float-slow {
+  transform: rotate(var(--tilt, 0deg));
+  animation: float 9s ease-in-out infinite;
+}
+
+.blink {
+  animation: blink 2.4s ease-in-out infinite;
+}
+
+/* Scroll-driven reveals, only where the browser supports view timelines. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: rise-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
+  }
+
+  .thread-line {
+    transform-origin: top;
+    animation: draw-down linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 45%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .float,
+  .float-slow,
+  .blink,
+  .reveal,
+  .thread-line {
+    animation: none;
+  }
+}

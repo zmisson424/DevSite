@@ -1,0 +1,79 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  min-height: 680px;
+  padding-top: 24px;
+}
+
+.hero__intro {
+  flex: 1 1 360px;
+  min-width: 0;
+  padding-bottom: 40px;
+}
+
+.hero__greeting {
+  margin-bottom: 18px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.hero__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(64px, 9vw, 136px);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+}
+
+.hero__surname {
+  font-style: italic;
+  padding-left: 0.5em;
+}
+
+.hero__tagline {
+  margin-top: 32px;
+  max-width: 420px;
+  min-height: 2.7em; /* reserve two lines so the page doesn't jump as taglines rotate */
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.35;
+  color: var(--color-muted);
+}
+
+.hero__tagline-ending {
+  font-style: italic;
+  color: var(--color-bone);
+}
+
+.hero__nudge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.hero__nudge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-signal);
+  box-shadow: 0 0 10px 2px rgb(185 255 74 / 0.5);
+}
+
+.hero__graph {
+  flex: 1.5 1 480px;
+  min-width: 0;
+  height: 640px;
+}
+
+@media (max-width: 560px) {
+  .hero__graph {
+    height: 520px;
+  }
+}

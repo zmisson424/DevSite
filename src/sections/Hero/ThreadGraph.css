@@ -1,0 +1,130 @@
+.thread-graph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--color-ink);
+  touch-action: pan-y;
+}
+
+.thread-graph__glow {
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgb(185 255 74 / 0.09) 0%,
+    rgb(185 255 74 / 0.03) 40%,
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+/* ---------- Threads ---------- */
+
+.thread-graph__threads {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.thread-graph__thread {
+  stroke: rgb(236 237 239 / 0.12);
+  stroke-width: 1;
+  transition: stroke 0.3s;
+}
+
+.thread-graph__thread.is-lit {
+  stroke: rgb(185 255 74 / 0.8);
+}
+
+/* ---------- Nodes ---------- */
+
+.thread-graph__node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 6px 10px;
+  border: none;
+  background: none;
+  color: var(--color-bone);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.thread-graph__node.is-dimmed {
+  color: var(--color-muted);
+}
+
+.thread-graph__node.is-active {
+  color: var(--color-signal);
+}
+
+.thread-graph__dot {
+  border-radius: 50%;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.thread-graph__node--major .thread-graph__dot {
+  width: 9px;
+  height: 9px;
+  background: var(--color-soft-text);
+}
+
+.thread-graph__node--minor .thread-graph__dot {
+  width: 6px;
+  height: 6px;
+  background: #5c626c;
+}
+
+.thread-graph__node.is-active .thread-graph__dot {
+  background: var(--color-signal);
+  box-shadow: 0 0 18px 4px rgb(185 255 74 / 0.5);
+}
+
+.thread-graph__node--major .thread-graph__label {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.thread-graph__node--minor .thread-graph__label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.thread-graph__node--italic .thread-graph__label {
+  font-style: italic;
+}
+
+/* ---------- Caption ---------- */
+
+.thread-graph__caption {
+  position: absolute;
+  width: 250px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #181b21;
+  border: 1px solid var(--color-edge-strong);
+  box-shadow: 0 20px 40px -16px rgb(0 0 0 / 0.8);
+  pointer-events: none;
+}
+
+.thread-graph__caption-kind {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-signal);
+}
+
+.thread-graph__caption-text {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.45;
+}
