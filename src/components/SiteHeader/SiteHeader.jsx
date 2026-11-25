@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { NAVIGATION_LINKS } from "../../data/links";
+import { NAVIGATION_LINKS, RESUME_URL } from "../../data/links";
 import "./SiteHeader.css";
 
 // SVG paths for the menu button's two states.
 const HAMBURGER_ICON_PATH = "M3 6h14M3 10h14M3 14h14";
 const CLOSE_ICON_PATH = "M5 5l10 10M15 5L5 15";
 
-/** Sticky top bar: wordmark, section tabs, contact button, and a dropdown menu on phones. */
+/** Sticky top bar: wordmark, section tabs, résumé button, and a dropdown menu on phones. */
 function SiteHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -28,8 +28,13 @@ function SiteHeader() {
           ))}
         </nav>
 
-        <a href="#hi" className="site-header__contact">
-          Contact
+        <a
+          href={RESUME_URL}
+          className="site-header__resume"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Résumé
         </a>
 
         <button

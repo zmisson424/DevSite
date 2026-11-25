@@ -54,7 +54,7 @@
   color: var(--color-bone);
 }
 
-.site-header__contact {
+.site-header__resume {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -67,7 +67,7 @@
   transition: background 0.2s;
 }
 
-.site-header__contact:hover {
+.site-header__resume:hover {
   background: var(--color-signal-hover);
   color: var(--color-ink);
 }
