@@ -47,20 +47,6 @@
   display: block;
 }
 
-.off-the-clock__photo-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  background: var(--color-edge);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--color-mist);
-  text-align: center;
-}
-
 /* ---------- Pastimes ---------- */
 
 .off-the-clock__item {

@@ -9,7 +9,7 @@ export const HAVENSIGHT = {
 };
 
 export const H1_PRODUCT = {
-  eyebrow: "a Havensight product · launching 2026",
+  eyebrow: "a Havensight product · launched 2026",
   name: "H1",
   fullName: "Havensight Inventory 1",
   summary:
@@ -28,21 +28,21 @@ export const H1_PRODUCT = {
 // Older roles, newest first. Each row steps a little further right on wide screens.
 export const PAST_ROLES = [
   {
-    dates: "2023 — 2025",
+    dates: "2023 – 2025",
     company: "Bizi",
     role: "Project Manager · part time",
     summary: "Ran the build of a website, marketing and analytics platform for the self-employed.",
     stack: ["React", "Flutter", "Firebase", "DigitalOcean"],
   },
   {
-    dates: "2019 — 2021",
+    dates: "2019 – 2021",
     company: "BlueQueue",
     role: "Mobile Developer · part time",
     summary: "Built the consumer app: products, coupons, how-to videos and reviews in one feed.",
     stack: ["Flutter", "Firebase", "DigitalOcean"],
   },
   {
-    dates: "2018 — 2021",
+    dates: "2018 – 2021",
     company: "TappShare",
     role: "Full Stack Developer",
     summary: "Built SMS, WhatsApp and iMessage campaign tools across web and mobile.",
