@@ -1,0 +1,44 @@
+.say-hi {
+  padding-top: clamp(120px, 14vw, 220px);
+  padding-bottom: clamp(80px, 10vw, 140px);
+}
+
+.say-hi__content {
+  max-width: 900px;
+  margin-left: clamp(0px, 12vw, 200px);
+}
+
+.say-hi__headline {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 6vw, 88px);
+  line-height: 1.02;
+}
+
+.say-hi__accent {
+  font-style: italic;
+  color: var(--color-signal);
+}
+
+.say-hi__email {
+  display: inline-block;
+  margin-top: 40px;
+  padding-bottom: 4px;
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.say-hi__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.say-hi__socials a {
+  color: var(--color-mist);
+}
+
+.say-hi__socials a:hover {
+  color: var(--color-signal);
+}
