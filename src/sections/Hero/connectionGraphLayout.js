@@ -4,7 +4,7 @@
  */
 
 // Keep labels from sliding off the left or right edge.
-const HORIZONTAL_EDGE_PADDING = 56;
+const HORIZONTAL_EDGE_PADDING = 72;
 
 // Caption card dimensions and spacing, in px.
 const CAPTION_WIDTH = 250;

@@ -14,12 +14,12 @@ function Hero() {
         </h1>
         <p className="hero__tagline">
           I build things{" "}
-          <span className="hero__tagline-accent">for the fun of it</span>, and
-          I never quite stop tinkering.
+          <span className="hero__tagline-accent">for the fun of it</span>, and I
+          never quite stop tinkering.
         </p>
         <p className="hero__nudge">
           <span className="hero__nudge-dot blink" aria-hidden="true" />
-          pick a name to learn more →
+          pick a node to learn more →
         </p>
       </div>
 

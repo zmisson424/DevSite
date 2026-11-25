@@ -39,6 +39,14 @@
   color: var(--color-mist);
 }
 
+.day-job__link {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-soft-text);
+}
+
 @media (max-width: 860px) {
   .day-job__employer,
   .day-job__product {

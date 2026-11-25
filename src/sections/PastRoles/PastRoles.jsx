@@ -6,8 +6,13 @@ import "./PastRoles.css";
 /** 02 — Before that: a compact, stepped list of earlier roles. */
 function PastRoles() {
   const resumeLink = (
-    <a href={RESUME_URL} className="past-roles__resume-link underline-link">
-      the full résumé ↓
+    <a
+      href={RESUME_URL}
+      className="past-roles__resume-link underline-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      the full résumé ↗
     </a>
   );
 

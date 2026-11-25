@@ -8,13 +8,14 @@
  *   driftPhase       offsets the bob so nodes don't move in sync
  *   parallaxDepth    how far (px) it shifts as the pointer moves
  *   isMajor          major nodes get the big serif label and a bigger dot
+ *   isFeatured       minor nodes that get a slightly larger label and dot
  */
 export const GRAPH_NODES = [
   {
     id: "h1",
     label: "H1",
     kind: "the day job",
-    caption: "SAP warehouse screens, finally dragged out of 1997.",
+    caption: "A SaaS platform for SAP-based warehouses. A large, powerful tool that each customer can heavily customize.",
     homeX: 0.26, homeY: 0.16,
     driftAmount: 10, driftSpeed: 0.5, driftPhase: 0.0, parallaxDepth: 26,
     isMajor: true,
@@ -41,24 +42,25 @@ export const GRAPH_NODES = [
     id: "havensight",
     label: "Havensight",
     kind: "since 2021",
-    caption: "Senior engineer. SAP mobile for some very large companies.",
+    caption: "SAP mobile apps for some very large companies.",
     homeX: 0.12, homeY: 0.38,
     driftAmount: 8, driftSpeed: 0.46, driftPhase: 3.0, parallaxDepth: 14,
+    isFeatured: true,
   },
   {
-    id: "techLead",
-    label: "Tech Lead",
+    id: "seniorEngineer",
+    label: "Senior Engineer",
     kind: "the other half of the job",
-    caption: "Running a small team and turning junior devs into dangerous ones.",
-    homeX: 0.88, homeY: 0.4,
+    caption: "Architecture calls, code reviews, and leading a team that turns junior devs into dangerous ones.",
+    homeX: 0.8, homeY: 0.42,
     driftAmount: 7, driftSpeed: 0.5, driftPhase: 3.6, parallaxDepth: 12,
   },
   {
     id: "flutter",
     label: "Flutter",
     kind: "weapon of choice",
-    caption: "If I’m building it for me, it’s Flutter.",
-    homeX: 0.46, homeY: 0.4,
+    caption: "My go-to for mobile. One codebase, native feel on iOS and Android, shipped to both stores.",
+    homeX: 0.5, homeY: 0.44,
     driftAmount: 11, driftSpeed: 0.55, driftPhase: 4.2, parallaxDepth: 18,
   },
   {
@@ -79,7 +81,7 @@ export const GRAPH_NODES = [
   },
   {
     id: "homelab",
-    label: "~/homelab",
+    label: "Homelab",
     kind: "self-hosted",
     caption: "Docker Compose, a dashboard, and more containers than I’ll admit to.",
     homeX: 0.84, homeY: 0.86,
@@ -101,13 +103,37 @@ export const GRAPH_NODES = [
     homeX: 0.36, homeY: 0.92,
     driftAmount: 8, driftSpeed: 0.42, driftPhase: 4.6, parallaxDepth: 14,
   },
+  {
+    id: "typescript",
+    label: "TypeScript",
+    kind: "typed everything",
+    caption: "Front end, back end and tooling. If it runs on Node, it’s typed.",
+    homeX: 0.44, homeY: 0.27,
+    driftAmount: 9, driftSpeed: 0.45, driftPhase: 0.4, parallaxDepth: 16,
+  },
+  {
+    id: "aws",
+    label: "AWS",
+    kind: "in the cloud",
+    caption: "Hosting, serverless functions and the infrastructure behind what I ship.",
+    homeX: 0.3, homeY: 0.76,
+    driftAmount: 8, driftSpeed: 0.5, driftPhase: 2.4, parallaxDepth: 13,
+  },
+  {
+    id: "cpp",
+    label: "C++",
+    kind: "closer to the metal",
+    caption: "For when performance matters more than convenience.",
+    homeX: 0.6, homeY: 0.84,
+    driftAmount: 7, driftSpeed: 0.43, driftPhase: 5.6, parallaxDepth: 11,
+  },
 ];
 
 // Pairs of node ids joined by a line.
 export const GRAPH_CONNECTIONS = [
   ["h1", "havensight"],
   ["h1", "flutter"],
-  ["h1", "techLead"],
+  ["h1", "seniorEngineer"],
   ["h1", "ai"],
   ["stringTheory", "flutter"],
   ["stringTheory", "ai"],
@@ -119,4 +145,10 @@ export const GRAPH_CONNECTIONS = [
   ["emberAndAsh", "family"],
   ["family", "ohioState"],
   ["havensight", "ohioState"],
+  ["typescript", "react"],
+  ["typescript", "ai"],
+  ["aws", "react"],
+  ["aws", "homelab"],
+  ["cpp", "flutter"],
+  ["cpp", "homelab"],
 ];

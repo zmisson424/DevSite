@@ -5,7 +5,7 @@ export const HAVENSIGHT = {
   company: "Havensight",
   role: "Senior Software Engineer",
   summary:
-    "Havensight makes the mobile side of SAP work for some of the world's largest companies. I design, build and ship the apps warehouse crews rely on, mostly with UI5 and SAP MDK.",
+    "Havensight builds mobile solutions on SAP for some of the world's largest companies. I design, build and ship the fast, intuitive apps warehouse crews rely on every day, in close partnership with Zebra on their devices and tools.",
 };
 
 export const H1_PRODUCT = {
@@ -13,24 +13,22 @@ export const H1_PRODUCT = {
   name: "H1",
   fullName: "Havensight Inventory 1",
   summary:
-    "SAP runs the world's warehouses, but the screens people use look like 1997. H1 lets a company design its own modern app, then drops it straight onto their SAP system.",
+    "H1 is a SaaS platform for SAP-based warehouses. It's a large, powerful tool that each company can heavily customize, from its screens and workflows to its plugins, then deploy straight to its own SAP system.",
   // Revealed by "+ the longer story".
   details: [
-    { title: "The portal.", text: "Clients design their own screens, flows and plugins." },
+    { title: "The portal.", text: "Each customer designs its own screens, workflows and plugins." },
     {
       title: "The generator.",
-      text: "Metadata goes in and a cross-platform app comes out, built on UI5 Web Components.",
+      text: "Those designs become a fast, cross-platform mobile app.",
     },
     { title: "The build.", text: "One package that deploys to IM, SRM or EWM on the customer's own SAP." },
   ],
-  closingLine: "It's what's turning a consulting firm into a software company.",
 };
 
 // Older roles, newest first. Each row steps a little further right on wide screens.
 export const PAST_ROLES = [
   {
-    // TODO: fill in the year Bizi ended.
-    dates: "2023 — [END]",
+    dates: "2023 — 2025",
     company: "Bizi",
     role: "Project Manager · part time",
     summary: "Ran the build of a website, marketing and analytics platform for the self-employed.",
@@ -47,8 +45,7 @@ export const PAST_ROLES = [
     dates: "2018 — 2021",
     company: "TappShare",
     role: "Full Stack Developer",
-    summary:
-      "Where it started. Campaigns over SMS, WhatsApp and iMessage, with my first real users and my first 2 a.m. outage.",
+    summary: "Built SMS, WhatsApp and iMessage campaign tools across web and mobile.",
     stack: ["React", "Flutter", "Parse", "AWS", "Firebase"],
   },
 ];

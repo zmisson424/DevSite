@@ -29,7 +29,12 @@ function MyCompany() {
             </h3>
             <p className="my-company__company-meta mono-label">{EMBER_AND_ASH.meta}</p>
             <p className="my-company__company-summary">{EMBER_AND_ASH.summary}</p>
-            <a href={EMBER_AND_ASH_URL} className="my-company__company-link underline-link">
+            <a
+              href={EMBER_AND_ASH_URL}
+              className="my-company__company-link underline-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               emberandash.dev ↗
             </a>
           </div>

@@ -27,6 +27,6 @@ Each component keeps its stylesheet next to it with BEM-style class names
 
 ## Open placeholders
 
-Search the `src/data` folder for `TODO` to find copy that still needs real values:
-Bizi's end year, Ember & Ash's founding year, StringTheory store links,
-the "reading" line, and the off-the-clock photo.
+Search the `src/data` folder for `TODO` to find copy that still needs real values.
+StringTheory's store and web app links are marked `isComingSoon` in `src/data/projects.js`
+until they go live.

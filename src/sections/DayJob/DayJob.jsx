@@ -1,5 +1,6 @@
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import { HAVENSIGHT } from "../../data/experience";
+import { HAVENSIGHT_URL } from "../../data/links";
 import H1Showcase from "./H1Showcase";
 import "./DayJob.css";
 
@@ -17,6 +18,14 @@ function DayJob() {
           <h3 className="day-job__company">{HAVENSIGHT.company}</h3>
           <p className="day-job__role">{HAVENSIGHT.role}</p>
           <p className="day-job__summary">{HAVENSIGHT.summary}</p>
+          <a
+            href={HAVENSIGHT_URL}
+            className="day-job__link underline-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            havensightconsulting.com ↗
+          </a>
         </div>
 
         <div className="day-job__product reveal">

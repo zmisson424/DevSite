@@ -12,6 +12,10 @@ export const SOCIAL_LINKS = [
 
 export const EMBER_AND_ASH_URL = "https://emberandash.dev";
 
+export const HAVENSIGHT_URL = "https://www.havensightconsulting.com/";
+
+export const H1_URL = "https://www.havensightconsulting.com/inventory-one/";
+
 // Sections shown in the header navigation, in page order.
 export const NAVIGATION_LINKS = [
   { label: "Work", sectionId: "work" },

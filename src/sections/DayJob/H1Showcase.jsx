@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { H1_PRODUCT } from "../../data/experience";
+import { H1_URL } from "../../data/links";
 import H1Mockup from "./H1Mockup";
 import "./H1Showcase.css";
 
@@ -22,14 +23,24 @@ function H1Showcase() {
         <div className="h1-showcase__pitch-block">
           <p className="h1-showcase__pitch">{H1_PRODUCT.summary}</p>
 
-          <button
-            type="button"
-            className="h1-showcase__story-toggle"
-            onClick={() => setIsStoryOpen((isOpen) => !isOpen)}
-            aria-expanded={isStoryOpen}
-          >
-            {isStoryOpen ? "− less" : "+ the longer story"}
-          </button>
+          <div className="h1-showcase__actions">
+            <button
+              type="button"
+              className="h1-showcase__story-toggle"
+              onClick={() => setIsStoryOpen((isOpen) => !isOpen)}
+              aria-expanded={isStoryOpen}
+            >
+              {isStoryOpen ? "− less" : "+ the longer story"}
+            </button>
+            <a
+              href={H1_URL}
+              className="h1-showcase__link underline-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              see H1 ↗
+            </a>
+          </div>
 
           {isStoryOpen && (
             <div className="h1-showcase__story">
@@ -38,7 +49,6 @@ function H1Showcase() {
                   <span className="h1-showcase__story-title">{detail.title}</span> {detail.text}
                 </span>
               ))}
-              <span className="h1-showcase__story-closing">{H1_PRODUCT.closingLine}</span>
             </div>
           )}
         </div>

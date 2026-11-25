@@ -85,6 +85,12 @@
   background: #5c626c;
 }
 
+.connection-graph__node--featured .connection-graph__dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-soft-text);
+}
+
 .connection-graph__node.is-active .connection-graph__dot {
   background: var(--color-signal);
   box-shadow: 0 0 18px 4px rgb(185 255 74 / 0.5);
@@ -98,6 +104,16 @@
 .connection-graph__node--minor .connection-graph__label {
   font-family: var(--font-mono);
   font-size: 13px;
+}
+
+.connection-graph__node--featured .connection-graph__label {
+  font-size: 17px;
+}
+
+@media (max-width: 560px) {
+  .connection-graph__node--featured .connection-graph__label {
+    font-size: 15px;
+  }
 }
 
 .connection-graph__node--italic .connection-graph__label {

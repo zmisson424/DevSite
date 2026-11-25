@@ -85,6 +85,7 @@ function ConnectionGraph() {
         const classNames = [
           "connection-graph__node",
           node.isMajor ? "connection-graph__node--major" : "connection-graph__node--minor",
+          node.isFeatured ? "connection-graph__node--featured" : "",
           // Every major label is italic except the short "H1".
           node.isMajor && node.id !== "h1" ? "connection-graph__node--italic" : "",
           isActive ? "is-active" : "",

@@ -33,8 +33,15 @@
   color: var(--color-soft-text);
 }
 
-.h1-showcase__story-toggle {
+.h1-showcase__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 28px;
   margin-top: 14px;
+}
+
+.h1-showcase__story-toggle {
   min-height: 44px;
   padding: 0;
   border: none;
@@ -43,6 +50,12 @@
   font-family: var(--font-mono);
   font-size: 13px;
   cursor: pointer;
+}
+
+.h1-showcase__link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-soft-text);
 }
 
 .h1-showcase__story {
@@ -59,11 +72,4 @@
 
 .h1-showcase__story-title {
   color: var(--color-bone);
-}
-
-.h1-showcase__story-closing {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 19px;
-  color: var(--color-soft-text);
 }

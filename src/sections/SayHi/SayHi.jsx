@@ -16,7 +16,13 @@ function SayHi() {
 
         <p className="say-hi__socials">
           {SOCIAL_LINKS.map((socialLink) => (
-            <a key={socialLink.label} href={socialLink.url} className="underline-link">
+            <a
+              key={socialLink.label}
+              href={socialLink.url}
+              className="underline-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {socialLink.label}
             </a>
           ))}

@@ -11,7 +11,7 @@ function OffTheClock() {
 
           <div className="off-the-clock__polaroid float-slow" style={{ "--tilt": "-4deg" }}>
             {OFF_THE_CLOCK_PHOTO ? (
-              <img src={OFF_THE_CLOCK_PHOTO} alt="Zach, off the clock" className="off-the-clock__photo" />
+              <img src={OFF_THE_CLOCK_PHOTO} alt="Zach (left) on the beach" className="off-the-clock__photo" />
             ) : (
               <div className="off-the-clock__photo-placeholder">[a photo of you, mid-something]</div>
             )}

@@ -15,7 +15,7 @@
 .app-entry__mockup-stage {
   flex: 0 1 300px;
   min-width: 280px;
-  height: 600px;
+  height: 640px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +24,15 @@
 .app-entry__text {
   flex: 1 1 260px;
   min-width: 0;
+}
+
+.app-entry__logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  box-shadow: 0 12px 28px -12px rgb(0 0 0 / 0.8);
 }
 
 .app-entry__name {
@@ -55,4 +64,16 @@
   margin-top: 20px;
   font-family: var(--font-mono);
   font-size: 13px;
+}
+
+.app-entry__link--soon {
+  color: var(--color-muted);
+}
+
+.app-entry__soon-tag {
+  margin-left: 4px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--color-edge-strong);
+  font-size: 10px;
 }
